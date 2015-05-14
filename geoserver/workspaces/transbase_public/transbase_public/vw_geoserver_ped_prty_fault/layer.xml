@@ -1,0 +1,15 @@
+<layer>
+  <name>vw_geoserver_ped_prty_fault</name>
+  <id>LayerInfoImpl--4d69f6ac:143d5bafd38:-67b4</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fdf</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--4d69f6ac:143d5bafd38:-67b5</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

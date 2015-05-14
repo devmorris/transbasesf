@@ -1,0 +1,15 @@
+<layer>
+  <name>geo_st_intrsctn</name>
+  <id>LayerInfoImpl--116a753d:1473580b575:-83e</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--2a89c7dd:141e1574081:-5fac</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--116a753d:1473580b575:-83f</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

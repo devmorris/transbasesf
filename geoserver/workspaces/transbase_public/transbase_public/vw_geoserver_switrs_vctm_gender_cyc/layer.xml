@@ -1,0 +1,15 @@
+<layer>
+  <name>vw_geoserver_switrs_vctm_gender_cyc</name>
+  <id>LayerInfoImpl-773f4145:1449e8824fd:7643</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fdf</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-773f4145:1449e8824fd:7642</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

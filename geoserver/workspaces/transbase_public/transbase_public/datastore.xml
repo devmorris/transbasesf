@@ -1,0 +1,33 @@
+<dataStore>
+  <id>DataStoreInfoImpl-1bcbd938:142293c7282:-8000</id>
+  <name>transbase_public</name>
+  <type>PostGIS</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl-31118007:141e5ef58cc:-7ff8</id>
+  </workspace>
+  <connectionParameters>
+    <entry key="Connection timeout">20</entry>
+    <entry key="port">5432</entry>
+    <entry key="passwd">crypt1:SBQP5Dkaud5fX1RP8XFatKiMSZ2Vrd2lH1bqCDHbM+I=</entry>
+    <entry key="dbtype">postgis</entry>
+    <entry key="host">localhost</entry>
+    <entry key="encode functions">false</entry>
+    <entry key="validate connections">false</entry>
+    <entry key="max connections">10</entry>
+    <entry key="Support on the fly geometry simplification">false</entry>
+    <entry key="database">transbase_public</entry>
+    <entry key="namespace">transbasesf.org</entry>
+    <entry key="schema">public</entry>
+    <entry key="Loose bbox">true</entry>
+    <entry key="Expose primary keys">false</entry>
+    <entry key="create database">false</entry>
+    <entry key="fetch size">1000</entry>
+    <entry key="Max open prepared statements">50</entry>
+    <entry key="preparedStatements">false</entry>
+    <entry key="Estimated extends">true</entry>
+    <entry key="user">postgres</entry>
+    <entry key="min connections">1</entry>
+  </connectionParameters>
+  <__default>false</__default>
+</dataStore>
