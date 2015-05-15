@@ -1,0 +1,15 @@
+<layer>
+  <name>vw_geo_intrsctn_demo</name>
+  <id>LayerInfoImpl--116a753d:146b51e6a64:-56ec</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fdf</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--116a753d:146b51e6a64:-56ed</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

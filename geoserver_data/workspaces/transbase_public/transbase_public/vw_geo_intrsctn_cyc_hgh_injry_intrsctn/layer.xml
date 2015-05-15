@@ -1,0 +1,16 @@
+<layer>
+  <name>vw_geo_intrsctn_cyc_hgh_injry_intrsctn</name>
+  <id>LayerInfoImpl--556b7b8e:14d4f6db451:45e0</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--556b7b8e:14d4f6db451:45e1</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--556b7b8e:14d4f6db451:45df</id>
+  </resource>
+  <opaque>true</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

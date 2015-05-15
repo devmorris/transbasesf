@@ -1,0 +1,54 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-773f4145:1449e8824fd:-2b37</id>
+  <name>vw_geoserver_cyc_prty_mpc</name>
+  <nativeName>vw_geoserver_cyc_prty_mpc</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-31118007:141e5ef58cc:-7ff7</id>
+  </namespace>
+  <title>vw_geoserver_cyc_prty_mpc</title>
+  <keywords>
+    <string>vw_geoserver_cyc_prty_mpc</string>
+    <string>features</string>
+  </keywords>
+  <srs>EPSG:3857</srs>
+  <nativeBoundingBox>
+    <minx>-1.0</minx>
+    <maxx>0.0</maxx>
+    <miny>-1.0</miny>
+    <maxy>0.0</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-8.9831528412E-6</minx>
+    <maxx>0.0</maxx>
+    <miny>-8.983152841E-6</miny>
+    <maxy>0.0</maxy>
+    <crs>GEOGCS[&quot;WGS84(DD)&quot;, &#xd;
+  DATUM[&quot;WGS84&quot;, &#xd;
+    SPHEROID[&quot;WGS84&quot;, 6378137.0, 298.257223563]], &#xd;
+  PRIMEM[&quot;Greenwich&quot;, 0.0], &#xd;
+  UNIT[&quot;degree&quot;, 0.017453292519943295], &#xd;
+  AXIS[&quot;Geodetic longitude&quot;, EAST], &#xd;
+  AXIS[&quot;Geodetic latitude&quot;, NORTH]]</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="JDBC_VIRTUAL_TABLE">
+      <virtualTable>
+        <name>vw_geoserver_cyc_prty_mpc</name>
+        <sql>select * from vw_geo_intrsctn_switrs_all_types_cyc_col_all_prties where move_pre_acc = &apos;%mpc%&apos; and dph_col_grp = &apos;CC&apos; and party_type = &apos;4&apos;
+</sql>
+        <escapeSql>false</escapeSql>
+        <parameter>
+          <name>mpc</name>
+          <regexpValidator>[^;&apos;]+</regexpValidator>
+        </parameter>
+      </virtualTable>
+    </entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-1bcbd938:142293c7282:-8000</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+</featureType>

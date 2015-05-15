@@ -1,0 +1,15 @@
+<layer>
+  <name>vw_geo_st_sgmt_vz_hgh_injry_ntwrk</name>
+  <id>LayerInfoImpl-74c9851d:14b5bc3b1d0:-30ce</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fe3</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-74c9851d:14b5bc3b1d0:-30cf</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

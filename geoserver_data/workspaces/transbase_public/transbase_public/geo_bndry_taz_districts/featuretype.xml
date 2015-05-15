@@ -1,0 +1,40 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-7ef972ef:146265dc36d:-4930</id>
+  <name>geo_bndry_taz_districts</name>
+  <nativeName>geo_bndry_taz_districts</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-31118007:141e5ef58cc:-7ff7</id>
+  </namespace>
+  <title>geo_bndry_taz_districts</title>
+  <keywords>
+    <string>geo_bndry_taz_districts</string>
+    <string>features</string>
+  </keywords>
+  <srs>EPSG:3857</srs>
+  <nativeBoundingBox>
+    <minx>-1.36335851567832E7</minx>
+    <maxx>-1.36244821656812E7</maxx>
+    <miny>4538284.10072941</miny>
+    <maxy>4550859.84707263</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-122.47257923683391</minx>
+    <maxx>-122.3908056764526</maxx>
+    <miny>37.70818738904785</miny>
+    <maxy>37.79750801528947</maxy>
+    <crs>GEOGCS[&quot;WGS84(DD)&quot;, &#xd;
+  DATUM[&quot;WGS84&quot;, &#xd;
+    SPHEROID[&quot;WGS84&quot;, 6378137.0, 298.257223563]], &#xd;
+  PRIMEM[&quot;Greenwich&quot;, 0.0], &#xd;
+  UNIT[&quot;degree&quot;, 0.017453292519943295], &#xd;
+  AXIS[&quot;Geodetic longitude&quot;, EAST], &#xd;
+  AXIS[&quot;Geodetic latitude&quot;, NORTH]]</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-1bcbd938:142293c7282:-8000</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+</featureType>

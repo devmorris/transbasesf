@@ -1,0 +1,170 @@
+#================================================================================================
+# To adjust to other paper formats, here is a list of Paper Keywords and
+# paper size in points
+# (http://www.gnu.org/software/gv/manual/html_node/Paper-Keywords-and-paper-size-in-points.html)
+#
+#                width, height
+# Letter		 612x792
+# LetterSmall	 612x792
+# Tabloid		 792x1224
+# Ledger		 1224x792
+# Legal		     612x1008
+# Statement	     396x612
+# Executive	     540x720
+# A0             2384x3371
+# A1             1685x2384
+# A2		     1190x1684
+# A3		     842x1190
+# A4		     595x842
+# A4Small		 595x842
+# A5		     420x595
+# B4		     729x1032
+# B5		     516x729
+# Envelope	     ???x???
+# Folio		     612x936
+# Quarto		 610x780
+# 10x14		     720x1008
+#=================================================================================================
+
+#These two settings let the print server open lots of connections to the source dataset.
+globalParallelFetches: 12
+perHostParallelFetches: 4
+
+#Connection timeouts for connecting to the map servers in ms
+connectionTimeout: 5000
+socketTimeout: 5000
+
+#outputFilename: '${outputFilename}'
+outputFilename: 'TRANSBASE-${yyyy-MM-dd}T${HHmmss}'
+
+#path to non-default fonts
+#slows down initial start so unused.
+
+#===========================================================================
+# allowed DPIs
+#===========================================================================
+dpis:
+  - 96
+  
+#===========================================================================
+# allowed Formats
+#===========================================================================
+# '*' means any formats
+formats:
+  - pdf
+
+#===========================================================================
+# the allowed scales
+#===========================================================================
+scales:
+  - 4514
+  - 8531
+  - 17062
+  - 34124
+  - 68247
+  - 136495
+
+
+#===========================================================================
+# the list of allowed hosts
+#===========================================================================
+hosts:
+  - !localMatch
+    dummy: true
+  - !ipMatch
+    host:0.0.0.0
+    mask:0.0.0.0
+  - !dnsMatch
+    host:http://services.arcgisonline.com/
+  - !dnsMatch
+    host:www.transbasesf.org
+
+#visible in things like adobe reader File->Properties
+metaData:
+    title: '${mapTitle}'
+    supportLegacyReader: false
+
+fonts: 
+  - 'C:/Program Files/Apache Software Foundation/Tomcat 7.0/webapps/print-servlet-2.0-SNAPSHOT/GillSansMT.TTF'
+  
+layouts:
+
+  #===========================================================================
+  # Letter   612x792
+  #===========================================================================
+  
+  Letter:
+
+    mainPage:
+      pageSize: Letter
+      landscape: false
+      rotation: true
+      backgroundPdf: '${configDir}/background.pdf'
+
+      items:
+
+      #The Map
+        - !map
+          absoluteX: 37
+          absoluteY: 719
+          width: 538
+          height: 646   
+
+        #ScaleBar
+        - !columns
+          absoluteX: 250
+          absoluteY: 48
+          width: 130
+          items:
+            - !scalebar
+              align: center
+              font: Gill Sans MT
+              maxSize: 130
+              type: 'bar_sub'
+              intervals: 2
+              units: ft
+			  
+        #Legend
+        - !columns
+          #This line determines if the legend is shown in the template.
+          condition: legends
+          absoluteX: 44
+          absoluteY: 712
+          width: 145
+          config:
+            borderWidth: 1
+            cells:
+              - borderWidth: 1
+                borderColor: #555555
+                padding: 7
+
+          items:
+            - !legends
+              iconMaxWidth: 130
+              iconMaxHeight: 200
+              defaultScale: 0.1
+              maxWidth: 130
+              #Padding between layers
+              layerSpace: 3
+              layerFont: Gill Sans MT
+              layerFontSize: 6
+              #Padding between text and icon within layer
+              classSpace: 2
+              classIndentation: 1
+              classFont: Gill Sans MT
+              classFontSize: 8
+              backgroundColor: white
+              inline:true
+			  
+			  
+        #Date Box
+        - !columns
+          absoluteX: 268
+          absoluteY: 72
+          width: 90
+          items:
+            - !text
+              fontSize: 8
+              font: Gill Sans MT
+              align: center
+              text: 'Printed ${now yyyy-MM-dd}'

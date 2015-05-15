@@ -1,0 +1,15 @@
+<layer>
+  <name>vw_geoserver_switrs_col_month_ped</name>
+  <id>LayerInfoImpl--636a7810:143d1a27e86:-36ce</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fdf</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--636a7810:143d1a27e86:-36cf</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

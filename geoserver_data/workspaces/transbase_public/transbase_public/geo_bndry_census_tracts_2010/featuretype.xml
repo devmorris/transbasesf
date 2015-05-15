@@ -1,0 +1,40 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-7ef972ef:146265dc36d:-4934</id>
+  <name>geo_bndry_census_tracts_2010</name>
+  <nativeName>geo_bndry_census_tracts_2010</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-31118007:141e5ef58cc:-7ff7</id>
+  </namespace>
+  <title>geo_bndry_census_tracts_2010</title>
+  <keywords>
+    <string>geo_bndry_census_tracts_2010</string>
+    <string>features</string>
+  </keywords>
+  <srs>EPSG:3857</srs>
+  <nativeBoundingBox>
+    <minx>-1.3637738E7</minx>
+    <maxx>-1.362465E7</maxx>
+    <miny>4538303.5</miny>
+    <maxy>4552053.5</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-122.50988486217594</minx>
+    <maxx>-122.39231335779037</maxx>
+    <miny>37.70832525753486</miny>
+    <maxy>37.80598046304061</maxy>
+    <crs>GEOGCS[&quot;WGS84(DD)&quot;, &#xd;
+  DATUM[&quot;WGS84&quot;, &#xd;
+    SPHEROID[&quot;WGS84&quot;, 6378137.0, 298.257223563]], &#xd;
+  PRIMEM[&quot;Greenwich&quot;, 0.0], &#xd;
+  UNIT[&quot;degree&quot;, 0.017453292519943295], &#xd;
+  AXIS[&quot;Geodetic longitude&quot;, EAST], &#xd;
+  AXIS[&quot;Geodetic latitude&quot;, NORTH]]</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-1bcbd938:142293c7282:-8000</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+</featureType>

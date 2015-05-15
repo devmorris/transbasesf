@@ -1,0 +1,15 @@
+<layer>
+  <name>vw_geo_intrsctn_switrs_all_types_cyc_col_all_prties</name>
+  <id>LayerInfoImpl-74c9851d:14a746e507f:8bf</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fdf</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-74c9851d:14a746e507f:8be</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

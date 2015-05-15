@@ -1,0 +1,15 @@
+<layer>
+  <name>vw_geoserver_cyc_driver_prty_age</name>
+  <id>LayerInfoImpl-773f4145:1449e30eb3c:21ea</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fdf</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-773f4145:1449e30eb3c:21e9</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

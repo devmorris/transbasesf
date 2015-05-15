@@ -1,0 +1,15 @@
+<layer>
+  <name>vw_geoserver_switrs_vctm_gender_ped</name>
+  <id>LayerInfoImpl--4d69f6ac:143d4f8a9db:-5bab</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fdf</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--4d69f6ac:143d4f8a9db:-5bac</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>
