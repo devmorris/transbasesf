@@ -1,0 +1,464 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Heron Workshop &mdash; Heron MC v1.0.1</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Heron MC v1.0.1" href="../index.html" />
+    <link rel="up" title="Tutorials" href="index.html" />
+    <link rel="next" title="Core Concepts" href="../primers/index.html" />
+    <link rel="prev" title="Heron QuickStart" href="quickstart.html" />
+    
+    
+
+  </head>
+  <body>
+    <div class="header">
+        <div class="wrap">
+            <h1 id="logo"><a href="../index.html">Heron</a></h1>
+            <ul id="top-nav">
+                <li class="first"><a href="../docs.html">Documentation</a></li>
+                <li><a href="../examples.html">Examples</a></li>
+                <li><a href="../downloads.html">Download</a></li>
+                <li><a href="http://code.google.com/p/geoext-viewer">Development</a></li>
+            </ul>
+            <div id="searchbox">
+                <form class="search" action="../search.html" method="get">
+                    <input id="searchbox-query" type="text" name="q" size="25" value="Search &hellip;" tabindex="3" onblur="if(this.value=='') this.value='Search &hellip;';" onfocus="if(this.value=='Search &hellip;') this.value='';" />
+                    <input id="searchbox-submit" type="image" value="Search" src="../_static/img/search_icon_green.png" />
+                    <input type="hidden" name="check_keywords" value="yes" />
+                    <input type="hidden" name="area" value="default" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="../index.html">HeronMC</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Tutorials</a> &raquo;</li>
+        <li><a href="#">Heron Workshop</a></li>
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Heron Workshop</a><ul>
+<li><a class="reference internal" href="#intro-slides">Intro Slides</a></li>
+<li><a class="reference internal" href="#quickstart">Quickstart</a></li>
+<li><a class="reference internal" href="#server-components">Server Components</a><ul>
+<li><a class="reference internal" href="#ajax-proxy">AJAX Proxy</a></li>
+<li><a class="reference internal" href="#advanced-up-download-transformation-services">Advanced: Up/download/transformation Services</a></li>
+<li><a class="reference internal" href="#advanced-printing">Advanced: Printing</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+<li><a class="reference internal" href="#development-environment">Development Environment</a><ul>
+<li><a class="reference internal" href="#tools">Tools</a></li>
+<li><a class="reference internal" href="#debugging-in-the-browser">Debugging in the Browser</a></li>
+<li><a class="reference internal" href="#user-debug-versions-of-js-libs">User Debug Versions of JS-libs</a></li>
+<li><a class="reference internal" href="#quick-deployment">Quick Deployment</a></li>
+<li><a class="reference internal" href="#use-a-version-control-system">Use a Version Control System</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#heron-configuration-concepts">Heron Configuration Concepts</a></li>
+<li><a class="reference internal" href="#how-heron-works">How Heron Works</a></li>
+<li><a class="reference internal" href="#theming">Theming</a></li>
+<li><a class="reference internal" href="#exercises">Exercises</a><ul>
+<li><a class="reference internal" href="#steps">Steps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="quickstart.html"
+                        title="previous chapter">Heron QuickStart</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../primers/index.html"
+                        title="next chapter">Core Concepts</a></p>
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="heron-workshop">
+<h1>Heron Workshop<a class="headerlink" href="#heron-workshop" title="Permalink to this headline">¶</a></h1>
+<p>Below are various notes and subjects from Heron workshops. This follows a hands-on approach.</p>
+<div class="section" id="intro-slides">
+<h2>Intro Slides<a class="headerlink" href="#intro-slides" title="Permalink to this headline">¶</a></h2>
+<p>We start with some high level overview.</p>
+<p>See these slides here: <a class="reference external" href="http://www.slideshare.net/justb4/the-heron">http://www.slideshare.net/justb4/the-heron</a></p>
+</div>
+<div class="section" id="quickstart">
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h2>
+<p>Get our hands dirty right away: follow the steps in the <a class="reference internal" href="quickstart.html"><em>Heron QuickStart</em></a>, in short:</p>
+<ol class="arabic simple">
+<li>Download Heron from the <a class="reference internal" href="../downloads.html"><em>downloads page</em></a></li>
+<li>Unpack the .zip file. Open a terminal/DOS-window and <tt class="docutils literal"><span class="pre">cd</span></tt>
+to the  top-directory and start the Heron-included
+webserver with <tt class="docutils literal"><span class="pre">startheron.sh</span></tt> (Unix/Linux/MacOS)  or <tt class="docutils literal"><span class="pre">startheron.bat</span></tt> (Win*, may also work via double-click).
+If you see any errors you may have to install Python.
+See the readme.txt file in the top-directory how install Python and other dependencies for more
+advanced usage.</li>
+<li>Browse the examples at <a class="reference external" href="http://localhost:8000/examples">http://localhost:8000/examples</a></li>
+</ol>
+</div>
+<div class="section" id="server-components">
+<h2>Server Components<a class="headerlink" href="#server-components" title="Permalink to this headline">¶</a></h2>
+<p>Heron is a client-only library mainly supported by a server-backend of OGC standard webservices (WMS, WFS) etc.
+In the future CSW and WPS will be added. No Heron-specific back-end components are required except for
+two small CGI scripts. This also depends on which widgets and web services your app uses. For example
+for pure WMS and tiling, no back-ends are required. Only Vector-info based services require the CGI scripts
+described next. Printing requires a MapFish print server.</p>
+<div class="section" id="ajax-proxy">
+<h3>AJAX Proxy<a class="headerlink" href="#ajax-proxy" title="Permalink to this headline">¶</a></h3>
+<p>WMS GetFeatureInfo and WFS use AJAX calls. When using server domains other then the one your Heron App is hosted from
+you need &#8220;A Proxy&#8221;. This is sometimes a misty subject. This is not specific to Heron but data on the web in genereal.
+OpenLayers is catered for proxied services but we need:</p>
+<ol class="arabic simple">
+<li>a proxy script</li>
+<li>install the proxy on your webserver</li>
+<li>configure the proxy in your Heron config</li>
+</ol>
+<p>Ad 1) See an example Proxy script here
+<a class="reference external" href="http://geoext-viewer.googlecode.com/svn/trunk/heron/services/proxy.cgi">http://geoext-viewer.googlecode.com/svn/trunk/heron/services/proxy.cgi</a>
+You need to adapt it for the hosts you are allowing. Don&#8217;t allow an open proxy!!</p>
+<p>Ad 2) adapt proxy.cgi for your hosts put in dir e.g. <cite>/var/www/heron-mc.org/cgi-bin</cite>. This is server-dependent, e.g. on Apache something like</p>
+<div class="highlight-python"><pre>ScriptAlias /cgi-bin/ /var/www/heron-mc.org/cgi-bin/
+&lt;Directory "/var/www/heron-mc.org/cgi-bin/"&gt;
+     AllowOverride None
+     Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+     Order allow,deny
+     Allow from all
+&lt;/Directory&gt;</pre>
+</div>
+<p>Ad 3)  configure in Heron. See examples/DefaultOptionsWorld.js</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">OpenLayers</span><span class="o">.</span><span class="n">ProxyHost</span> <span class="o">=</span> <span class="s">&quot;/cgi-bin/proxy.cgi?url=&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The proxy protocol is just a convention. You may have your own implementation in PHP, Java Servlet/JSP or other.</p>
+</div>
+<div class="section" id="advanced-up-download-transformation-services">
+<h3>Advanced: Up/download/transformation Services<a class="headerlink" href="#advanced-up-download-transformation-services" title="Permalink to this headline">¶</a></h3>
+<p>The <cite>heron.cgi</cite> script is used for advanced services dealing with enforcing
+download (e.g. from FeatureInfoPanel and Editor) and upload (Editor)
+to/from local files and some conversion services, for example to allow ESRI Shapefile upload as a .zip file.</p>
+<p>The script: <a class="reference external" href="http://geoext-viewer.googlecode.com/svn/trunk/heron/services/heron.cgi">http://geoext-viewer.googlecode.com/svn/trunk/heron/services/heron.cgi</a></p>
+<p>The script URL is pre-configured with default in Heron <cite>App.js</cite> but can be overridden in your config</p>
+<div class="highlight-python"><pre>/** REST Services specific to Heron. */
+Heron.globals = {
+        serviceUrl: '/cgi-bin/heron.cgi',</pre>
+</div>
+<p>Note: in time more &#8220;geoprocessing&#8221; remote services will be moved to use OGC WPS.</p>
+</div>
+<div class="section" id="advanced-printing">
+<h3>Advanced: Printing<a class="headerlink" href="#advanced-printing" title="Permalink to this headline">¶</a></h3>
+<p>Heron can use the MapFish Print server module (deployed as a Java .war) for printing (generating PDF prints).
+See <a class="reference external" href="http://www.mapfish.org">http://www.mapfish.org</a> for details. This is a whole subject by itself. Try to build/install
+the latest MapFish Print version from GitHub, usually not the one bundled with e.g. GeoServer.</p>
+<p>Heron with GeoExt components take care to follow the print protocol. If you need nice examples of YAML files
+(Mapfish config files to specify print layouts), see here: <a class="reference external" href="http://kademo.nl/print">http://kademo.nl/print</a> (YAML config).</p>
+</div>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<p>For Heron the site <a class="reference external" href="http://heron-mc.org">http://heron-mc.org</a> is the main documentation site.</p>
+<p>These reference (API) docs are tended to be used the most, so bookmark these:</p>
+<ul class="simple">
+<li>Heron: <a class="reference external" href="http://heron-mc.org/lib/index.html">http://heron-mc.org/lib/index.html</a></li>
+<li>GeoExt: <a class="reference external" href="http://geoext.org/lib/index.html">http://geoext.org/lib/index.html</a></li>
+<li>OpenLayers: <a class="reference external" href="http://dev.openlayers.org/docs/files/OpenLayers-js.html">http://dev.openlayers.org/docs/files/OpenLayers-js.html</a></li>
+<li>ExtJS (not 4.0!): <a class="reference external" href="http://docs.sencha.com/ext-js/3-4/#!/api">http://docs.sencha.com/ext-js/3-4/#!/api</a></li>
+</ul>
+</div>
+<div class="section" id="development-environment">
+<h2>Development Environment<a class="headerlink" href="#development-environment" title="Permalink to this headline">¶</a></h2>
+<p>Although Heron and its application configurations are all text, we advise strongly to set up a productive
+development environment. This holds in general for modern JavaScript development. To be productive the
+following elements of your development environment need to be in order, maybe not all right now, but try
+to build this up.</p>
+<div class="section" id="tools">
+<h3>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h3>
+<p>It may be tempting to use a plain text editor like Notepad(++). For very simple apps, this may be sufficient.
+But as soon as your apps get more advanced this may turn into a frustrating nightmare.
+Why? You may not notice tiny JavaScript syntax-errors (try adding a comma &#8216;,&#8217; to the end
+of an array) and things may work in some browsers, but fail mysteriously in other browsers.</p>
+<p>You will need at least a syntax-aware editor for JavaScript, CSS and HTML but it is better use
+an Integrated Development Environment like Eclipse or IntelliJ IDEA (our pref).</p>
+</div>
+<div class="section" id="debugging-in-the-browser">
+<h3>Debugging in the Browser<a class="headerlink" href="#debugging-in-the-browser" title="Permalink to this headline">¶</a></h3>
+<p>Get familiar with JavaScript-debugging in the browser. There are many introductions on the web, for
+example: <a class="reference external" href="http://www.netmagazine.com/tutorials/javascript-debugging-beginners">http://www.netmagazine.com/tutorials/javascript-debugging-beginners</a> . Our preference is to use Chrome browser,
+but also Mozilla (Firebug) and IE have devlopment tools. The latter even allows to emulate various
+IE-versions.</p>
+</div>
+<div class="section" id="user-debug-versions-of-js-libs">
+<h3>User Debug Versions of JS-libs<a class="headerlink" href="#user-debug-versions-of-js-libs" title="Permalink to this headline">¶</a></h3>
+<p>Often errors may be signaled in a supporting library, like ExtJS. Since all libs, including Heron, use compressed/minimized
+versions, figure out the uncompressed versions and use these to debug. These versions are even available via CDNJS (Except Heron).
+Except for ExtJS (file: ext-all-debug.js) OpenLayers (<cite>lib/OpenLayers.js</cite>, GeoExt (<cite>lib/GeoExt.js</cite>), GXP and Heron (<cite>DynLoader.js</cite>) also provide &#8220;dynamic loading&#8221;
+scripts. The combination of Debug versions and commandline debugging will save you hours of &#8220;guess-work&#8221;.</p>
+</div>
+<div class="section" id="quick-deployment">
+<h3>Quick Deployment<a class="headerlink" href="#quick-deployment" title="Permalink to this headline">¶</a></h3>
+<p>Your productivity is for a large part determined with how fast your
+edit, deploy, debug cycle is. Try also to automate your deployment. Although
+for Heron apps this holds copying to a webserver, when having to drag-and-drop each time
+by hand is cumbersome. We are a fan of using clickable deployments based on Ant from
+within the IDE like IntelliJ IDEA.</p>
+</div>
+<div class="section" id="use-a-version-control-system">
+<h3>Use a Version Control System<a class="headerlink" href="#use-a-version-control-system" title="Permalink to this headline">¶</a></h3>
+<p>Your app may have worked last week, but now it fails. Are you able to get back that last version,
+have a &#8216;diff&#8217; coloured display of what (and who) has changed. Even config files need version control.</p>
+</div>
+</div>
+<div class="section" id="heron-configuration-concepts">
+<h2>Heron Configuration Concepts<a class="headerlink" href="#heron-configuration-concepts" title="Permalink to this headline">¶</a></h2>
+<p>Heron&#8217;s main asset is to build a single-page web app through configuration. This configuration specifies mainly two
+things:</p>
+<ul class="simple">
+<li>the overall (ExtJS) layout of the components (Panels) in the app&#8217;s webpage</li>
+<li>the components/widgets (xtype&#8217;s) and their properties within the layout</li>
+</ul>
+<p>The configuration is build as a single JavaScript (JSON) hierarchical structure. The top-level variable should be called
+<cite>Heron.layout</cite>. See this most minimal config (example: <cite>minimal</cite>) with a default layout</p>
+<div class="highlight-python"><pre>Heron.layout = {
+        xtype: 'hr_mappanel',
+
+        /* Optional MapPanel ExtJS Panel properties here, see ExtJS API docs */
+
+        /** Below are Heron-specific settings for the MapPanel (xtype: 'hr_mappanel') */
+        hropts: {
+                layers: [
+                        new OpenLayers.Layer.WMS( "World Map",
+                          "http://www2.demis.nl/WMS/wms.asp?WMS=WorldMap", {layers: 'Coastlines', format: 'image/png' } )
+                ]
+        }
+};</pre>
+</div>
+<p>There is sometimes some confusion around file names like Config.js/Layout.js and Options.js . <cite>The filenames don&#8217;t
+matter</cite>! It is just a convenience to split up a complex config and to reuse more or less static
+parts like an overall layout. This is also true for <cite>Heron.options.</cite> or <cite>Heron.*.scratch.</cite> names.</p>
+<p>The config structure follows ExtJS conventions:</p>
+<ul class="simple">
+<li>component types are defined via their <cite>xtype</cite> (ExtJS connvention)</li>
+<li>general component properties follow below the <cite>xtype</cite> property</li>
+<li><cite>xtypes</cite> starting with <cite>hr_</cite> denote Heron components</li>
+<li><cite>xtypes</cite> starting with <cite>gx_</cite> denote GeoExt components</li>
+<li>all other <cite>xtypes</cite> are ExtJS base components</li>
+<li>properties may be specific for an ExtJS, GeoExt or Heron-component, dependent where the component is defined</li>
+<li>Heron-specific properties are <cite>hropts</cite> structure (though this will be phased out in the future)</li>
+</ul>
+<p>Layouts are documented in ExtJS docs. The specific components are each documented in the ExtJS, GeoExt or
+Heron reference docs (see above).</p>
+<p>Study the example AppDemo: <a class="reference external" href="http://lib.heron-mc.org/heron/latest/examples/appdemo">http://lib.heron-mc.org/heron/latest/examples/appdemo</a> with the Layout.js
+<a class="reference external" href="http://lib.heron-mc.org/heron/latest/examples/appdemo/Layout.js">http://lib.heron-mc.org/heron/latest/examples/appdemo/Layout.js</a> and its Options.js
+<a class="reference external" href="http://lib.heron-mc.org/heron/latest/examples/appdemo/Options.js">http://lib.heron-mc.org/heron/latest/examples/appdemo/Options.js</a>.</p>
+<p>Like said the distinction between Layout and Options JS files is just a convention. Often
+one needs a single layout with different options like Layers, specific Buttons and Search panels etc.
+Then it is easier to maintain a single Layout.js (or Config.js) which hardly changes and multiple Options.js
+for specific apps. In fact all Heron examples are structured this way. There is one DefaultConfig.js :</p>
+<p><a class="reference external" href="http://lib.heron-mc.org/heron/latest/examples/DefaultConfig.js">http://lib.heron-mc.org/heron/latest/examples/DefaultConfig.js</a> and specific Options files for World (WGS84) specific
+examples <a class="reference external" href="http://lib.heron-mc.org/heron/latest/examples/DefaultOptionsWorld.js">http://lib.heron-mc.org/heron/latest/examples/DefaultOptionsWorld.js</a> and Dutch projection/Layers examples
+<a class="reference external" href="http://lib.heron-mc.org/heron/latest/examples/DefaultOptionsNL.js">http://lib.heron-mc.org/heron/latest/examples/DefaultOptionsNL.js</a>. Also in some examples these files are overridden.</p>
+<p>If you are building multiple Heron Apps within your organisation, it is wise to make your own config convention.</p>
+</div>
+<div class="section" id="how-heron-works">
+<h2>How Heron Works<a class="headerlink" href="#how-heron-works" title="Permalink to this headline">¶</a></h2>
+<p>Understanding a framework === understanding its bootstrap (&#8220;follow the main()&#8221;).</p>
+<p>This is also true for Heron. The default &#8220;main&#8221; for Heron is in <cite>Launcher.js</cite></p>
+<div class="highlight-python"><pre>/**
+ * Autolaunches Heron as app.
+ * To prevent this and control explicitly include NoLaunch.js before App.js
+ */
+Ext.onReady(function() {
+
+        if (!Heron.noAutoLaunch) {
+                Heron.App.create();
+                Heron.App.show();
+        }
+}, Heron.App);</pre>
+</div>
+<p><cite>Ext.onReady()</cite> is called by ExtJS when all JS files have loaded and ExtJS is ready to start. This is the standard
+ExtJS-way to bootstrap any ExtJS App. (btw You are not obliged to use Heron via config, you may also program with Heron
+like with ExtJS and GeoExt via <cite>Heron.noAutoLaunch</cite> disabling the Heron init via a config.).</p>
+<p>Heron is started by calling <cite>Heron.App.create()</cite> and <cite>Heron.App.show()</cite>.
+Ok and what about <cite>Heron.App.*</cite> ? See App.js</p>
+<div class="highlight-python"><pre>Ext.namespace("Heron.App");
+Heron.App = function() {
+
+        return {
+                create : function() {
+                        Ext.QuickTips.init();
+
+                        if (Heron.layout.renderTo || Heron.layout.xtype == 'window') {
+                                // Render topComponent into a page div element or floating window
+                                Heron.App.topComponent = Ext.create(Heron.layout);
+                        } else {
+                                // Default: render top component into an ExtJS ViewPort (full screen)
+                                Heron.App.topComponent = new Ext.Viewport({
+                                        id      :"hr-topComponent",
+                                        layout: "fit",
+                                        hideBorders: true,
+
+                                        // This creates the entire layout from the config !
+                                        items: [Heron.layout]
+                                });
+                        }
+                },
+
+                show : function() {
+                        Heron.App.topComponent.show();
+                },
+
+                getMap : function() {
+                        return Heron.App.map;
+                },
+
+                setMap : function(aMap) {
+                        Heron.App.map = aMap;
+                },
+
+                getMapPanel : function() {
+                        return Heron.App.mapPanel;
+                },
+
+                setMapPanel : function(aMapPanel) {
+                        Heron.App.mapPanel = aMapPanel;
+                }
+        };
+}();</pre>
+</div>
+<p>What happens here is that <cite>Heron.App.create()</cite> will use your <cite>Heron.layout</cite> object to
+create a full widget tree with all your configured components. Next the entire app becomes visible by
+<cite>Heron.App.show()</cite> that calls <cite>show()</cite> on the top-component usually a Panel. ExtJS will percolate
+<cite>show()</cite> to all components in the tree. That is all!</p>
+<p>Some variants is where you can control auto-launching by including <cite>NoLaunch.js</cite>.</p>
+</div>
+<div class="section" id="theming">
+<h2>Theming<a class="headerlink" href="#theming" title="Permalink to this headline">¶</a></h2>
+<p>Basic ExtJS themes can be created using an online ExtJS theme-builder: <a class="reference external" href="http://extbuilder.dynalias.com">http://extbuilder.dynalias.com</a>.</p>
+<p>To work with Heron and for some tweaks, each theme below will have a corresponding file
+&#8220;default-theme-&lt;theme name&gt;.css&#8221; e.g. default-theme-greenery.css under heron/resources/css.</p>
+<p>Making a new theme is two steps:</p>
+<ul class="simple">
+<li>create a theme using <a class="reference external" href="http://extbuilder.dynalias.com">http://extbuilder.dynalias.com</a></li>
+<li>put the generated directory with css and images dirs under this dir with the name of the theme</li>
+<li>create a default-theme-&lt;theme name&gt;.css under heron/resources/css, starting with a copy of an existing theme css like default-theme-gray.css</li>
+</ul>
+<p>To include a theme in your app, see examples/theming/index.html
+Example online: <a class="reference external" href="http://lib.heron-mc.org/heron/latest/examples/theming">http://lib.heron-mc.org/heron/latest/examples/theming</a></p>
+<p>Example index.html head content.</p>
+<div class="highlight-python"><pre>&lt;!-- 1) under ext CSS  --&gt;
+        &lt;link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/extjs/3.4.1-1/resources/css/ext-all.css"/&gt;
+        &lt;link rel="stylesheet" type="text/css" href="....resources/themes/greenery/css/xtheme-greenery.css" media="all" /&gt;
+        &lt;!--[if IE 6]&gt;
+        &lt;link rel="stylesheet" type="text/css" media="all" href="resources/themes/greenery/css/xtheme-greenery_ie6.css" /&gt;
+         &lt;![endif]--&gt;
+.
+.
+&lt;!-- 1) under Heron default CSS  --&gt;
+        &lt;link rel="stylesheet" type="text/css" href="resources/css/default.css"/&gt;
+
+        &lt;!-- Need to override some Heron-CSS --&gt;
+        &lt;link rel="stylesheet" type="text/css" href="resources/css/default-theme-greenery.css"/&gt;</pre>
+</div>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<p>Finally we will do some exercises by gradually building up an application in multiple steps.
+For now this example is using the Dutch grid and Layers as the first workshops were given
+in The Netherlands.</p>
+<p>We will start with an empty page, adding layout, widgets and other goodies.
+Best is to make a directory where you place your own answers.
+For each step, you can look into the existing examples directly at
+<a class="reference external" href="http://lib.heron-mc.org/heron/latest/examples">http://lib.heron-mc.org/heron/latest/examples</a> and the API documentation (see above).
+If you get really stuck see the final answers (part of the Heron examples) at
+<a class="reference external" href="http://lib.heron-mc.org/heron/latest/examples/workshopnl">http://lib.heron-mc.org/heron/latest/examples/workshopnl</a> .
+The complete app that includes more advanced functions like Editor, WFS Search and Upload is at
+<a class="reference external" href="http://lib.heron-mc.org/heron/latest/examples/workshopnl/100-appcomplete">http://lib.heron-mc.org/heron/latest/examples/workshopnl/100-appcomplete</a>. We will start with a demo of that app.</p>
+<p>All examples can be viewed in the SVN source code as well.
+See: <a class="reference external" href="https://code.google.com/p/geoext-viewer/source/browse/#svn%2Ftrunk%2Fheron%2Fexamples">https://code.google.com/p/geoext-viewer/source/browse/#svn%2Ftrunk%2Fheron%2Fexamples</a></p>
+<div class="section" id="steps">
+<h3>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Create app with one ExtJS Panel that shows some text</li>
+<li>Create app with only one MapPanel and one layer</li>
+<li>Split config into Layout.js and Options.js, hint: see standard examples</li>
+<li>Add Toolbar with standard widgets</li>
+<li>Layout : extend with Border layout and Accordion</li>
+<li>Widgets: Layer Tree (basic and advanced) and ActiveLayers</li>
+<li>Toolbar: add bookmarks (toolbar + panel)</li>
+<li>Toolbar: add coordinate search</li>
+<li>Toolbar: add name search, via PDOK Geocoder</li>
+<li>Toolbar: feature info, “Identify” popup</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+            <li class="right" style="margin-right: 10px">
+              <a href="../genindex.html" title="General Index"
+                 accesskey="I">index</a></li>
+            <li class="right" >
+              <a href="../py-modindex.html" title="Python Module Index"
+                 >modules</a> |</li>
+            <li class="right" >
+              <a href="../primers/index.html" title="Core Concepts"
+                 accesskey="N">next</a> |</li>
+            <li class="right" >
+              <a href="quickstart.html" title="Heron QuickStart"
+                 accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">HeronMC</a> &raquo;</li>
+          <li><a href="index.html" >Tutorials</a> &raquo;</li>
+        <li><a href="#">Heron Workshop</a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2011+, Heron MC Community.
+    </div>
+  </body>
+</html>

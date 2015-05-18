@@ -1,0 +1,63 @@
+
+.. currentmodule:: Heron.widgets
+
+:class:`Heron.widgets.LayerNodeContextMenu`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Ext.menu.Menu <http://docs.sencha.com/extjs/3.4.0/#!/api/Ext.menu.Menu>`_
+    
+
+
+
+xtype
+    ``hr_layernodecontextmenu``
+
+
+
+
+.. class:: LayerNodeContextMenu(items)
+
+A context menu for (usually right-click) LayerNodes in Layer trees.
+
+
+
+Example Use
+-----------
+
+Sample code showing how to include a default LayerNodeContextMenu. Optionally pass your own menu items.
+
+.. code-block:: javascript
+
+       .
+       .
+       {
+        xtype: 'hr_layertreepanel',
+        border: true,
+		 .
+		 .
+    FOR NOW: TODO: something smart with ExtJS plugins, for now pass only standard Menu Items.
+	contextMenu: [{xtype: 'hr_layernodemenuzoomextent'}, {xtype: 'hr_layernodemenustyle'}]);
+ },
+       {
+	 // The MapPanel
+	 xtype: 'hr_mappanel',
+	 id: 'hr-map',
+	 region: 'center',
+	 .
+	 .
+
+    
+
+
+
+
+
+
+
+
+

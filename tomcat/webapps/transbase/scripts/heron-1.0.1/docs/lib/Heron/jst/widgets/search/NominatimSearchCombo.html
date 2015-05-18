@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Heron.widgets.search.NominatimSearchCombo &mdash; Heron MC v1.0.1</title>
+    
+    <link rel="stylesheet" href="../../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../../',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="top" title="Heron MC v1.0.1" href="../../../../../index.html" />
+    <link rel="up" title="Heron.widgets.search" href="../../../widgets.search.html" />
+    <link rel="next" title="Heron.widgets.search.OpenLSSearchCombo" href="OpenLSSearchCombo.html" />
+    <link rel="prev" title="Heron.widgets.search.MultiSearchCenterPanel" href="MultiSearchCenterPanel.html" />
+    
+    
+
+  </head>
+  <body>
+    <div class="header">
+        <div class="wrap">
+            <h1 id="logo"><a href="../../../../../index.html">Heron</a></h1>
+            <ul id="top-nav">
+                <li class="first"><a href="../../../../../docs.html">Documentation</a></li>
+                <li><a href="../../../../../examples.html">Examples</a></li>
+                <li><a href="../../../../../downloads.html">Download</a></li>
+                <li><a href="http://code.google.com/p/geoext-viewer">Development</a></li>
+            </ul>
+            <div id="searchbox">
+                <form class="search" action="../../../../../search.html" method="get">
+                    <input id="searchbox-query" type="text" name="q" size="25" value="Search &hellip;" tabindex="3" onblur="if(this.value=='') this.value='Search &hellip;';" onfocus="if(this.value=='Search &hellip;') this.value='';" />
+                    <input id="searchbox-submit" type="image" value="Search" src="../../../../../_static/img/search_icon_green.png" />
+                    <input type="hidden" name="check_keywords" value="yes" />
+                    <input type="hidden" name="area" value="default" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="../../../../../index.html">HeronMC</a> &raquo;</li>
+          <li><a href="../../../../index.html" >API Reference</a> &raquo;</li>
+          <li><a href="../../../widgets.search.html" accesskey="U"><tt class="docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets.search</span></tt></a> &raquo;</li>
+        <li><a href="#"><tt class="docutils literal docutils literal"><span class="pre">Heron.widgets.search.NominatimSearchCombo</span></tt></a></li>
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><tt class="docutils literal"><span class="pre">Heron.widgets.search.NominatimSearchCombo</span></tt></a><ul>
+<li><a class="reference internal" href="#example-use">Example Use</a></li>
+<li><a class="reference internal" href="#config-options">Config Options</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="MultiSearchCenterPanel.html"
+                        title="previous chapter"><tt class="docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets.search.MultiSearchCenterPanel</span></tt></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="OpenLSSearchCombo.html"
+                        title="next chapter"><tt class="docutils literal"><span class="pre">Heron.widgets.search.OpenLSSearchCombo</span></tt></a></p>
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="heron-widgets-search-nominatimsearchcombo">
+<h1><a class="reference internal" href="#Heron.widgets.search.NominatimSearchCombo" title="Heron.widgets.search.NominatimSearchCombo"><tt class="xref py py-class docutils literal"><span class="pre">Heron.widgets.search.NominatimSearchCombo</span></tt></a><a class="headerlink" href="#heron-widgets-search-nominatimsearchcombo" title="Permalink to this headline">¶</a></h1>
+<dl class="meta docutils">
+<dt>Extends</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.form.ComboBox">Ext.form.ComboBox</a></li>
+</ul>
+</dd>
+<dt>xtype</dt>
+<dd><tt class="docutils literal"><span class="pre">hr_nominatimsearchcombo</span></tt></dd>
+</dl>
+<dl class="class">
+<dt id="Heron.widgets.search.NominatimSearchCombo">
+<em class="property">class </em><tt class="descclassname">Heron.widgets.search.</tt><tt class="descname">NominatimSearchCombo</tt><big>(</big><em>config</em><big>)</big><a class="headerlink" href="#Heron.widgets.search.NominatimSearchCombo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Create a ComboBox that provides a &#8220;search and zoom&#8221; function using OpenStreetMap Nominatim search.
+To use this class you need to include additional JS files in your page.
+See also the example HTML file under examples/namesearch.</p>
+<ol class="arabic simple">
+<li>If your map is not in EPSG:4326 (WGS84) you need to import Proj4JS, e.g.
+http://cdnjs.cloudflare.com/ajax/libs/proj4js/1.1.0/proj4js-compressed.js</li>
+<li>You need a proxy server that should proxy the domain <cite>open.mapquestapi.com</cite>.</li>
+</ol>
+<div class="section" id="example-use">
+<h2>Example Use<a class="headerlink" href="#example-use" title="Permalink to this headline">¶</a></h2>
+<p>Sample code showing how to include Nominatim search in your MapPanel toolbar, not URL to restrict search in e.g. country.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">Heron</span><span class="p">.</span><span class="nx">layout</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">xtype</span><span class="o">:</span> <span class="s1">&#39;hr_mappanel&#39;</span><span class="p">,</span>
+
+      <span class="nx">hropts</span><span class="o">:</span> <span class="p">{</span>
+               <span class="nx">layers</span><span class="o">:</span> <span class="p">[</span>
+                       <span class="k">new</span> <span class="nx">OpenLayers</span><span class="p">.</span><span class="nx">Layer</span><span class="p">.</span><span class="nx">WMS</span><span class="p">(</span> <span class="s2">&quot;World Map&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;http://tilecache.osgeo.org/wms-c/Basic.py?&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">layers</span><span class="o">:</span> <span class="s1">&#39;basic&#39;</span><span class="p">,</span> <span class="nx">format</span><span class="o">:</span> <span class="s1">&#39;image/png&#39;</span> <span class="p">}</span> <span class="p">)</span>
+               <span class="p">],</span>
+              <span class="nx">toolbar</span> <span class="o">:</span> <span class="p">[</span>
+                      <span class="p">{</span><span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;pan&quot;</span><span class="p">},</span>
+                      <span class="p">{</span><span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;zoomin&quot;</span><span class="p">},</span>
+                      <span class="p">{</span><span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;zoomout&quot;</span><span class="p">},</span>
+                      <span class="p">{</span><span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;-&quot;</span><span class="p">},</span>
+                      <span class="p">{</span><span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;search_nominatim&quot;</span><span class="p">,</span>
+                              <span class="nx">options</span> <span class="o">:</span> <span class="p">{</span>
+                                  <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://open.mapquestapi.com/nominatim/v1/search?countrycodes=CO&amp;format=json&#39;</span><span class="p">,</span>
+                              <span class="p">}}</span>
+              <span class="p">]</span>
+        <span class="p">}</span>
+      <span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="config-options">
+<h2>Config Options<a class="headerlink" href="#config-options" title="Permalink to this headline">¶</a></h2>
+<p>Configuration properties in addition to
+those listed for <a class="reference external" href="http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.form.ComboBox">Ext.form.ComboBox</a>.</p>
+<dl class="describe">
+<dt>
+<tt class="descname">charset</tt></dt>
+<dd><p><cite>String</cite> Defines the encoding used for the document returned by
+the web service, defaults to &#8216;UTF8&#8217;.
+See: <a class="reference external" href="http://www.geonames.org/export/geonames-search.html">http://www.geonames.org/export/geonames-search.html</a></p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">displayTpl</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Ext.XTemplate</span> <span class="pre">or</span> <span class="pre">String</span></tt> Template for presenting the result in the
+field (see <a class="reference external" href="http://www.dev.sencha.com/deploy/dev/docs/output/Ext.XTemplate.html">http://www.dev.sencha.com/deploy/dev/docs/output/Ext.XTemplate.html</a>),
+if not set this default value is provided. If null &#8220;displayField&#8221; is used.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">emptyText</tt></dt>
+<dd><p>See <a class="reference external" href="http://www.dev.sencha.com/deploy/dev/docs/source/TextField.html#cfg-Ext.form.TextField-emptyText">http://www.dev.sencha.com/deploy/dev/docs/source/TextField.html#cfg-Ext.form.TextField-emptyText</a>,
+default value is &#8220;Search location in Nominatim&#8221;.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">lang</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">String</span></tt> Place name and country name will be returned in the specified
+language. Default is English (en). See: <a class="reference external" href="http://www.geonames.org/export/geonames-search.html">http://www.geonames.org/export/geonames-search.html</a></p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">listWidth</tt></dt>
+<dd><p>See <a class="reference external" href="http://www.dev.sencha.com/deploy/dev/docs/source/Combo.html#cfg-Ext.form.ComboBox-listWidth">http://www.dev.sencha.com/deploy/dev/docs/source/Combo.html#cfg-Ext.form.ComboBox-listWidth</a>,
+default value is 350.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">loadingText</tt></dt>
+<dd><p>See <a class="reference external" href="http://www.dev.sencha.com/deploy/dev/docs/source/Combo.html#cfg-Ext.form.ComboBox-loadingText">http://www.dev.sencha.com/deploy/dev/docs/source/Combo.html#cfg-Ext.form.ComboBox-loadingText</a>,
+default value is &#8220;Search in Nominatim...&#8221;.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">map</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">OpenLayers.Map</span> <span class="pre">or</span> <span class="pre">Object</span></tt>  A configured map or a configuration object
+for the map constructor, required only if <tt class="xref py py-attr docutils literal"><span class="pre">zoom</span></tt> is set to
+value greater than or equal to 0.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">maxRows</tt></dt>
+<dd><p><cite>String</cite> The maximum number of rows in the responses, defaults to 20,
+maximum allowed value is 1000.
+See: <a class="reference external" href="http://www.geonames.org/export/geonames-search.html">http://www.geonames.org/export/geonames-search.html</a></p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">minChars</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Number</span></tt> Minimum number of characters to be typed before
+search occurs, defaults to 1.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">queryDelay</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Number</span></tt> Delay before the search occurs, defaults to 50 ms.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">tpl</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Ext.XTemplate</span> <span class="pre">or</span> <span class="pre">String</span></tt> Template for presenting the result in the
+list (see <a class="reference external" href="http://www.dev.sencha.com/deploy/dev/docs/output/Ext.XTemplate.html">http://www.dev.sencha.com/deploy/dev/docs/output/Ext.XTemplate.html</a>),
+if not set this default value is provided. If null &#8220;displayField&#8221; is used.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">width</tt></dt>
+<dd><p>See <a class="reference external" href="http://www.dev.sencha.com/deploy/dev/docs/source/BoxComponent.html#cfg-Ext.BoxComponent-width">http://www.dev.sencha.com/deploy/dev/docs/source/BoxComponent.html#cfg-Ext.BoxComponent-width</a>,
+default value is 350.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">zoom</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Number</span></tt> Zoom level for recentering the map after search, if set to
+a negative number the map isn&#8217;t recentered, defaults to 8. OBSOLETE, as &#8216;boundingbox&#8217; from result is used.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+            <li class="right" style="margin-right: 10px">
+              <a href="../../../../../genindex.html" title="General Index"
+                 accesskey="I">index</a></li>
+            <li class="right" >
+              <a href="../../../../../py-modindex.html" title="Python Module Index"
+                 >modules</a> |</li>
+            <li class="right" >
+              <a href="OpenLSSearchCombo.html" title="Heron.widgets.search.OpenLSSearchCombo"
+                 accesskey="N">next</a> |</li>
+            <li class="right" >
+              <a href="MultiSearchCenterPanel.html" title="Heron.widgets.search.MultiSearchCenterPanel"
+                 accesskey="P">previous</a> |</li>
+        <li><a href="../../../../../index.html">HeronMC</a> &raquo;</li>
+          <li><a href="../../../../index.html" >API Reference</a> &raquo;</li>
+          <li><a href="../../../widgets.search.html" ><tt class="docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets.search</span></tt></a> &raquo;</li>
+        <li><a href="#"><tt class="docutils literal docutils literal"><span class="pre">Heron.widgets.search.NominatimSearchCombo</span></tt></a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2011+, Heron MC Community.
+    </div>
+  </body>
+</html>

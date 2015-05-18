@@ -1,0 +1,142 @@
+
+.. currentmodule:: Heron.widgets.search
+
+:class:`Heron.widgets.search.SearchByDrawPanel`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Heron.widgets.search.SpatialSearchPanel <SpatialSearchPanel.html>`_
+    
+
+
+
+xtype
+    ``hr_searchbydrawpanel``
+
+
+
+
+.. class:: SearchByDrawPanel(config)
+
+A Panel to hold a spatial (WFS) query by drawing geometries.
+
+
+
+Example Use
+-----------
+
+This Panel is mostly used in combination with the  `Heron.widgets.search.FeaturePanel <FeaturePanel.html>`_
+in which results from a search are displayed in a grid and on the Map. Both Panels are usually bundled
+in a `Heron.widgets.search.SearchCenterPanel <SearchCenterPanel.html>`_ that manages the search and result Panels.
+See config example below.
+
+.. code-block:: javascript
+
+  {
+  xtype: 'hr_searchcenterpanel',
+  hropts: {
+      searchPanel: {
+      xtype: 'hr_searchbydrawpanel',
+          id: 'hr-searchbydrawpanel',
+          header: false,
+           border: false,
+          style: {
+              fontFamily: 'Verdana, Arial, Helvetica, sans-serif',
+              fontSize: '12px'
+          }
+      },
+      resultPanel: {
+          xtype: 'hr_featuregridpanel',
+          id: 'hr-featuregridpanel',
+          header: false,
+           border: false,
+          autoConfig: true,
+           exportFormats: ['XLS', 'WellKnownText'],
+          hropts: {
+              zoomOnRowDoubleClick: true,
+              zoomOnFeatureSelect: false,
+              zoomLevelPointSelect: 8,
+              zoomToDataExtent: false
+          }
+      }
+  }
+
+A ``SearchCenterPanel`` can be embedded in a Toolbar item popup as toolbar definition item ``searchcenter``
+as below. ``Heron.examples.searchPanelConfig`` is the ``SearchCenterPanel`` config as above.
+
+.. code-block:: javascript
+
+  {
+  type: "searchcenter",
+  // Options for SearchPanel window
+  options: {
+       show: true,
+
+      searchWindow: {
+          title: __('Search by Drawing'),
+          x: 100,
+          y: undefined,
+          width: 360,
+          height: 400,
+          items: [
+              Heron.examples.searchPanelConfig
+          ]
+      }
+  }
+  }
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties in addition to
+those listed for `Heron.widgets.search.SpatialSearchPanel <SpatialSearchPanel.html>`_.
+
+
+.. describe:: name
+
+    ``String``
+    Name, e.g. for multiple searches combo.
+
+
+
+
+
+
+Public Methods
+--------------
+
+Public methods in addition to those
+listed for `Heron.widgets.search.SpatialSearchPanel <SpatialSearchPanel.html>`_.
+
+
+.. method:: SearchByDrawPanel.onDrawingComplete
+
+    Called when feature drawn selected.
+
+.. method:: SearchByDrawPanel.onPanelRendered
+
+    Called when Panel has been rendered.
+
+.. method:: SearchByDrawPanel.onParentHide
+
+    Called when parent Panel is hidden in Container.
+
+.. method:: SearchByDrawPanel.onParentShow
+
+    Called when parent Panel is shown in Container.
+
+.. method:: SearchByDrawPanel.searchFromFeatures
+
+    Issue spatial search via WFS.
+
+
+
+
+

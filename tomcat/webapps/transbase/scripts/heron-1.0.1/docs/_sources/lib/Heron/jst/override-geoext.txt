@@ -1,0 +1,449 @@
+
+.. currentmodule:: GeoExt.plugins
+
+:class:`GeoExt.plugins.PrintProviderField`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Ext.util.Observable <http://dev.sencha.com/deploy/dev/docs/?class=Ext.util.Observable>`_
+    
+
+
+
+
+
+
+.. class:: PrintProviderField
+
+A plugin for ``Ext.form.Field`` components which provides synchronization
+with a :class:`GeoExt.data.PrintProvider`.
+
+
+
+Example Use
+-----------
+
+A form with combo boxes for layout and resolution, and a text field for a
+map title. The latter is a custom parameter to the print module, which is
+a default for all print pages. For setting custom parameters on the page
+level, use :class:`GeoExt.plugins.PrintPageField`):
+
+.. code-block:: javascript
+
+    var printProvider = new GeoExt.data.PrintProvider({
+        capabilities: printCapabilities
+    });
+    new Ext.form.FormPanel({
+        renderTo: "form",
+        width: 200,
+        height: 300,
+        items: [{
+            xtype: "combo",
+            displayField: "name",
+            store: printProvider.layouts, // printProvider.layout
+            fieldLabel: "Layout",
+            typeAhead: true,
+            mode: "local",
+            forceSelection: true,
+            triggerAction: "all",
+            selectOnFocus: true,
+            plugins: new GeoExt.plugins.PrintProviderField({
+                printProvider: printProvider
+            })
+        }, {
+            xtype: "combo",
+            displayField: "name",
+            store: printProvider.dpis, // printProvider.dpi
+            fieldLabel: "Resolution",
+            typeAhead: true,
+            mode: "local",
+            forceSelection: true,
+            triggerAction: "all",
+            selectOnFocus: true,
+            plugins: new GeoExt.plugins.PrintProviderField({
+                printProvider: printProvider
+            })
+        }, {
+            xtype: "combo",
+            displayField: "name",
+            store: printProvider.outputFormats,
+            fieldLabel: "Output",
+            typeAhead: true,
+            mode: "local",
+            forceSelection: true,
+            triggerAction: "all",
+            selectOnFocus: true,
+            plugins: new GeoExt.plugins.PrintProviderField({
+                printProvider: printProvider
+            })
+        }, {
+            xtype: "textfield",
+            name: "mapTitle", // printProvider.customParams.mapTitle
+            fieldLabel: "Map Title",
+            plugins: new GeoExt.plugins.PrintProviderField({
+                printProvider: printProvider
+            })
+        }]
+    }):
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties in addition to
+those listed for `Ext.util.Observable <http://dev.sencha.com/deploy/dev/docs/?class=Ext.util.Observable>`_.
+
+
+.. describe:: autoLoad
+
+    ``Boolean`` If set to true, the capabilities will be loaded upon
+    instance creation, and ``loadCapabilities`` does not need to be called
+    manually. Setting this when ``capabilities`` and no ``url`` is provided
+    has no effect. Default is false.
+
+.. describe:: baseParams
+
+    ``Object`` Key-value pairs of base params to be add to every
+    request to the service. Optional.
+
+.. describe:: capabilities
+
+    ``Object`` Capabilities of the print service. Only required if ``url``
+    is not provided. This is the object returned by the ``info.json``
+    endpoint of the print service, and is usually obtained by including a
+    script tag pointing to
+    http://path/to/printservice/info.json?var=myvar in the head of the
+    html document, making the capabilities accessible as ``window.myvar``.
+    This property should be used when no local print service or proxy is
+    available, or when you do not listen for the ``loadcapabilities``
+    events before creating components that require the PrintProvider's
+    capabilities to be available.
+
+.. describe:: encoding
+
+    ``String`` The encoding to set in the headers when requesting the print
+    service. Prevent character encoding issues, especially when using IE.
+    Default is retrieved from document charset or characterSet if existing
+    or ``UTF-8`` if not.
+
+.. describe:: method
+
+    ``String`` Either ``POST`` or ``GET`` (case-sensitive). Method to use
+    when sending print requests to the servlet. If the print service is at
+    the same origin as the application (or accessible via proxy), then
+    ``POST`` is recommended. Use ``GET`` when accessing a remote print
+    service with no proxy available, but expect issues with character
+    encoding and URLs exceeding the maximum length. Default is ``POST``.
+
+.. describe:: printProvider
+
+    ``GeoExt.data.PrintProvider`` The print provider to use with this
+    plugin's field. Not required if set on the owner container of the
+    field.
+
+.. describe:: timeout
+
+    ``Number`` Timeout of the POST Ajax request used for the print request
+    (in milliseconds). Default of 30 seconds. Has no effect if ``method``
+    is set to ``GET``.
+
+.. describe:: url
+
+    ``String`` Base url of the print service. Only required if
+    ``capabilities`` is not provided. This
+    is usually something like http://path/to/mapfish/print for Mapfish,
+    and http://path/to/geoserver/pdf for GeoServer with the printing
+    extension installed. This property requires that the print service is
+    at the same origin as the application (or accessible via proxy).
+
+
+
+
+Public Properties
+-----------------
+
+Public properties in addition to those
+listed for `Ext.util.Observable <http://dev.sencha.com/deploy/dev/docs/?class=Ext.util.Observable>`_.
+
+
+.. attribute:: PrintProviderField.customParams
+
+    ``Object`` Key-value pairs of custom data to be sent to the print
+    service. Optional. This is e.g. useful for complex layout definitions
+    on the server side that require additional parameters.
+
+.. attribute:: PrintProviderField.defaultOutputFormatName
+
+    ``String`` the name of the default output format.
+
+.. attribute:: PrintProviderField.dpi
+
+    ``Ext.data.Record`` the record for the currently used resolution.
+    Read-only, use ``setDpi`` to set the value.
+
+.. attribute:: PrintProviderField.dpis
+
+    ``Ext.data.JsonStore`` read-only. A store representing the dpis
+    available.
+    
+    Fields of records in this store:
+    
+    * name - ``String`` the name of the dpi
+    * value - ``Float`` the dots per inch
+
+.. attribute:: PrintProviderField.layout
+
+    ``Ext.data.Record`` the record of the currently used layout. Read-only,
+    use ``setLayout`` to set the value.
+
+.. attribute:: PrintProviderField.layouts
+
+    ``Ext.data.JsonStore`` read-only. A store representing the layouts
+    available.
+    
+    Fields of records in this store:
+    
+    * name - ``String`` the name of the layout
+    * size - ``Object`` width and height of the map in points
+    * rotation - ``Boolean`` indicates if rotation is supported
+
+.. attribute:: PrintProviderField.outputFormat
+
+    ``Ext.data.Record`` the record of the currently used output format. Read-only,
+    use ``setOutputFormat`` to set the value.
+
+.. attribute:: PrintProviderField.outputFormats
+
+    ``Ext.data.JsonStore`` read-only. A store representing the output formats
+    available.
+    
+    Fields of the output formats in this store:
+    
+    * name - ``String`` the name of the output format
+
+.. attribute:: PrintProviderField.outputFormatsEnabled
+
+    ``Boolean`` read-only. Should outputFormats be populated and used?
+    Default value is 'False'
+
+.. attribute:: PrintProviderField.scales
+
+    ``Ext.data.JsonStore`` read-only. A store representing the scales
+    available.
+    
+    Fields of records in this store:
+    
+    * name - ``String`` the name of the scale
+    * value - ``Float`` the scale denominator
+
+
+
+
+Public Methods
+--------------
+
+Public methods in addition to those
+listed for `Ext.util.Observable <http://dev.sencha.com/deploy/dev/docs/?class=Ext.util.Observable>`_.
+
+
+.. method:: PrintProviderField.loadCapabilities
+
+    Loads the capabilities from the print service. If this instance is
+    configured with either ``capabilities`` or a ``url`` and ``autoLoad``
+    set to true, then this method does not need to be called from the
+    application.
+
+.. method:: PrintProviderField.print
+
+    :param map: ``GeoExt.MapPanel`` or ``OpenLayers.Map`` The map to print.
+    :param pages: ``Array`` of :class:`GeoExt.data.PrintPage` or
+        :class:`GeoExt.data.PrintPage` page(s) to print.
+    :param options: ``Object`` of additional options, see below.
+    
+    Sends the print command to the print service and opens a new window
+    with the resulting PDF.
+    
+    Valid properties for the ``options`` argument:
+    
+        * ``legend`` - :class:`GeoExt.LegendPanel` If provided, the legend
+          will be added to the print document. For the printed result to
+          look like the LegendPanel, the following ``!legends`` block
+          should be included in the ``items`` of your page layout in the
+          print module's configuration file:
+    
+          .. code-block:: none
+    
+            - !legends
+                maxIconWidth: 0
+                maxIconHeight: 0
+                classIndentation: 0
+                layerSpace: 5
+                layerFontSize: 10
+    
+        * ``overview`` - :class:`OpenLayers.Control.OverviewMap` If provided,
+          the layers for the overview map in the printout will be taken from
+          the OverviewMap control. If not provided, the print service will
+          use the main map's layers for the overview map. Applies only for
+          layouts configured to print an overview map.
+
+.. method:: PrintProviderField.setDpi
+
+    :param dpi: ``Ext.data.Record`` the dpi record.
+    
+    Sets the dpi for this printProvider.
+
+.. method:: PrintProviderField.setLayout
+
+    :param layout: ``Ext.data.Record`` the record of the layout.
+    
+    Sets the layout for this printProvider.
+
+.. method:: PrintProviderField.setOutputFormat
+
+    :param outputFormat: ``Ext.data.Record`` the format record.
+    
+    Sets the output print format for this printProvider.
+
+.. method:: PrintProviderField.update
+
+    Update rule titles and symbolizers.
+
+
+
+
+Events
+------
+
+Events in addition to those
+listed for `Ext.util.Observable <http://dev.sencha.com/deploy/dev/docs/?class=Ext.util.Observable>`_.
+
+
+.. describe:: beforeencodelayer
+
+    Triggered before a layer is encoded. This can be used to
+    exclude layers from the printing, by having the listener
+    return false.
+    
+    Listener arguments:
+    
+    * printProvider - :class:`GeoExt.data.PrintProvider` this
+      PrintProvider
+    * layer - ``OpenLayers.Layer`` the layer which is about to be
+      encoded.
+
+.. describe:: beforeencodelegend
+
+    Triggered before the legend is encoded. If the listener
+    returns false, the default encoding based on GeoExt.LegendPanel
+    will not be executed. This provides an option for application
+    to get legend info from a custom component other than
+    GeoExt.LegendPanel.
+    
+    Listener arguments:
+    
+    * printProvider - :class:`GeoExt.data.PrintProvider` this
+      PrintProvider
+    * jsonData - ``Object`` The data that will be sent to the print
+      server. Can be used to populate jsonData.legends.
+    * legend - ``Object`` The legend supplied in the options which were
+      sent to the print function.
+
+.. describe:: beforeprint
+
+    Triggered when the print method is called.
+    TODO: rename this event to beforeencode
+    
+    Listener arguments:
+    
+    * printProvider - :class:`GeoExt.data.PrintProvider` this
+      PrintProvider
+    * map - ``OpenLayers.Map`` the map being printed
+    * pages - Array of :class:`GeoExt.data.PrintPage` the print
+      pages being printed
+    * options - ``Object`` the options to the print command
+
+.. describe:: dpichange
+
+    Triggered when the dpi value is changed.
+    
+    Listener arguments:
+    
+    * printProvider - :class:`GeoExt.data.PrintProvider` this
+      PrintProvider
+    * dpi - ``Ext.data.Record`` the new dpi record
+
+.. describe:: encodelayer
+
+    Triggered when a layer is encoded. This can be used to modify
+    the encoded low-level layer object that will be sent to the
+    print service.
+    
+    Listener arguments:
+    
+    * printProvider - :class:`GeoExt.data.PrintProvider` this
+      PrintProvider
+    * layer - ``OpenLayers.Layer`` the layer which is about to be
+      encoded.
+    * encodedLayer - ``Object`` the encoded layer that will be
+      sent to the print service.
+
+.. describe:: layoutchange
+
+    Triggered when the layout is changed.
+    
+    Listener arguments:
+    
+    * printProvider - :class:`GeoExt.data.PrintProvider` this
+      PrintProvider
+    * layout - ``Ext.data.Record`` the new layout
+
+.. describe:: loadcapabilities
+
+    Triggered when the capabilities have finished loading. This
+    event will only fire when ``capabilities`` is not  configured.
+    
+    Listener arguments:
+    
+    * printProvider - :class:`GeoExt.data.PrintProvider` this
+      PrintProvider
+    * capabilities - ``Object`` the capabilities
+
+.. describe:: outputformatchange
+
+    Triggered when the outputFormat  value is changed.
+    
+    Listener arguments:
+    
+    * printProvider - :class:`GeoExt.data.PrintProvider` this
+      PrintProvider
+    * outputFormat - ``Ext.data.Record`` the new output format record
+
+.. describe:: print
+
+    Triggered when the print document is opened.
+    
+    Listener arguments:
+    
+    * printProvider - :class:`GeoExt.data.PrintProvider` this
+      PrintProvider
+    * url - ``String`` the url of the print document
+
+.. describe:: printexception
+
+    Triggered when using the ``POST`` method, when the print
+    backend returns an exception.
+    
+    Listener arguments:
+    
+    * printProvider - :class:`GeoExt.data.PrintProvider` this
+      PrintProvider
+    * response - ``Object`` the response object of the XHR
+
+
+

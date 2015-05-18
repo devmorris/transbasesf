@@ -1,0 +1,37 @@
+
+.. currentmodule:: Heron.widgets
+
+:class:`Heron.widgets.MenuPanel`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Ext.Panel <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.Panel>`_
+    
+
+
+
+xtype
+    ``hr_menupanel``
+
+
+
+
+.. class:: MenuPanel(config)
+
+A wrapper Panel with an embedded menu bar.
+
+
+    
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,295 @@
+
+.. currentmodule:: Heron.widgets.search
+
+:class:`Heron.widgets.search.CoordSearchPanel`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Ext.form.FormPanel <http://docs.sencha.com/ext-js/3-4/#!/api/Ext.form.FormPanel>`_
+    
+
+
+
+xtype
+    ``gx_formpanel``
+
+
+
+
+.. class:: CoordSearchPanel(config)
+
+    A specific ``Ext.form.FormPanel`` whose internal form is a
+    ``Ext.form.BasicForm``.
+    Use this form to do pan and zoom to a point in the map.
+    The coordinates are typed in by the user.
+
+
+
+Example Use
+-----------
+
+Sample code showing how to use the CoordSearchPanel.
+
+.. code-block:: javascript
+
+    var panel = new Heron.widgets.search.CoordSearchPanel({
+                xtype: 'hr_coordsearchpanel',
+                id: 'hr-coordsearchpanelRD',
+                title: 'Go to Coordinates (Dutch RD)',
+                height: 150,
+                border: true,
+                collapsible: true,
+                collapsed: true,
+                onZoomLevel: 8,
+                hropts: [ {
+                            projEpsg: 'EPSG:28992',
+                            projDesc: 'Amersfoort / RD New',
+                            localIconFile: 'redpin.png',
+                            fieldLabelX: 'x (Dutch RD)',
+                            fieldLabelY: 'y (Dutch RD)'
+                          }
+                        ]
+        }
+    });
+
+IMPORTANT
+If using the zoom option (showZoom: true) the global 'map' must already be
+initialized - otherwise the zoom combo box will not contain any scale values!
+This happens for example if the 'hr_coordsearchpanel' is defined BEFORE the
+'hr_mappanel'.
+The solution is: ALWAYS define the 'hr_mappanel' as the FIRST element in the
+layout tree - this ensures that the 'map' is initialized properly.
+See 'coordsearch' demo - here is the right coding scheme:
+
+.. code-block:: javascript
+
+ Heron.layout = {
+	xtype: 'panel',
+	id: 'hr-container-main',
+
+	items: [ {
+		xtype: 'panel',
+		id: 'hr-map-and-info-container',
+		layout: 'border',
+		region: 'center',
+		width: '100%',
+		collapsible: true,
+		split: true,
+		border: false,
+		items: [ {
+			xtype: 'hr_mappanel',					// FIRST
+			id: 'hr-map',
+			region: 'center',
+			collapsible : false,
+			border: false,
+			hropts: Heron.options.map
+		} ]
+		},
+		{
+		xtype: 'panel',
+		id: 'hr-menu-left-container',
+		layout: 'accordion',
+		region: "west",
+		width: 270,
+		collapsible: true,
+		split: true,
+		border: false,
+		items: [ {
+			xtype: 'hr_coordsearchpanel',			//  SECOND
+			id: 'hr-coordsearchpanel',
+			title: 'Go to Coordinates (Lon/Lat)',
+			height: 150,
+			border: true,
+			collapsible: true,
+			collapsed: false,
+			fieldLabelWidth: 50,
+			onZoomLevel: 6,
+			showZoom: true,
+			layerName: 'Location Europe - Lon/Lat',
+			hropts: [ {
+						fieldLabelX: 'Lon',
+						fieldLabelY: 'Lat',
+						fieldEmptyTextX: 'Enter Lon-coordinate...',
+						fieldEmptyTextY: 'Enter Lat-coordinate...'
+					} ]
+		},
+
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties in addition to
+those listed for `Ext.form.FormPanel <http://docs.sencha.com/ext-js/3-4/#!/api/Ext.form.FormPanel>`_.
+
+
+.. describe:: bodyBaseCls
+
+    body base cls
+    default value is 'x-panel'.
+
+.. describe:: bodyCls
+
+    cls for setting the font features
+    (example: 'hr-html-panel-font-size-11') of the form items
+    default value is "null".
+
+.. describe:: bodyItemCls
+
+    item cls for setting the font features
+    (example: 'hr-html-panel-font-size-11') of the form items
+    default value is "null".
+
+.. describe:: buttonAlign
+
+    Alignment of the button(s) - 'left', 'center', 'right' - in the form
+    default value is 'left'.
+
+.. describe:: checkAddMarkers
+
+    ``Boolean`` If set to true, the AddMarkers option will be set.
+    If set to false, no AddMarkers option will be set.
+    Default is false.
+
+.. describe:: checkHideMarkers
+
+    ``Boolean`` If set to true, the HideMarkers option will be set.
+    If set to false, no HideMarkers option will be set.
+    Default is false.
+
+.. describe:: fieldDecPrecision
+
+    precision of the input coordinate fields
+    default value is 2.
+
+.. describe:: fieldLabelStyle
+
+    field label style (e.g. 'color: red;') or null
+    default value is "null".
+
+.. describe:: fieldLabelWidth
+
+    field label width for the input fields
+    default value is ''.
+
+.. describe:: fieldMaxWidth
+
+    field max width for the input fields
+    default value is 200.
+
+.. describe:: fieldResultMarkerPrecision
+
+    precision of the marker coordinates
+    default value is 2.
+
+.. describe:: fieldResultMarkerSeparator
+
+    field text coordinates seperator
+    default value is " , ".
+
+.. describe:: fieldResultMarkerStyle
+
+    field style (e.g. 'color: green;') or null
+    default value is "null".
+
+.. describe:: fieldResultMarkerText
+
+    field text label of the result or null
+    default value is "Marker position: ".
+
+.. describe:: fieldStyle
+
+    field style (e.g. 'color: green;') or null
+    default value is "null".
+
+.. describe:: hropts
+
+    user defined projection array.
+    default value is "null" - no transformation will be done.
+
+.. describe:: layerName
+
+    layer name of the location marker.
+
+.. describe:: onProjectionIndex
+
+    Start index entry of the projection combobox
+    default value is 0 (first combobox entry).
+
+.. describe:: onZoomLevel
+
+    zoomlevel when moving to point.
+    default value is -1 (no zoom).
+
+.. describe:: removeMarkersOnClose
+
+    ``Boolean`` If set to true, the markers will be removed from the
+    layer when the form is closed. If set to false, the markers layer
+    will be hidden without removing them.
+    Default is false.
+
+.. describe:: showAddMarkers
+
+    ``Boolean`` If set to true, the AddMarkers checkbox will be shown.
+    If set to false, no AddMarkers checkbox will be shown.
+    Default is false.
+
+.. describe:: showHideMarkers
+
+    ``Boolean`` If set to true, the HideMarkers checkbox will be shown.
+    If set to false, no HideMarkers checkbox will be shown.
+    Default is false.
+
+.. describe:: showProjection
+
+    ``Boolean`` If set to true, the projection combobox will be shown.
+    If set to false, an input system selection will not be possible.
+    Default is false.
+
+.. describe:: showRemoveMarkersBtn
+
+    ``Boolean`` If set to true, the RemoveMarkers button will be shown.
+    If set to false, no RemoveMarkers button will be shown.
+    Default is false.
+
+.. describe:: showResultMarker
+
+    ``Boolean`` If set to true, the result coordinates will be shown.
+    If set to false, no result coordinates will be shown.
+    Default is false.
+
+.. describe:: showZoom
+
+    ``Boolean`` If set to true, the zoom combobox will be shown.
+    If set to false, a zoom selection will not be possible.
+    Default is false.
+
+.. describe:: title
+
+    title of the panel
+    default value is 'Go to coordinates'.
+
+.. describe:: titleDescription
+
+    description line under the title line
+    default value is "null".
+
+.. describe:: titleDescriptionStyle
+
+    title description style (e.g. 'font-size: 11px;') or null
+    default value is "null".
+
+
+
+
+
+
+
+
+

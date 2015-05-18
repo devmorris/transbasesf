@@ -1,0 +1,81 @@
+
+.. currentmodule:: Heron.widgets
+
+:class:`Heron.widgets.LayerTreePanel`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Ext.tree.TreePanel <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.tree.TreePanel>`_
+    
+
+
+
+xtype
+    ``hr_layertreepanel``
+
+
+
+
+.. class:: LayerTreePanel(config)
+
+A panel designed to hold trees of Map Layers.
+
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties in addition to
+those listed for `Ext.tree.TreePanel <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.tree.TreePanel>`_.
+
+
+.. describe:: contextMenu
+
+    Context menu (right-click) for layer nodes, for now instance of Heron.widgets.LayerNodeContextMenu. Default value is null.
+
+.. describe:: layerIcons
+
+    Which icons to use for Layers in LayerNodes. Values 'default' (use Ext JS standard icons), '
+    bylayertype' (Layer-type specific icons, e.g. for raster and vector) or
+    'none' (no, i.e. blanc icon). Default value is default'. Used, unless the Layer Nodes (gx_layer entries) are explicitly
+    configured with an 'iconCls', 'cls' or 'icon' config attribute.
+
+.. describe:: lines
+
+    Flag for showing tree lines
+    default value is "false".
+
+.. describe:: ordering
+
+    Ordering of layer in the map comparerd to layertree
+    default value is "none" (behaviour as in older versions)
+    valid values: 'TopBottom', 'BottomTop', 'none'
+
+.. describe:: textbaselayers
+
+    default value is "Base Layers".
+    Only valid if not using the 'hropts' option
+
+.. describe:: textoverlays
+
+    default value is "Overlays".
+    Only valid if not using the 'hropts' option
+
+.. describe:: title
+
+    default value is "Layers".
+
+
+
+
+
+
+
+
+

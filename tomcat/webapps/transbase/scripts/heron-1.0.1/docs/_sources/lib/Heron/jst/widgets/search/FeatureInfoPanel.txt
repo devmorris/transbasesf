@@ -1,0 +1,291 @@
+
+.. currentmodule:: Heron.widgets.search
+
+:class:`Heron.widgets.search.FeatureInfoPanel`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Ext.Panel <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.Panel>`_
+    
+
+
+
+xtype
+    ``hr_featureinfopanel``
+
+
+
+
+.. class:: FeatureInfoPanel(config)
+
+Panel to hold Feature Information for one or more WMS (GetFeatureInfo) and/or Vector (e.g. WFS) layers.
+
+
+
+
+Example Use
+-----------
+
+Sample code showing how to configure a Heron FeatureInfoPanel.
+All regular ExtJS `Ext.Panel <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.Panel>`_
+config params also apply.
+The ``infoFormat`` config parameter is the default ``INFO_FORMAT`` to be used for WMS GetFeatureInfo (GFI).
+This value can be overruled by an optional per-Layer ``infoFormat`` WMS Layer config parameter.
+GetFeatureInfo-response data may be displayed as a Grid, a Tree or formatted XML. The ``displayPanels``
+config option can be used to trigger a menu with display options. Note also the use of "GridCellRenderers".
+These allow you to render specific formatting of cell content within the feature grid. For example
+URL substitution to render external links in a new tab or browser window. You can even supply your own formatting
+function. This function is according to the ExtJS ColumnModel renderers (see e.g. http://snipplr.com/view/40942).
+More finegrained grid-control can be obtained with ``gridColumns``. Here the standard ExtJS ``columns``
+layout can be specified per feature type. Via ``gridColumns`` should become the preferred method.
+
+.. code-block:: javascript
+
+	 xtype: 'hr_featureinfopanel',
+	 id: 'hr-feature-info',
+	 region: "south",
+	 border: true,
+	 collapsible: true,
+	 collapsed: true,
+	 height: 205,
+	 split: true,
+	 infoFormat: 'application/vnd.ogc.gml',
+	 displayPanels: ['Grid', 'XML'],
+	 exportFormats: ['CSV', 'XLS'],
+	 maxFeatures: 10,
+	 columnCapitalize: false,
+	 discardStylesForDups: true,
+	 gridCellRenderers: [
+				{
+					featureType: 'cities',
+					attrName: 'City',
+					renderer: {
+						fn : Heron.widgets.GridCellRenderer.directLink,
+						options : {
+							url: 'http://en.wikipedia.org/wiki/{City}',
+							target: '_new'
+						}
+					}
+				},
+				{
+					featureType: 'cities',
+					attrName : 'Country',
+					renderer :  {
+						fn : Heron.widgets.GridCellRenderer.browserPopupLink,
+						options : {
+							url: 'http://en.wikipedia.org/wiki/{Country}',
+							winName: 'demoWin',
+							width: 400,
+							height: 800,
+							scrollbars: 'yes'
+						}
+					}
+				},
+				{   // Example for custom HTML, could use also with e.g. links
+					featureType: 'cities',
+					attrName : 'longitude',
+					renderer :  {
+						fn : Heron.widgets.GridCellRenderer.valueSubstitutor,
+						options : {
+							template: '<i>ll={latitude},{longitude}{empty}</i>'
+						}
+					}
+				},
+				{
+					// Example: supply your own function, parms as in ExtJS ColumnModel
+					featureType: 'cities',
+					attrName : 'population',
+					renderer :  {
+						fn : function(value, metaData, record, rowIndex, colIndex, store) {
+							// Custom formatting, may also use this.options if needed
+							return '<b>' + value + ' inh.</b>';
+						},
+						options : {
+
+						}
+					}
+				}
+			],
+
+      gridColumns: [
+      {
+      featureType: 'states',
+        columns: [
+         {
+                header: "State Name",
+                width: 120,
+                dataIndex: "STATE_NAME"
+         },
+         {
+                header: "Inhabitants",
+                width: 120,
+                dataIndex: "PERSONS"
+         },
+         {
+                header: "More Info",
+                width: 120,
+                renderer: function (value, metaData, record, rowIndex, colIndex, store) {
+                    var template = '<a target="_new" href="http://en.wikipedia.org/wiki/{STATE_NAME}">Wikipedia Info</a>';
+                    var options = {attrNames: ['STATE_NAME']};
+                    return Heron.widgets.GridCellRenderer.substituteAttrValues(template, options, record);
+                }
+          }
+
+         ]
+       }
+    ]
+
+
+
+  }
+
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties in addition to
+those listed for `Ext.Panel <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.Panel>`_.
+
+
+.. describe:: autoConfigMaxSniff
+
+    ``Integer``
+    Maximum number of features to 'sniff' for autoconfigured grid columns (as null columns are often not sent by server).
+
+.. describe:: autoMaxWidth
+
+    ``Integer``
+    The maximum width of a auto adjusted column grid response. Setting to 0 will disable auto column width detection
+
+.. describe:: autoMinWidth
+
+    ``Integer``
+     The minimum width of a auto adjusted column. Requires autoMaxWidth to be > 1 to function.
+
+.. describe:: columnCapitalize
+
+    ``Boolean``
+    Should the column names be capitalized when autoconfig is true?
+
+.. describe:: columnFixedWidth
+
+    ``Integer``
+    The width of a column in a grid response
+
+.. describe:: discardStylesForDups
+
+    ``Boolean``
+    In case the same Layer is present multiple times, request only once without any STYLES= parameter.
+    Default is ``false``.
+
+.. describe:: displayPanels
+
+    ``String Array``
+    
+    tring array  of types of Panels to display GFI info in, default value is ['Table'], a grid table.
+    ther value is 'Detail', a propertyPanel showing records one by one in a "Vertical" view.
+    f multiple display values are given buttons in the toolbar will be shown to switch display types.
+    irst value is the panel to be opened at the first time info is requested
+    ote: The old implementation with 'Tree' and 'XML' was deprecated from v0.75
+
+.. describe:: drillDown
+
+    ``Boolean``
+    Show features from all visible layers that are queryable.
+
+.. describe:: exportFormats
+
+    ``String Array``
+    
+    rray of document formats to be used when exporting the content of a GFI response. This requires the server-side CGI script
+    `heron.cgi`` to be installed. Exporting results in a download of a document with the contents of the (Grid) Panel.
+    or example when 'XLS' is configured, exporting will result in the Excel (or compatible) program to be
+    tarted with the GFI data in an Excel worksheet.
+    ption values are 'CSV' and/or 'XLS', , 'GMLv2', 'GeoJSON', 'WellKnownText' default is, ``null``, meaning no export (results in no export menu).
+    he value ['CSV', 'XLS'] configures a menu to choose from a ``.csv`` or ``.xls`` export document format.
+
+.. describe:: featureSelection
+
+    ``Boolean``
+    Should the feature geometries that are shown be selectable in grid and map? Default ``true``.
+
+.. describe:: gridCellRenderers
+
+    ``Array``
+    Have all columns displayed but only these specifically formatted per feature type (see example).
+
+.. describe:: gridColumns
+
+    ``Array``
+    Have only specific columns displayed and formatted per feature type (see example).
+
+.. describe:: hideColumns
+
+    ``Array``
+    An array of column names from WFS and WMS GetFeatureInfo results that should be removed and not shown to the user.
+
+.. describe:: hover
+
+    ``Boolean``
+    Show features on hovering.
+
+.. describe:: infoFormat
+
+    ``String``
+    Default GFI INFO_FORMAT parameter, may be overruled per Layer object infoFormat WMS param. If not set
+    the value ``application/vnd.ogc.gml`` will be used.
+
+.. describe:: layer
+
+    ``string``
+    The layer to get feature information from. Parameter value will be ``""`` if not set.
+    If not set, all visible layers of the map will be searched. In case the drillDown
+    parameter is ``false``, the topmost visible layer will searched.
+
+.. describe:: maxFeatures
+
+    ``int``
+    Default GFI MAX_FEATURES parameter. Will be ``5`` if not set.
+
+.. describe:: showGeometries
+
+    ``Boolean``
+    Should the feature geometries be shown? Default ``true``.
+
+.. describe:: showTopToolbar
+
+    ``Boolean``
+    Show the toolbar with object count, clear and export buttons.
+    Default is ``false``.
+
+
+
+
+
+
+Public Methods
+--------------
+
+Public methods in addition to those
+listed for `Ext.Panel <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.Panel>`_.
+
+
+.. method:: FeatureInfoPanel.onPanelRender
+
+    Called when Panel has been rendered.
+
+.. method:: FeatureInfoPanel.onPanelRendered
+
+    Called when Panel has been rendered.
+
+
+
+
+

@@ -1,0 +1,232 @@
+
+.. currentmodule:: Heron.widgets.search
+
+:class:`Heron.widgets.search.GXP_QueryPanel`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `gxp.QueryPanel <http://gxp.opengeo.org/master/doc/lib/widgets/QueryPanel.html>`_
+    
+
+
+
+xtype
+    ``hr_gxpquerypanel``
+
+
+
+
+.. class:: GXP_QueryPanel(config)
+
+Wrap and configure an OpenGeo `GXP QueryPanel <http://gxp.opengeo.org/master/doc/lib/widgets/QueryPanel.html>`_.
+OpenGeo GXP are high-level GeoExt components that can be
+used in Heron as well. A GXP QueryPanel allows a user to construct query conditions interactively.
+These query conditions will be translated to WFS Filters embedded in an WFS GetFeature request.
+Results may be displayed in a  `Heron.widgets.search.FeaturePanel <FeaturePanel.html>`_,
+see example configuration.
+
+
+
+Example Use
+-----------
+
+Sample code showing how to configure a Heron GXP_QueryPanel. Here within a SearchCenterPanel, through a search button
+(binoculars) within the MapPanel Toolbar. This Panel is mostly used in combination with the  `Heron.widgets.search.FeaturePanel <FeaturePanel.html>`_
+in which results from a search are displayed in a grid and on the Map. Both Panels are usually bundled
+in a `Heron.widgets.search.SearchCenterPanel <SearchCenterPanel.html>`_ that manages the search and result Panels.
+See config example below.
+
+.. code-block:: javascript
+
+       {type: "zoomprevious"},
+       {type: "zoomnext"},
+       {type: "-"},
+       {
+           type: "searchcenter",
+           // Options for SearchPanel window
+           options: {
+               show: true,
+
+               searchWindow: {
+                   title: __('Query Builder'),
+                   x: 100,
+                   y: undefined,
+                   layout: 'fit',
+                   width: 380,
+                   height: 420,
+                   items: [
+                       {
+                           xtype: 'hr_searchcenterpanel',
+                           id: 'hr-searchcenterpanel',
+                           hropts: {
+                               searchPanel: {
+                                   xtype: 'hr_gxpquerypanel',
+                                   header: false,
+                                   border: false,
+                                   spatialQuery: true,
+                                   attributeQuery: true,
+                                   caseInsensitiveMatch: true,
+                                   autoWildCardAttach: true
+                               },
+                               resultPanel: {
+                                   xtype: 'hr_featuregridpanel',
+                                   id: 'hr-featuregridpanel',
+                                   header: false,
+                                   border: false,
+                                   autoConfig: true,
+                                   exportFormats: ['XLS', 'WellKnownText'],
+                                   hropts: {
+                                       zoomOnRowDoubleClick: true,
+                                       zoomOnFeatureSelect: false,
+                                       zoomLevelPointSelect: 8,
+                                       zoomToDataExtent: true
+                                   }
+                               }
+                           }
+                       }
+                   ]
+               }
+           }
+       }
+       ];
+
+
+mportant is to also enable your WMS Layers for WFS through the metadata object.
+ee the examples DefaultOptionsWorld.js, for example the USA States Layer (only 'fromWMSLayer' value is currently supported):
+
+.. code-block:: javascript
+
+       new OpenLayers.Layer.WMS(
+       "USA States (OpenGeo)",
+       'http://suite.opengeo.org/geoserver/ows?',
+       {layers: "states", transparent: true, format: 'image/png'},
+       {singleTile: true, opacity: 0.9, isBaseLayer: false, visibility: false, noLegend: false, featureInfoFormat: 'application/vnd.ogc.gml', transitionEffect: 'resize', metadata: {
+           wfs: {
+               protocol: 'fromWMSLayer',
+               featurePrefix: 'usa',
+               featureNS: 'http://usa.opengeo.org',
+               downloadFormats: Heron.options.wfs.downloadFormats
+           }
+       }
+       }
+       ),
+
+The ``downloadFormats`` specifies the outputFormats that the WFS supports for triggered download (via HTTP Content-disposition: attachment)
+that the WFS supports. Currently only GeoServer is known to support "triggered download".
+
+.. code-block:: javascript
+
+       Heron.options.wfs.downloadFormats = [
+       {
+           name: 'CSV',
+           outputFormat: 'csv',
+           fileExt: '.csv'
+       },
+       {
+           name: 'GML (version 2.1.2)',
+           outputFormat: 'text/xml; subtype=gml/2.1.2',
+           fileExt: '.gml'
+       },
+       {
+           name: 'ESRI Shapefile (zipped)',
+           outputFormat: 'SHAPE-ZIP',
+           fileExt: '.zip'
+       },
+       {
+           name: 'GeoJSON',
+           outputFormat: 'json',
+           fileExt: '.json'
+       }
+       ];
+
+
+
+
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties in addition to
+those listed for `gxp.QueryPanel <http://gxp.opengeo.org/master/doc/lib/widgets/QueryPanel.html>`_.
+
+
+.. describe:: autoWildCardAttach
+
+    ``Boolean``
+    Should search strings (LIKE comparison only) for attribute queries always be pre/postpended with a wildcard '*' character?
+    Default is ``"false"``.
+
+.. describe:: caseInsensitiveMatch
+
+    ``Boolean``
+    Should Comparison Filters for Strings do case insensitive matching?  Default is ``"false"``.
+
+.. describe:: downloadFormats
+
+    ``Array``
+    Optional array of explicit download formats (mainly GeoServer-only) to set or overrule any
+    downloadFormats in the Layer metadata.wfs properties.
+    Default is null (taking possible values from the Layer metadata).
+
+.. describe:: layerSortOrder
+
+    ``String``
+    How should the layer names be sorted in the selector, 'ASC', 'DESC' or null (as Map order)?
+    default value is 'ASC' (Alphabetically Ascending).
+
+
+
+
+
+
+Public Methods
+--------------
+
+Public methods in addition to those
+listed for `gxp.QueryPanel <http://gxp.opengeo.org/master/doc/lib/widgets/QueryPanel.html>`_.
+
+
+.. method:: GXP_QueryPanel.onBeforeDestroy
+
+    Called just before Panel is destroyed.
+
+.. method:: GXP_QueryPanel.onPanelRendered
+
+    Called when Panel has been rendered.
+
+.. method:: GXP_QueryPanel.onParentHide
+
+    Called when parent Panel is hidden in Container.
+
+.. method:: GXP_QueryPanel.onParentShow
+
+    Called when parent Panel is shown in Container.
+
+.. method:: GXP_QueryPanel.onSearchComplete
+
+    Function to call when search is complete.
+    Default is to show "Search completed" with feature count on progress label.
+
+.. method:: GXP_QueryPanel.onSearchIssued
+
+    Called when remote search (WFS) query has started.
+
+.. method:: GXP_QueryPanel.search
+
+    Issue query via GXP QueryPanel.
+
+.. method:: GXP_QueryPanel.searchAbort
+
+    Cancel search in progress.
+
+
+
+
+

@@ -1,0 +1,38 @@
+
+.. currentmodule:: Heron.widgets
+
+:class:`Heron.widgets.ToolbarBuilder`
+================================================================================
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+Events
+------
+
+Events.
+
+
+.. describe:: printexception
+
+    Triggered when using the ``POST`` method, when the print
+    backend returns an exception.
+    
+    Listener arguments:
+    
+    * printProvider - :class:`GeoExt.data.PrintProvider` this
+      PrintProvider
+    * response - ``Object`` the response object of the XHR
+
+
+

@@ -1,0 +1,60 @@
+
+.. currentmodule:: Heron.widgets
+
+:class:`Heron.widgets.LayerNodeMenuItem.Opacity`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Ext.menu.Item <http://docs.sencha.com/extjs/3.4.0/#!/api/Ext.menu.Item>`_
+    
+
+
+
+xtype
+    ``hr_layernodemenuopacityslider``
+
+
+
+
+.. class:: LayerNodeMenuItem.OpacitySlider(items)
+
+A context menu item to popup opacity slider to change opacity of Layer.
+
+
+
+Example Use
+-----------
+
+Sample code showing how to include LayerNodeMenuItems. Optionally pass your own menu items.
+
+.. code-block:: javascript
+
+       .
+       .
+       {
+        xtype: 'hr_layertreepanel',
+    FOR NOW: TODO: something smart with ExtJS plugins..
+	contextMenu: [{xtype: 'hr_layernodemenuzoomextent'}, {xtype: 'hr_layernodemenustyle'}]);
+ },
+       {
+	 // The MapPanel
+	 xtype: 'hr_mappanel',
+	 id: 'hr-map',
+	 region: 'center',
+	 .
+	 .
+
+    
+
+
+
+
+
+
+
+
+

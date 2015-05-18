@@ -1,0 +1,93 @@
+
+.. currentmodule:: Heron.widgets
+
+:class:`Heron.widgets.LayerCombo`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Ext.form.ComboBox <http://dev.sencha.com/deploy/ext-3.4.0/docs/?class=Ext.form.ComboBox>`_
+    
+
+
+
+xtype
+    ``hr_layercombo``
+
+
+
+
+
+
+
+Example Use
+-----------
+
+Sample code showing how to configure a Heron LayerCombo.
+Note the main config layerFilter, a function to select a subset of Layers from the Map.
+Default is all Map Layers. When a Layer is selected the 'selectlayer' event is fired.
+
+.. code-block:: javascript
+
+   {
+       xtype: "hr_layercombo",
+       id: "hr_layercombo",
+
+       layerFilter: function (map) {
+           return map.getLayersByClass('OpenLayers.Layer.WMS');
+       }
+   }
+
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties in addition to
+those listed for `Ext.form.ComboBox <http://dev.sencha.com/deploy/ext-3.4.0/docs/?class=Ext.form.ComboBox>`_.
+
+
+.. describe:: emptyText
+
+    See http://www.dev.sencha.com/deploy/dev/docs/source/TextField.html#cfg-Ext.form.TextField-emptyText,
+    default value is "Choose a Base Layer".
+
+.. describe:: map
+
+    ``OpenLayers.Map or Object``  A configured map or a configuration object
+    for the map constructor, required only if :attr:`zoom` is set to
+    value greater than or equal to 0.
+
+.. describe:: selectFirst
+
+    ``Boolean``
+    utomatically select the first layer? Default false.
+
+.. describe:: sortOrder
+
+    ``String``
+    How should the layer names be sorted in the selector, 'ASC', 'DESC' or null (as Map order)?
+    default value is 'ASC' (Alphabetically Ascending).
+
+.. describe:: store
+
+    ``GeoExt.data.LayerStore`` A configured LayerStore
+
+.. describe:: tooltip
+
+    See http://www.dev.sencha.com/deploy/dev/docs/source/TextField.html#cfg-Ext.form.TextField-emptyText,
+    default value is "Basemaps".
+
+
+
+
+
+
+
+
+

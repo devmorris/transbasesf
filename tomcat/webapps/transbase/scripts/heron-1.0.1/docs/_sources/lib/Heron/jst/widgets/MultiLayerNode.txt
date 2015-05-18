@@ -1,0 +1,84 @@
+
+.. currentmodule:: Heron.tree
+
+:class:`Heron.tree.MultiLayerNode`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `GeoExt.tree.LayerNode <http://geoext.org/lib/GeoExt/widgets/tree/LayerNode.html>`_
+    
+
+
+
+
+
+
+.. class:: MultiLayerNode(config)
+
+ A subclass of ``GeoExt.tree.LayerNode`` that is connected to multiple
+ ``OpenLayers.Layer`` objects by setting the node's ``layers`` property with multiple
+ comma-separated layer names.
+
+ Checking or
+ unchecking the checkbox of this node will directly affect all layers and
+ vice versa. The default iconCls for this node's icon is
+ "gx-tree-layer-icon", unless it has children.
+
+  All methods will delegate to the superclass ``GeoExt.tree.LayerNode``.
+
+ To use this node type in a ``TreePanel`` config, set ``nodeType`` to
+ "hr_multilayer".
+
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties in addition to
+those listed for `GeoExt.tree.LayerNode <http://geoext.org/lib/GeoExt/widgets/tree/LayerNode.html>`_.
+
+
+.. describe:: layerNames
+
+    ``OpenLayers.Layer``
+    The layerNames that this node will
+    be bound to.
+
+.. describe:: layers
+
+    ``OpenLayers.Layer``
+    The layers that this node will
+    be bound to.
+
+
+
+
+Public Properties
+-----------------
+
+Public properties in addition to those
+listed for `GeoExt.tree.LayerNode <http://geoext.org/lib/GeoExt/widgets/tree/LayerNode.html>`_.
+
+
+.. attribute:: MultiLayerNode.layerNames
+
+    ``String``
+    The array of layerNames's that this Node manages.
+
+.. attribute:: MultiLayerNode.layers
+
+    ``OpenLayers.Layer``
+    The array of LayerNode's to delegate to.
+
+
+
+
+
+
+

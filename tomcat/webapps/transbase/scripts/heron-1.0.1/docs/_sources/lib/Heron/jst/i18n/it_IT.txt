@@ -1,0 +1,31 @@
+
+.. currentmodule:: Heron.i18n
+
+:class:`Heron.i18n.Heron.i18n.dict (it_IT)`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Ext.form.ComboBox <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.form.ComboBox>`_
+    
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+
+.. currentmodule:: Heron.widgets
+
+:class:`Heron.widgets.MapPanel`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `GeoExt.MapPanel <http://geoext.org/lib/GeoExt/widgets/MapPanel.html>`_
+    
+
+
+
+xtype
+    ``hr_mappanel``
+
+
+
+
+.. class:: MapPanel(config)
+
+A wrapper Panel for a GeoExt MapPanel.
+
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties in addition to
+those listed for `GeoExt.MapPanel <http://geoext.org/lib/GeoExt/widgets/MapPanel.html>`_.
+
+
+.. describe:: formatX
+
+    ``Function`` A custom format function for the x coordinate text.
+    When set this function overrides the default format function.
+    The signature of this function should be: ``function(lon,precision)``.
+    The result should be a ``String`` with the formatted text.
+    
+    Example:
+     .. code-block:: javascript
+    
+                Heron.options.map.settings = {
+    
+                 formatX: function(lon,precision) {
+                     return 'x: ' + lon.toFixed(precision) + ' m.';
+                 },
+    
+    
+
+.. describe:: formatY
+
+    ``Function`` A custom format function for the y coordinate text.
+    When set this function overrides the default format function.
+    The signature of this function should be: ``function(lat,precision)``.
+    The result should be a ``String`` with the formatted text.
+    
+    Example:
+     .. code-block:: javascript
+    
+                Heron.options.map.settings = {
+    
+                     formatY: function(lat,precision) {
+                         return 'y: ' + lat.toFixed(precision) + ' m.';
+                     },
+    
+
+
+
+
+
+
+
+
+

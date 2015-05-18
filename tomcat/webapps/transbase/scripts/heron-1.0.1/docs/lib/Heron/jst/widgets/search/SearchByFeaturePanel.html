@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Heron.widgets.search.SearchByFeaturePanel &mdash; Heron MC v1.0.1</title>
+    
+    <link rel="stylesheet" href="../../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../../',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="top" title="Heron MC v1.0.1" href="../../../../../index.html" />
+    <link rel="up" title="Heron.widgets.search" href="../../../widgets.search.html" />
+    <link rel="next" title="Heron.widgets.search.SearchCenterPanel" href="SearchCenterPanel.html" />
+    <link rel="prev" title="Heron.widgets.search.SearchByDrawPanel" href="SearchByDrawPanel.html" />
+    
+    
+
+  </head>
+  <body>
+    <div class="header">
+        <div class="wrap">
+            <h1 id="logo"><a href="../../../../../index.html">Heron</a></h1>
+            <ul id="top-nav">
+                <li class="first"><a href="../../../../../docs.html">Documentation</a></li>
+                <li><a href="../../../../../examples.html">Examples</a></li>
+                <li><a href="../../../../../downloads.html">Download</a></li>
+                <li><a href="http://code.google.com/p/geoext-viewer">Development</a></li>
+            </ul>
+            <div id="searchbox">
+                <form class="search" action="../../../../../search.html" method="get">
+                    <input id="searchbox-query" type="text" name="q" size="25" value="Search &hellip;" tabindex="3" onblur="if(this.value=='') this.value='Search &hellip;';" onfocus="if(this.value=='Search &hellip;') this.value='';" />
+                    <input id="searchbox-submit" type="image" value="Search" src="../../../../../_static/img/search_icon_green.png" />
+                    <input type="hidden" name="check_keywords" value="yes" />
+                    <input type="hidden" name="area" value="default" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="../../../../../index.html">HeronMC</a> &raquo;</li>
+          <li><a href="../../../../index.html" >API Reference</a> &raquo;</li>
+          <li><a href="../../../widgets.search.html" accesskey="U"><tt class="docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets.search</span></tt></a> &raquo;</li>
+        <li><a href="#"><tt class="docutils literal docutils literal"><span class="pre">Heron.widgets.search.SearchByFeaturePanel</span></tt></a></li>
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><tt class="docutils literal"><span class="pre">Heron.widgets.search.SearchByFeaturePanel</span></tt></a><ul>
+<li><a class="reference internal" href="#example-use">Example Use</a></li>
+<li><a class="reference internal" href="#config-options">Config Options</a></li>
+<li><a class="reference internal" href="#public-methods">Public Methods</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="SearchByDrawPanel.html"
+                        title="previous chapter"><tt class="docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets.search.SearchByDrawPanel</span></tt></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="SearchCenterPanel.html"
+                        title="next chapter"><tt class="docutils literal"><span class="pre">Heron.widgets.search.SearchCenterPanel</span></tt></a></p>
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="heron-widgets-search-searchbyfeaturepanel">
+<h1><a class="reference internal" href="#Heron.widgets.search.SearchByFeaturePanel" title="Heron.widgets.search.SearchByFeaturePanel"><tt class="xref py py-class docutils literal"><span class="pre">Heron.widgets.search.SearchByFeaturePanel</span></tt></a><a class="headerlink" href="#heron-widgets-search-searchbyfeaturepanel" title="Permalink to this headline">¶</a></h1>
+<dl class="meta docutils">
+<dt>Extends</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="SpatialSearchPanel.html">Heron.widgets.search.SpatialSearchPanel</a></li>
+</ul>
+</dd>
+<dt>xtype</dt>
+<dd><tt class="docutils literal"><span class="pre">hr_searchbydrawpanel</span></tt></dd>
+</dl>
+<dl class="class">
+<dt id="Heron.widgets.search.SearchByFeaturePanel">
+<em class="property">class </em><tt class="descclassname">Heron.widgets.search.</tt><tt class="descname">SearchByFeaturePanel</tt><big>(</big><em>config</em><big>)</big><a class="headerlink" href="#Heron.widgets.search.SearchByFeaturePanel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>A Panel to hold a spatial search by selecting features (via drawing) from another layer.</p>
+<p>Search by Feature Selection works as follows:</p>
+<blockquote>
+<div><ul class="simple">
+<li>select a source layer,</li>
+<li>draw a geometry using a draw tool</li>
+<li>observe features/geometries selected in the source layer</li>
+<li>select a target layer (in which to search, using the geometries of features found in the source layer)</li>
+<li>select a spatial operator for the search like WITHIN, or INTERSECTS</li>
+<li>fire search through &#8216;Search&#8217; button</li>
+</ul>
+</div></blockquote>
+<div class="section" id="example-use">
+<h2>Example Use<a class="headerlink" href="#example-use" title="Permalink to this headline">¶</a></h2>
+<p>This Panel is mostly used in combination with the  <a class="reference external" href="FeaturePanel.html">Heron.widgets.search.FeaturePanel</a>
+in which results from a search are displayed in a grid and on the Map. Both Panels are usually bundled
+in a <a class="reference external" href="SearchCenterPanel.html">Heron.widgets.search.SearchCenterPanel</a> that manages the search and result Panels.
+See config example below.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+<span class="nx">xtype</span><span class="o">:</span> <span class="s1">&#39;hr_searchcenterpanel&#39;</span><span class="p">,</span>
+<span class="nx">hropts</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">searchPanel</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">xtype</span><span class="o">:</span> <span class="s1">&#39;hr_searchbyfeaturepanel&#39;</span><span class="p">,</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;hr-searchbyfeaturepanel&#39;</span><span class="p">,</span>
+        <span class="nx">header</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nx">border</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nx">style</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">fontFamily</span><span class="o">:</span> <span class="s1">&#39;Verdana, Arial, Helvetica, sans-serif&#39;</span><span class="p">,</span>
+            <span class="nx">fontSize</span><span class="o">:</span> <span class="s1">&#39;12px&#39;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">resultPanel</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">xtype</span><span class="o">:</span> <span class="s1">&#39;hr_featuregridpanel&#39;</span><span class="p">,</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;hr-featuregridpanel&#39;</span><span class="p">,</span>
+        <span class="nx">header</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nx">border</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nx">autoConfig</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nx">exportFormats</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;XLS&#39;</span><span class="p">,</span> <span class="s1">&#39;WellKnownText&#39;</span><span class="p">],</span>
+        <span class="nx">hropts</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">zoomOnRowDoubleClick</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nx">zoomOnFeatureSelect</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nx">zoomLevelPointSelect</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+            <span class="nx">zoomToDataExtent</span><span class="o">:</span> <span class="kc">false</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>A <tt class="docutils literal"><span class="pre">SearchCenterPanel</span></tt> can be embedded in a Toolbar item popup as toolbar definition item <tt class="docutils literal"><span class="pre">searchcenter</span></tt>
+as below. <tt class="docutils literal"><span class="pre">Heron.examples.searchPanelConfig</span></tt> is the <tt class="docutils literal"><span class="pre">SearchCenterPanel</span></tt> config as above.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+<span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;searchcenter&quot;</span><span class="p">,</span>
+<span class="c1">// Options for SearchPanel window</span>
+<span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+     <span class="nx">show</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="nx">searchWindow</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">title</span><span class="o">:</span> <span class="nx">__</span><span class="p">(</span><span class="s1">&#39;Search by Drawing&#39;</span><span class="p">),</span>
+        <span class="nx">x</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="nx">y</span><span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
+        <span class="nx">width</span><span class="o">:</span> <span class="mi">360</span><span class="p">,</span>
+        <span class="nx">height</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>
+        <span class="nx">items</span><span class="o">:</span> <span class="p">[</span>
+            <span class="nx">Heron</span><span class="p">.</span><span class="nx">examples</span><span class="p">.</span><span class="nx">searchPanelConfig</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="config-options">
+<h2>Config Options<a class="headerlink" href="#config-options" title="Permalink to this headline">¶</a></h2>
+<p>Configuration properties in addition to
+those listed for <a class="reference external" href="SpatialSearchPanel.html">Heron.widgets.search.SpatialSearchPanel</a>.</p>
+<dl class="describe">
+<dt>
+<tt class="descname">name</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">String</span></tt>
+Name, e.g. for multiple searches combo.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">targetLayerFilter</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Function</span></tt>
+Filter for OpenLayer getLayersBy(), to filter out WFS-enabled Layers from Layer array except the source selection layer.
+Default: only Layers that have metadata.wfs (see OpenLayers Layer spec and examples) set.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="public-methods">
+<h2>Public Methods<a class="headerlink" href="#public-methods" title="Permalink to this headline">¶</a></h2>
+<p>Public methods in addition to those
+listed for <a class="reference external" href="SpatialSearchPanel.html">Heron.widgets.search.SpatialSearchPanel</a>.</p>
+<dl class="method">
+<dt id="Heron.widgets.search.SearchByFeaturePanel.onBeforeDestroy">
+<tt class="descclassname">SearchByFeaturePanel.</tt><tt class="descname">onBeforeDestroy</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.SearchByFeaturePanel.onBeforeDestroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called just before Panel is destroyed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Heron.widgets.search.SearchByFeaturePanel.onLayerSelect">
+<tt class="descclassname">SearchByFeaturePanel.</tt><tt class="descname">onLayerSelect</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.SearchByFeaturePanel.onLayerSelect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when Layer selected.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Heron.widgets.search.SearchByFeaturePanel.onPanelRendered">
+<tt class="descclassname">SearchByFeaturePanel.</tt><tt class="descname">onPanelRendered</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.SearchByFeaturePanel.onPanelRendered" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when Panel has been rendered.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Heron.widgets.search.SearchByFeaturePanel.onParentHide">
+<tt class="descclassname">SearchByFeaturePanel.</tt><tt class="descname">onParentHide</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.SearchByFeaturePanel.onParentHide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when parent Panel is hidden in Container.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Heron.widgets.search.SearchByFeaturePanel.onParentShow">
+<tt class="descclassname">SearchByFeaturePanel.</tt><tt class="descname">onParentShow</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.SearchByFeaturePanel.onParentShow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when parent Panel is shown in Container.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Heron.widgets.search.SearchByFeaturePanel.onSearchCanceled">
+<tt class="descclassname">SearchByFeaturePanel.</tt><tt class="descname">onSearchCanceled</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.SearchByFeaturePanel.onSearchCanceled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function called when search is canceled.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Heron.widgets.search.SearchByFeaturePanel.onSearchSuccess">
+<tt class="descclassname">SearchByFeaturePanel.</tt><tt class="descname">onSearchSuccess</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.SearchByFeaturePanel.onSearchSuccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function called when search is complete and succesful.
+Default is to show &#8220;Search completed&#8221; with feature count on progress label.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Heron.widgets.search.SearchByFeaturePanel.searchFromFeatures">
+<tt class="descclassname">SearchByFeaturePanel.</tt><tt class="descname">searchFromFeatures</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.SearchByFeaturePanel.searchFromFeatures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Issue spatial search via WFS.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+            <li class="right" style="margin-right: 10px">
+              <a href="../../../../../genindex.html" title="General Index"
+                 accesskey="I">index</a></li>
+            <li class="right" >
+              <a href="../../../../../py-modindex.html" title="Python Module Index"
+                 >modules</a> |</li>
+            <li class="right" >
+              <a href="SearchCenterPanel.html" title="Heron.widgets.search.SearchCenterPanel"
+                 accesskey="N">next</a> |</li>
+            <li class="right" >
+              <a href="SearchByDrawPanel.html" title="Heron.widgets.search.SearchByDrawPanel"
+                 accesskey="P">previous</a> |</li>
+        <li><a href="../../../../../index.html">HeronMC</a> &raquo;</li>
+          <li><a href="../../../../index.html" >API Reference</a> &raquo;</li>
+          <li><a href="../../../widgets.search.html" ><tt class="docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets.search</span></tt></a> &raquo;</li>
+        <li><a href="#"><tt class="docutils literal docutils literal"><span class="pre">Heron.widgets.search.SearchByFeaturePanel</span></tt></a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2011+, Heron MC Community.
+    </div>
+  </body>
+</html>

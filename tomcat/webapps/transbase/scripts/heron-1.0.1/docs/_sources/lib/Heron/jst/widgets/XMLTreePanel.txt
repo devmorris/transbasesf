@@ -1,0 +1,37 @@
+
+.. currentmodule:: Heron.widgets
+
+:class:`Heron.widgets.XMLTreePanel`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Ext.tree.TreePanel <http://docs.sencha.com/ext-js/3-4/#!/api/Ext.tree.TreePanel>`_
+    
+
+
+
+xtype
+    ``hr_xmltreepanel``
+
+
+
+
+.. class:: XMLTreePanel(config)
+
+Specialized TreePanel to display an XML as a tree such with GML.
+
+
+    
+
+
+
+
+
+
+
+
+

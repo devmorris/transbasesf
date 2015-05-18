@@ -1,0 +1,37 @@
+
+.. currentmodule:: Heron.widgets
+
+:class:`Heron.widgets.HTMLPanel`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Ext.Panel <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.Panel>`_
+    
+
+
+
+xtype
+    ``hr_htmlpanel``
+
+
+
+
+.. class:: Heron.widgets.HTMLPanel(config)
+
+A panel designed to hold HTML content.
+
+
+    
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+
+.. currentmodule:: Heron.widgets
+
+:class:`Heron.widgets.LoadingPanel`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `OpenLayers.Control <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=OpenLayers.Control>`_
+    
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+

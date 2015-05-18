@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Heron.widgets.BookmarksPanel &mdash; Heron MC v1.0.1</title>
+    
+    <link rel="stylesheet" href="../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="top" title="Heron MC v1.0.1" href="../../../../index.html" />
+    <link rel="up" title="Heron.widgets" href="../../widgets.html" />
+    <link rel="next" title="Heron.widgets.CapabilitiesTreePanel" href="CapabilitiesTreePanel.html" />
+    <link rel="prev" title="Heron.widgets.BaseLayerCombo" href="BaseLayerCombo.html" />
+    
+    
+
+  </head>
+  <body>
+    <div class="header">
+        <div class="wrap">
+            <h1 id="logo"><a href="../../../../index.html">Heron</a></h1>
+            <ul id="top-nav">
+                <li class="first"><a href="../../../../docs.html">Documentation</a></li>
+                <li><a href="../../../../examples.html">Examples</a></li>
+                <li><a href="../../../../downloads.html">Download</a></li>
+                <li><a href="http://code.google.com/p/geoext-viewer">Development</a></li>
+            </ul>
+            <div id="searchbox">
+                <form class="search" action="../../../../search.html" method="get">
+                    <input id="searchbox-query" type="text" name="q" size="25" value="Search &hellip;" tabindex="3" onblur="if(this.value=='') this.value='Search &hellip;';" onfocus="if(this.value=='Search &hellip;') this.value='';" />
+                    <input id="searchbox-submit" type="image" value="Search" src="../../../../_static/img/search_icon_green.png" />
+                    <input type="hidden" name="check_keywords" value="yes" />
+                    <input type="hidden" name="area" value="default" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="../../../../index.html">HeronMC</a> &raquo;</li>
+          <li><a href="../../../index.html" >API Reference</a> &raquo;</li>
+          <li><a href="../../widgets.html" accesskey="U"><tt class="docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets</span></tt></a> &raquo;</li>
+        <li><a href="#"><tt class="docutils literal docutils literal"><span class="pre">Heron.widgets.BookmarksPanel</span></tt></a></li>
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><tt class="docutils literal"><span class="pre">Heron.widgets.BookmarksPanel</span></tt></a><ul>
+<li><a class="reference internal" href="#example-use">Example Use</a></li>
+<li><a class="reference internal" href="#config-options">Config Options</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="BaseLayerCombo.html"
+                        title="previous chapter"><tt class="docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets.BaseLayerCombo</span></tt></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="CapabilitiesTreePanel.html"
+                        title="next chapter"><tt class="docutils literal"><span class="pre">Heron.widgets.CapabilitiesTreePanel</span></tt></a></p>
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="heron-widgets-bookmarkspanel">
+<h1><a class="reference internal" href="#Heron.widgets.BookmarksPanel" title="Heron.widgets.BookmarksPanel"><tt class="xref py py-class docutils literal"><span class="pre">Heron.widgets.BookmarksPanel</span></tt></a><a class="headerlink" href="#heron-widgets-bookmarkspanel" title="Permalink to this headline">¶</a></h1>
+<dl class="meta docutils">
+<dt>Extends</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="HTMLPanel.html">Heron.widgets.HTMLPanel</a></li>
+</ul>
+</dd>
+<dt>xtype</dt>
+<dd><tt class="docutils literal"><span class="pre">hr_bookmarkspanel</span></tt></dd>
+</dl>
+<dl class="class">
+<dt id="Heron.widgets.BookmarksPanel">
+<em class="property">class </em><tt class="descclassname">Heron.widgets.</tt><tt class="descname">BookmarksPanel</tt><big>(</big><em>config</em><big>)</big><a class="headerlink" href="#Heron.widgets.BookmarksPanel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>A panel designed to hold link bookmarks to map contexts (layers/zoom/center).
+A map context is a set of layers to be activated, a zoomlevel to be zoomed into plus
+the point (x,y) where the map should be centered.</p>
+<div class="section" id="example-use">
+<h2>Example Use<a class="headerlink" href="#example-use" title="Permalink to this headline">¶</a></h2>
+<p>A panel designed to hold link bookmarks to map contexts (layers/zoom/center).
+A map context is a set of layers to be activated, a zoomlevel to be zoomed into plus
+the point (x,y) where the map should be centered.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+<span class="nx">xtype</span><span class="o">:</span> <span class="s1">&#39;hr_bookmarkspanel&#39;</span><span class="p">,</span>
+<span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;hr-bookmarks&#39;</span><span class="p">,</span>
+<span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;My title&#39;</span><span class="p">,</span>
+<span class="nx">titleDescription</span><span class="o">:</span> <span class="s1">&#39;Text for explanation&#39;</span><span class="p">,</span>
+<span class="nx">titleBookmarkProject</span><span class="o">:</span> <span class="s1">&#39;My Project bookmarks&#39;</span><span class="p">,</span>
+<span class="nx">titleBookmarkUser</span><span class="o">:</span> <span class="s1">&#39;My bookmarks&#39;</span><span class="p">,</span>
+<span class="nx">showProjectBookmarks</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="nx">showUserBookmarks</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="nx">autoProjectBookmarksTitle</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="nx">autoUserBookmarksTitle</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="nx">appBookmarkSign</span><span class="o">:</span> <span class="s1">&#39;MyAppSign&#39;</span><span class="p">,</span>
+
+<span class="c1">// The contexts to create project bookmarks in the bookmark panel.</span>
+<span class="nx">hropts</span><span class="o">:</span> <span class="p">[</span>
+<span class="p">{</span>
+<span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;bookmark_XXX&#39;</span><span class="p">,</span>
+<span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Change layers - jump - zoom&#39;</span><span class="p">,</span>
+<span class="nx">desc</span><span class="o">:</span> <span class="s1">&#39;Bookmark XXX - change + jump + zoom&#39;</span><span class="p">,</span>
+<span class="nx">addLayers</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+<span class="nx">layers</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;XXX_baselayer&#39;</span><span class="p">,</span><span class="s1">&#39;XXX_overlay1&#39;</span><span class="p">,</span><span class="s1">&#39;XXX_overlay2&#39;</span><span class="p">]</span>
+<span class="p">,</span> <span class="nx">x</span><span class="o">:</span> <span class="mi">3796558</span><span class="p">,</span>       <span class="nx">y</span><span class="o">:</span> <span class="mi">5830315</span>
+<span class="p">,</span> <span class="nx">zoom</span><span class="o">:</span> <span class="mi">16</span>
+<span class="p">},</span>
+<span class="p">{</span>
+<span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;bookmark_XXX add&#39;</span><span class="p">,</span>
+<span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Add layers - jump - zoom&#39;</span><span class="p">,</span>
+<span class="nx">desc</span><span class="o">:</span> <span class="s1">&#39;Bookmark XXX - add + jump + zoom&#39;</span><span class="p">,</span>
+<span class="nx">addLayers</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="nx">layers</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;XXX_overlay1&#39;</span><span class="p">,</span><span class="s1">&#39;XXX_overlay2&#39;</span><span class="p">]</span>
+<span class="p">,</span> <span class="nx">x</span><span class="o">:</span> <span class="mi">3796558</span><span class="p">,</span>       <span class="nx">y</span><span class="o">:</span> <span class="mi">5830315</span>
+<span class="p">,</span> <span class="nx">zoom</span><span class="o">:</span> <span class="mi">16</span>
+<span class="p">},</span>
+<span class="p">{</span>
+<span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;bookmark_XXX_delete&#39;</span><span class="p">,</span>
+<span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Delete all overlays&#39;</span><span class="p">,</span>
+<span class="nx">desc</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="nx">layers</span><span class="o">:</span> <span class="p">[]</span>
+<span class="p">},</span>
+<span class="p">{</span>
+<span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;bookmark_empty_1&#39;</span><span class="p">,</span>
+<span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="nx">desc</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="nx">layers</span><span class="o">:</span> <span class="p">[]</span>
+<span class="p">},</span>
+<span class="p">{</span>
+<span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;bookmark_change_jump&#39;</span><span class="p">,</span>
+<span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Change layers - jump&#39;</span><span class="p">,</span>
+<span class="nx">desc</span><span class="o">:</span> <span class="s1">&#39;Bookmark XXX - change + jump&#39;</span><span class="p">,</span>
+<span class="nx">layers</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;XXX_baselayer&#39;</span><span class="p">,</span><span class="s1">&#39;XXX_overlay1&#39;</span><span class="p">,</span><span class="s1">&#39;XXX_overlay2&#39;</span><span class="p">]</span>
+<span class="p">,</span> <span class="nx">x</span><span class="o">:</span> <span class="mi">3796558</span><span class="p">,</span>       <span class="nx">y</span><span class="o">:</span> <span class="mi">5830315</span>
+<span class="p">},</span>
+<span class="p">{</span>
+<span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;bookmark_change_zoom&#39;</span><span class="p">,</span>
+<span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Change layers - zoom&#39;</span><span class="p">,</span>
+<span class="nx">desc</span><span class="o">:</span> <span class="s1">&#39;Bookmark XXX - change + zoom&#39;</span><span class="p">,</span>
+<span class="nx">layers</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;XXX_baselayer&#39;</span><span class="p">,</span><span class="s1">&#39;XXX_overlay1&#39;</span><span class="p">,</span><span class="s1">&#39;XXX_overlay2&#39;</span><span class="p">]</span>
+<span class="p">,</span> <span class="nx">zoom</span><span class="o">:</span> <span class="mi">16</span>
+<span class="p">},</span>
+<span class="p">{</span>
+<span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;bookmark_empty_2&#39;</span><span class="p">,</span>
+<span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="nx">desc</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="nx">layers</span><span class="o">:</span> <span class="p">[]</span>
+<span class="p">},</span>
+<span class="p">{</span>
+<span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;bookmark_only_jump&#39;</span><span class="p">,</span>
+<span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Only - jump&#39;</span><span class="p">,</span>
+<span class="nx">desc</span><span class="o">:</span> <span class="s1">&#39;Bookmark XXX - jump&#39;</span><span class="p">,</span>
+<span class="nx">layers</span><span class="o">:</span> <span class="p">[]</span>
+<span class="p">,</span> <span class="nx">x</span><span class="o">:</span> <span class="mi">3796558</span><span class="p">,</span>       <span class="nx">y</span><span class="o">:</span> <span class="mi">5830315</span>
+<span class="p">},</span>
+<span class="p">{</span>
+<span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;bookmark_only_zoom&#39;</span><span class="p">,</span>
+<span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Only - zoom&#39;</span><span class="p">,</span>
+<span class="nx">desc</span><span class="o">:</span> <span class="s1">&#39;Bookmark XXX - zoom&#39;</span><span class="p">,</span>
+<span class="nx">layers</span><span class="o">:</span> <span class="p">[]</span>
+<span class="p">,</span> <span class="nx">zoom</span><span class="o">:</span> <span class="mi">16</span>
+<span class="p">}</span>
+<span class="p">]</span>
+<span class="p">},</span>
+</pre></div>
+</div>
+<p>The design of the bookmark panel areas could be modified by
+&#8216;overloading&#8217; the css entries in &#8216;default.css&#8217; with your own
+definitions using</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">hr</span><span class="o">-</span><span class="n">bookmark</span><span class="o">-</span><span class="n">panel</span><span class="o">-</span><span class="n">bode</span>
+<span class="n">hr</span><span class="o">-</span><span class="n">bookmark</span><span class="o">-</span><span class="n">title</span><span class="o">-</span><span class="n">description</span>
+<span class="n">hr</span><span class="o">-</span><span class="n">bookmark</span><span class="o">-</span><span class="n">title</span><span class="o">-</span><span class="n">header</span>
+<span class="n">hr</span><span class="o">-</span><span class="n">bookmark</span><span class="o">-</span><span class="n">title</span><span class="o">-</span><span class="n">hr</span>
+<span class="n">hr</span><span class="o">-</span><span class="n">bookmark</span><span class="o">-</span><span class="n">link</span><span class="o">-</span><span class="n">project</span>
+<span class="n">hr</span><span class="o">-</span><span class="n">bookmark</span><span class="o">-</span><span class="n">link</span><span class="o">-</span><span class="n">user</span>
+<span class="n">hr</span><span class="o">-</span><span class="n">bookmark</span><span class="o">-</span><span class="n">link</span><span class="o">-</span><span class="n">invalid</span>
+<span class="n">hr</span><span class="o">-</span><span class="n">bookmark</span><span class="o">-</span><span class="n">close</span><span class="o">-</span><span class="n">icon</span>
+</pre></div>
+</div>
+<p>Remark:
+with pre v0.73. Heron.widgets.ContextBrowserPanel was renamed to
+Heron.widgets.BookmarksPanel. Existing code can be converted (and
+expanded) like this:</p>
+<p>Existing &#8216;ContextBrowserPanel&#8217;</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+<span class="nx">xtype</span><span class="o">:</span> <span class="s1">&#39;hr_contextbrowserpanel&#39;</span><span class="p">,</span>
+<span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;my-old-hr-contextbrowser&#39;</span><span class="p">,</span>
+<span class="nx">hropts</span><span class="o">:</span> <span class="p">[</span> <span class="p">{</span> <span class="p">.</span> <span class="p">.</span> <span class="p">}</span> <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Converted to &#8216;BookmarksPanel&#8217;</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+<span class="nx">xtype</span><span class="o">:</span> <span class="s1">&#39;hr_bookmarkspanel&#39;</span><span class="p">,</span>
+<span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;my-new-hr-bookmarks&#39;</span><span class="p">,</span>
+<span class="nx">showProjectBookmarks</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="nx">showUserBookmarks</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+<span class="nx">autoProjectBookmarksTitle</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="p">.,</span>
+<span class="nx">hropts</span><span class="o">:</span> <span class="p">[</span> <span class="p">{</span> <span class="p">.</span> <span class="p">.</span> <span class="p">}</span> <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="config-options">
+<h2>Config Options<a class="headerlink" href="#config-options" title="Permalink to this headline">¶</a></h2>
+<p>Configuration properties in addition to
+those listed for <a class="reference external" href="HTMLPanel.html">Heron.widgets.HTMLPanel</a>.</p>
+<dl class="describe">
+<dt>
+<tt class="descname">appBookmarkSign</tt></dt>
+<dd><p>With &#8216;appBookmarkSign&#8217; you can configure different user bookmarks for
+different heron geo applications. Each application named by an extra
+signature then holds a different user bookmark set.
+Default is &#8220;null&#8221; - all user bookmarks are shown in all heron
+applications configured with &#8220;null&#8221;.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">autoProjectBookmarksTitle</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt> If set to true, the &#8216;titleBookmarkProject&#8217; is only shown,
+if there are any entries. If set to false, the title will be shown
+in each case in this panel.
+Default is true.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">autoUserBookmarksTitle</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt> If set to true, the &#8216;titleBookmarkUser&#8217; is only shown,
+if there are any entries. If set to false, the title will be shown
+in each case in this panel.
+Default is true.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">showProjectBookmarks</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt> If set to true, the project bookmarks will be shown.
+If set to false, no project bookmarks will be shown in this panel.
+Default is true.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">showUserBookmarks</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt> If set to true, the user bookmarks will be shown.
+If set to false, no user bookmarks will be shown in this panel -
+for compatibility with pre v0.73 - Heronon.widgets.ContextBrowserPanel or
+just for configuring only static bookmarks (showProjectBookmarks = true).
+Default is true.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">title</tt></dt>
+<dd><p>title of the panel
+default value is &#8220;Bookmarks&#8221;.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">titleBookmarkProject</tt></dt>
+<dd><p>title of the project bookmarks
+default value is &#8220;Project bookmarks&#8221;.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">titleBookmarkUser</tt></dt>
+<dd><p>title of the user bookmarks
+default value is &#8220;Your bookmarks&#8221;.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">titleDescription</tt></dt>
+<dd><p>description line under the title line
+default value is &#8220;null&#8221;.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+            <li class="right" style="margin-right: 10px">
+              <a href="../../../../genindex.html" title="General Index"
+                 accesskey="I">index</a></li>
+            <li class="right" >
+              <a href="../../../../py-modindex.html" title="Python Module Index"
+                 >modules</a> |</li>
+            <li class="right" >
+              <a href="CapabilitiesTreePanel.html" title="Heron.widgets.CapabilitiesTreePanel"
+                 accesskey="N">next</a> |</li>
+            <li class="right" >
+              <a href="BaseLayerCombo.html" title="Heron.widgets.BaseLayerCombo"
+                 accesskey="P">previous</a> |</li>
+        <li><a href="../../../../index.html">HeronMC</a> &raquo;</li>
+          <li><a href="../../../index.html" >API Reference</a> &raquo;</li>
+          <li><a href="../../widgets.html" ><tt class="docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets</span></tt></a> &raquo;</li>
+        <li><a href="#"><tt class="docutils literal docutils literal"><span class="pre">Heron.widgets.BookmarksPanel</span></tt></a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2011+, Heron MC Community.
+    </div>
+  </body>
+</html>

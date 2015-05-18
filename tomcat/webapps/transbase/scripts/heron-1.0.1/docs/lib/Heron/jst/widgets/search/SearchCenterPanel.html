@@ -1,0 +1,224 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Heron.widgets.search.SearchCenterPanel &mdash; Heron MC v1.0.1</title>
+    
+    <link rel="stylesheet" href="../../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../../',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="top" title="Heron MC v1.0.1" href="../../../../../index.html" />
+    <link rel="up" title="Heron.widgets.search" href="../../../widgets.search.html" />
+    <link rel="next" title="Heron.widgets.search.SpatialSearchPanel" href="SpatialSearchPanel.html" />
+    <link rel="prev" title="Heron.widgets.search.SearchByFeaturePanel" href="SearchByFeaturePanel.html" />
+    
+    
+
+  </head>
+  <body>
+    <div class="header">
+        <div class="wrap">
+            <h1 id="logo"><a href="../../../../../index.html">Heron</a></h1>
+            <ul id="top-nav">
+                <li class="first"><a href="../../../../../docs.html">Documentation</a></li>
+                <li><a href="../../../../../examples.html">Examples</a></li>
+                <li><a href="../../../../../downloads.html">Download</a></li>
+                <li><a href="http://code.google.com/p/geoext-viewer">Development</a></li>
+            </ul>
+            <div id="searchbox">
+                <form class="search" action="../../../../../search.html" method="get">
+                    <input id="searchbox-query" type="text" name="q" size="25" value="Search &hellip;" tabindex="3" onblur="if(this.value=='') this.value='Search &hellip;';" onfocus="if(this.value=='Search &hellip;') this.value='';" />
+                    <input id="searchbox-submit" type="image" value="Search" src="../../../../../_static/img/search_icon_green.png" />
+                    <input type="hidden" name="check_keywords" value="yes" />
+                    <input type="hidden" name="area" value="default" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="../../../../../index.html">HeronMC</a> &raquo;</li>
+          <li><a href="../../../../index.html" >API Reference</a> &raquo;</li>
+          <li><a href="../../../widgets.search.html" accesskey="U"><tt class="docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets.search</span></tt></a> &raquo;</li>
+        <li><a href="#"><tt class="docutils literal docutils literal"><span class="pre">Heron.widgets.search.SearchCenterPanel</span></tt></a></li>
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><tt class="docutils literal"><span class="pre">Heron.widgets.search.SearchCenterPanel</span></tt></a><ul>
+<li><a class="reference internal" href="#example-use">Example Use</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="SearchByFeaturePanel.html"
+                        title="previous chapter"><tt class="docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets.search.SearchByFeaturePanel</span></tt></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="SpatialSearchPanel.html"
+                        title="next chapter"><tt class="docutils literal docutils literal"><span class="pre">Heron.widgets.search.SpatialSearchPanel</span></tt></a></p>
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="heron-widgets-search-searchcenterpanel">
+<h1><a class="reference internal" href="#Heron.widgets.search.SearchCenterPanel" title="Heron.widgets.search.SearchCenterPanel"><tt class="xref py py-class docutils literal"><span class="pre">Heron.widgets.search.SearchCenterPanel</span></tt></a><a class="headerlink" href="#heron-widgets-search-searchcenterpanel" title="Permalink to this headline">¶</a></h1>
+<dl class="meta docutils">
+<dt>Extends</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://www.geoext.org/lib/GeoExt/widgets/form/FormPanel.html">GeoExt.form.FormPanel</a></li>
+</ul>
+</dd>
+<dt>xtype</dt>
+<dd><tt class="docutils literal"><span class="pre">hr_searchcenterpanel</span></tt></dd>
+</dl>
+<dl class="class">
+<dt id="Heron.widgets.search.SearchCenterPanel">
+<em class="property">class </em><tt class="descclassname">Heron.widgets.search.</tt><tt class="descname">SearchCenterPanel</tt><big>(</big><em>config</em><big>)</big><a class="headerlink" href="#Heron.widgets.search.SearchCenterPanel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>A panel designed to hold a (geo-)search form plus results (features) in grid and on map.
+Combines both the FeaturePanel and SearchPanel widgets</p>
+<div class="section" id="example-use">
+<h2>Example Use<a class="headerlink" href="#example-use" title="Permalink to this headline">¶</a></h2>
+<p>Sample code showing how to configure a Heron SearchCenterPanel.
+Note that the  config here contains both a Heron FormSearchPanel object (search form) and a Heron FeaturePanel
+(result panel). Other possible SearchPanels to use are: SpatialSearchPanel and  GXP_QueryPanel.</p>
+<div class="highlight-javascript"><div class="highlight"><pre> <span class="p">{</span>
+    <span class="nx">xtype</span><span class="o">:</span> <span class="s1">&#39;hr_searchcenterpanel&#39;</span><span class="p">,</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;hr-searchcenterpanel&#39;</span><span class="p">,</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="nx">__</span><span class="p">(</span><span class="s1">&#39;Search&#39;</span><span class="p">),</span>
+
+    <span class="nx">hropts</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">searchPanel</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">xtype</span><span class="o">:</span> <span class="s1">&#39;hr_formsearchpanel&#39;</span><span class="p">,</span>
+            <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;hr-formsearchpanel&#39;</span><span class="p">,</span>
+            <span class="nx">header</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nx">bodyStyle</span><span class="o">:</span> <span class="s1">&#39;padding: 6px&#39;</span><span class="p">,</span>
+            <span class="nx">style</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">fontFamily</span><span class="o">:</span> <span class="s1">&#39;Verdana, Arial, Helvetica, sans-serif&#39;</span><span class="p">,</span>
+                <span class="nx">fontSize</span><span class="o">:</span> <span class="s1">&#39;12px&#39;</span>
+            <span class="p">},</span>
+            <span class="nx">protocol</span><span class="o">:</span> <span class="k">new</span> <span class="nx">OpenLayers</span><span class="p">.</span><span class="nx">Protocol</span><span class="p">.</span><span class="nx">WFS</span><span class="p">({</span>
+                <span class="nx">version</span><span class="o">:</span> <span class="s2">&quot;1.1.0&quot;</span><span class="p">,</span>
+                <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;http://kademo.nl/gs2/wfs?&quot;</span><span class="p">,</span>
+                <span class="nx">srsName</span><span class="o">:</span> <span class="s2">&quot;EPSG:28992&quot;</span><span class="p">,</span>
+                <span class="nx">featureType</span><span class="o">:</span> <span class="s2">&quot;hockeyclubs&quot;</span><span class="p">,</span>
+                <span class="nx">featureNS</span><span class="o">:</span> <span class="s2">&quot;http://innovatie.kadaster.nl&quot;</span>
+            <span class="p">}),</span>
+            <span class="nx">items</span><span class="o">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nx">xtype</span><span class="o">:</span> <span class="s2">&quot;textfield&quot;</span><span class="p">,</span>
+                    <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;name__like&quot;</span><span class="p">,</span>
+                    <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;H.C*&#39;</span><span class="p">,</span>
+                    <span class="nx">fieldLabel</span><span class="o">:</span> <span class="s2">&quot;  name&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nx">xtype</span><span class="o">:</span> <span class="s2">&quot;label&quot;</span><span class="p">,</span>
+                    <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;helplabel&quot;</span><span class="p">,</span>
+                    <span class="nx">html</span><span class="o">:</span> <span class="s1">&#39;Type name of an NL hockeyclub, use * as wildcard&lt;br/&gt;&#39;</span><span class="p">,</span>
+                    <span class="nx">style</span><span class="o">:</span> <span class="p">{</span>
+                        <span class="nx">fontSize</span><span class="o">:</span> <span class="s1">&#39;10px&#39;</span><span class="p">,</span>
+                        <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#AAAAAA&#39;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nx">hropts</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">onSearchCompleteZoom</span> <span class="o">:</span> <span class="mi">11</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nx">resultPanel</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">xtype</span><span class="o">:</span> <span class="s1">&#39;hr_featurepanel&#39;</span><span class="p">,</span>
+            <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;hr-featurepanel&#39;</span><span class="p">,</span>
+            <span class="nx">title</span><span class="o">:</span> <span class="nx">__</span><span class="p">(</span><span class="s1">&#39;Search&#39;</span><span class="p">),</span>
+            <span class="nx">header</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nx">columns</span><span class="o">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nx">header</span><span class="o">:</span> <span class="s2">&quot;Name&quot;</span><span class="p">,</span>
+                    <span class="nx">width</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
+                    <span class="nx">dataIndex</span><span class="o">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+                    <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;string&#39;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nx">header</span><span class="o">:</span> <span class="s2">&quot;Desc&quot;</span><span class="p">,</span>
+                    <span class="nx">width</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+                    <span class="nx">dataIndex</span><span class="o">:</span> <span class="s2">&quot;cmt&quot;</span><span class="p">,</span>
+                    <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;string&#39;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+             <span class="nx">hropts</span><span class="o">:</span> <span class="p">{</span>
+                  <span class="nx">zoomOnRowDoubleClick</span> <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                 <span class="nx">zoomOnFeatureSelect</span> <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                 <span class="nx">zoomLevelPointSelect</span> <span class="o">:</span> <span class="mi">8</span>
+             <span class="p">}</span>
+
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+            <li class="right" style="margin-right: 10px">
+              <a href="../../../../../genindex.html" title="General Index"
+                 accesskey="I">index</a></li>
+            <li class="right" >
+              <a href="../../../../../py-modindex.html" title="Python Module Index"
+                 >modules</a> |</li>
+            <li class="right" >
+              <a href="SpatialSearchPanel.html" title="Heron.widgets.search.SpatialSearchPanel"
+                 accesskey="N">next</a> |</li>
+            <li class="right" >
+              <a href="SearchByFeaturePanel.html" title="Heron.widgets.search.SearchByFeaturePanel"
+                 accesskey="P">previous</a> |</li>
+        <li><a href="../../../../../index.html">HeronMC</a> &raquo;</li>
+          <li><a href="../../../../index.html" >API Reference</a> &raquo;</li>
+          <li><a href="../../../widgets.search.html" ><tt class="docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets.search</span></tt></a> &raquo;</li>
+        <li><a href="#"><tt class="docutils literal docutils literal"><span class="pre">Heron.widgets.search.SearchCenterPanel</span></tt></a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2011+, Heron MC Community.
+    </div>
+  </body>
+</html>

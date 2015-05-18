@@ -1,0 +1,82 @@
+
+.. currentmodule:: Heron.widgets
+
+:class:`Heron.widgets.CapabilitiesTreePanel`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Ext.tree.TreePanel <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.tree.TreePanel>`_
+    
+
+
+
+xtype
+    ``hr_CapabilitiesTreePanel``
+
+
+
+
+.. class:: CapabilitiesTreePanel(config)
+
+A panel designed to hold trees of Map Layers from a WMS Capabilties.
+
+
+
+Example Use
+-----------
+
+Sample code showing how to include a CapabilitiesTreePanel that automatically configures a layer tree
+from a WMS URL by doing a GetCapabilities and using the result to build the layertree.
+
+.. code-block:: javascript
+
+ .
+ .
+ {
+	 xtype: 'panel',
+
+	 id: 'hr-menu-left-container',
+		 .
+		 .
+	 items: [
+		 {
+			 // The TreePanel to be populated from a GetCapabilities request.
+			 title: 'Layers',
+			 xtype: 'hr_capabilitiestreepanel',
+			 autoScroll: true,
+			 useArrows: true,
+			 animate: true,
+			 hropts: {
+				 text: 'GetCaps Tree Panel',
+				 preload: true,
+				 url: 'http://eusoils.jrc.ec.europa.eu/wrb/wms_Landuse.asp?'
+			 }},
+
+		 {
+			.
+			.
+		 }
+	 ]
+ },
+ {
+	 // The MapPanel
+	 xtype: 'hr_mappanel',
+	 id: 'hr-map',
+	 region: 'center',
+	 .
+	 .
+
+    
+
+
+
+
+
+
+
+
+

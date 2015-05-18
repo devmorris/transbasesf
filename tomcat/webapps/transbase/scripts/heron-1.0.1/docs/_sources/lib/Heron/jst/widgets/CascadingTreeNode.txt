@@ -1,0 +1,37 @@
+
+.. currentmodule:: 
+
+:class:`.`
+================================================================================
+
+
+
+.. class:: CascadingTreeNode(config)
+
+    A subclass of ``Ext.tree.AsyncTreeNode``. Tree parent node with checkbox
+    that recursively toggles its childnodes when checked/unchecked.
+    Can be used to switch on/off on multiple Layers in child ``GeoExt LayerNodes``.
+
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties.
+
+
+.. describe:: checked
+
+    Shows a checkbox when ``true`` (checked) or ``false`` (unchecked) or none if ``undefined``.
+    Default value is ``false``.
+
+
+
+
+
+
+
+
+

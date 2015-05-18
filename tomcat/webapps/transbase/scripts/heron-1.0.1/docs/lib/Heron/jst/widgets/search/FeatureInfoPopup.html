@@ -1,0 +1,230 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Heron.widgets.search.FeatureInfoPopup &mdash; Heron MC v1.0.1</title>
+    
+    <link rel="stylesheet" href="../../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../../',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="top" title="Heron MC v1.0.1" href="../../../../../index.html" />
+    <link rel="up" title="Heron.widgets.search" href="../../../widgets.search.html" />
+    <link rel="next" title="Heron.widgets.search.FeaturePanel" href="FeaturePanel.html" />
+    <link rel="prev" title="Heron.widgets.search.FeatureInfoPanel" href="FeatureInfoPanel.html" />
+    
+    
+
+  </head>
+  <body>
+    <div class="header">
+        <div class="wrap">
+            <h1 id="logo"><a href="../../../../../index.html">Heron</a></h1>
+            <ul id="top-nav">
+                <li class="first"><a href="../../../../../docs.html">Documentation</a></li>
+                <li><a href="../../../../../examples.html">Examples</a></li>
+                <li><a href="../../../../../downloads.html">Download</a></li>
+                <li><a href="http://code.google.com/p/geoext-viewer">Development</a></li>
+            </ul>
+            <div id="searchbox">
+                <form class="search" action="../../../../../search.html" method="get">
+                    <input id="searchbox-query" type="text" name="q" size="25" value="Search &hellip;" tabindex="3" onblur="if(this.value=='') this.value='Search &hellip;';" onfocus="if(this.value=='Search &hellip;') this.value='';" />
+                    <input id="searchbox-submit" type="image" value="Search" src="../../../../../_static/img/search_icon_green.png" />
+                    <input type="hidden" name="check_keywords" value="yes" />
+                    <input type="hidden" name="area" value="default" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="../../../../../index.html">HeronMC</a> &raquo;</li>
+          <li><a href="../../../../index.html" >API Reference</a> &raquo;</li>
+          <li><a href="../../../widgets.search.html" accesskey="U"><tt class="docutils literal docutils literal docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets.search</span></tt></a> &raquo;</li>
+        <li><a href="#"><tt class="docutils literal docutils literal"><span class="pre">Heron.widgets.search.FeatureInfoPopup</span></tt></a></li>
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><tt class="docutils literal"><span class="pre">Heron.widgets.search.FeatureInfoPopup</span></tt></a><ul>
+<li><a class="reference internal" href="#example-use">Example Use</a></li>
+<li><a class="reference internal" href="#config-options">Config Options</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="FeatureInfoPanel.html"
+                        title="previous chapter"><tt class="docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets.search.FeatureInfoPanel</span></tt></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="FeaturePanel.html"
+                        title="next chapter"><tt class="docutils literal"><span class="pre">Heron.widgets.search.FeaturePanel</span></tt></a></p>
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="heron-widgets-search-featureinfopopup">
+<h1><a class="reference internal" href="#Heron.widgets.search.FeatureInfoPopup" title="Heron.widgets.search.FeatureInfoPopup"><tt class="xref py py-class docutils literal"><span class="pre">Heron.widgets.search.FeatureInfoPopup</span></tt></a><a class="headerlink" href="#heron-widgets-search-featureinfopopup" title="Permalink to this headline">¶</a></h1>
+<dl class="meta docutils">
+<dt>Extends</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://geoext.org/lib/GeoExt/widgets/Popup.html">GeoExt.Popup</a></li>
+</ul>
+</dd>
+<dt>xtype</dt>
+<dd><tt class="docutils literal"><span class="pre">hr_featureinfopopup</span></tt></dd>
+</dl>
+<dl class="class">
+<dt id="Heron.widgets.search.FeatureInfoPopup">
+<em class="property">class </em><tt class="descclassname">Heron.widgets.search.</tt><tt class="descname">FeatureInfoPopup</tt><big>(</big><em>config</em><big>)</big><a class="headerlink" href="#Heron.widgets.search.FeatureInfoPopup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>A Popup to hold the Panel designed to hold WMS GetFeatureInfo (GFI) data for one or more WMS layers.</p>
+<div class="section" id="example-use">
+<h2>Example Use<a class="headerlink" href="#example-use" title="Permalink to this headline">¶</a></h2>
+<p>This class can be configured via the Toolbar. It is usually not created explicitly.
+It can be either a regular &#8216;featureinfo&#8217; or &#8216;tooltips&#8217; widget button.
+A FeatureInfoPopup can be triggered by clcking or hovering, dependent on the config, both shown below.
+Below two sample configs for the toolbar.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;featureinfo&quot;</span><span class="p">,</span> <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+  <span class="nx">pressed</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nx">getfeatureControl</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">hover</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nx">drillDown</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nx">maxFeatures</span><span class="o">:</span> <span class="mi">1</span>
+  <span class="p">},</span>
+  <span class="nx">popupWindow</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">width</span><span class="o">:</span> <span class="mi">320</span><span class="p">,</span>
+      <span class="nx">height</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+      <span class="nx">anchored</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nx">featureInfoPanel</span><span class="o">:</span> <span class="p">{</span>
+          <span class="c1">// Option values are &#39;Grid&#39;, &#39;Tree&#39; and &#39;XML&#39;, default is &#39;Grid&#39; (results in no display menu)</span>
+          <span class="nx">displayPanels</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Grid&#39;</span><span class="p">],</span>
+          <span class="c1">// Export to download file. Option values are &#39;CSV&#39;, &#39;XLS&#39;, &#39;GMLv2&#39;, &#39;GeoJSON&#39;, &#39;WellKnownText&#39;, default is no export (results in no export menu).</span>
+          <span class="nx">exportFormats</span><span class="o">:</span> <span class="p">[],</span>
+          <span class="c1">// exportFormats: [&#39;CSV&#39;, &#39;XLS&#39;, &#39;GMLv2&#39;],</span>
+          <span class="nx">maxFeatures</span><span class="o">:</span> <span class="mi">1</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}},</span>
+
+<span class="p">{</span>
+  <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;tooltips&quot;</span><span class="p">,</span> <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+  <span class="c1">// Pressed cannot be true when anchored is true!</span>
+  <span class="nx">pressed</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nx">getfeatureControl</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">hover</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nx">drillDown</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nx">maxFeatures</span><span class="o">:</span> <span class="mi">1</span>
+  <span class="p">},</span>
+  <span class="nx">popupWindow</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;Information&quot;</span><span class="p">,</span>
+      <span class="nx">hideonmove</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nx">anchored</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="c1">//layer: &quot;World Cities (FAO)&quot;,</span>
+      <span class="nx">featureInfoPanel</span><span class="o">:</span> <span class="p">{</span>
+          <span class="c1">// Option values are &#39;Grid&#39;, &#39;Tree&#39; and &#39;XML&#39;, default is &#39;Grid&#39; (results in no display menu)</span>
+          <span class="nx">displayPanels</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Grid&#39;</span><span class="p">],</span>
+          <span class="c1">// Export to download file. Option values are &#39;CSV&#39;, &#39;XLS&#39;, default is no export (results in no export menu).</span>
+          <span class="nx">exportFormats</span><span class="o">:</span> <span class="p">[]</span>
+          <span class="c1">// exportFormats: [&#39;CSV&#39;, &#39;XLS&#39;],</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="config-options">
+<h2>Config Options<a class="headerlink" href="#config-options" title="Permalink to this headline">¶</a></h2>
+<p>Configuration properties in addition to
+those listed for <a class="reference external" href="http://geoext.org/lib/GeoExt/widgets/Popup.html">GeoExt.Popup</a>.</p>
+<dl class="describe">
+<dt>
+<tt class="descname">anchored</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">boolean</span></tt>
+The popup will show where the the clicked or where the mouse stopped.
+Will be <tt class="docutils literal"><span class="pre">true</span></tt> if not set.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">hideonmove</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">boolean</span></tt>
+The popup will hide if hideonmove parameter is <tt class="docutils literal"><span class="pre">true</span></tt>. Will be <tt class="docutils literal"><span class="pre">false</span></tt> if not set.
+This parameter only applies when hover is <tt class="docutils literal"><span class="pre">true</span></tt>.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">layer</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">string</span></tt>
+The layer to get feature information from. Parameter value will be <tt class="docutils literal"><span class="pre">&quot;&quot;</span></tt> if not set.
+If not set, all visible layers of the map will be searched. In case the drillDown
+parameter is <tt class="docutils literal"><span class="pre">false</span></tt>, the topmost visible layer will searched.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+            <li class="right" style="margin-right: 10px">
+              <a href="../../../../../genindex.html" title="General Index"
+                 accesskey="I">index</a></li>
+            <li class="right" >
+              <a href="../../../../../py-modindex.html" title="Python Module Index"
+                 >modules</a> |</li>
+            <li class="right" >
+              <a href="FeaturePanel.html" title="Heron.widgets.search.FeaturePanel"
+                 accesskey="N">next</a> |</li>
+            <li class="right" >
+              <a href="FeatureInfoPanel.html" title="Heron.widgets.search.FeatureInfoPanel"
+                 accesskey="P">previous</a> |</li>
+        <li><a href="../../../../../index.html">HeronMC</a> &raquo;</li>
+          <li><a href="../../../../index.html" >API Reference</a> &raquo;</li>
+          <li><a href="../../../widgets.search.html" ><tt class="docutils literal docutils literal docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets.search</span></tt></a> &raquo;</li>
+        <li><a href="#"><tt class="docutils literal docutils literal"><span class="pre">Heron.widgets.search.FeatureInfoPopup</span></tt></a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2011+, Heron MC Community.
+    </div>
+  </body>
+</html>

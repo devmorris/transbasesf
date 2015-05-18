@@ -1,0 +1,287 @@
+
+.. currentmodule:: Heron.widgets.search
+
+:class:`Heron.widgets.search.FeaturePanel`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `GeoExt.form.FormPanel <http://www.geoext.org/lib/GeoExt/widgets/form/FormPanel.html>`_
+    
+
+
+
+xtype
+    ``hr_featurepanel``
+
+
+
+
+.. class:: FeaturePanel(config)
+
+Show features both in a grid and on the map and have them selectable.
+
+
+
+Example Use
+-----------
+
+Sample code showing how to configure a Heron FeaturePanel. In this case
+a popup ExtJS Window is created with a single FeaturePanel (xtype: 'hr_featurepanel').
+
+.. code-block:: javascript
+
+    Ext.onReady(function () {
+        // create a panel and add the map panel and grid panel
+        // inside it
+        new Ext.Window({
+            title: __('Click Map or Grid to Select - Double Click to Zoom to feature'),
+            layout: "fit",
+            x: 50,
+            y: 100,
+            height: 400,
+            width: 280,
+            items: [{
+                    xtype: 'hr_featurepanel',
+                    id: 'hr-featurepanel',
+                    title: __('Parcels'),
+                    header: false,
+                    columns: [
+                        {
+                            header: "Fid",
+                            width: 60,
+                            dataIndex: "id",
+                            type: 'string'
+                        },
+                        {
+                            header: "ObjectNum",
+                            width: 180,
+                            dataIndex: "objectnumm",
+                            type: 'string'
+                        }
+                    ],
+                    hropts: {
+                        storeOpts: {
+                            proxy: new GeoExt.data.ProtocolProxy({
+                                protocol: new OpenLayers.Protocol.HTTP({
+                                    url: 'data/parcels.json',
+                                    format: new OpenLayers.Format.GeoJSON()
+                                })
+                            }),
+                            autoLoad: true
+                        },
+                        zoomOnRowDoubleClick: true,
+                        zoomOnFeatureSelect: false,
+                        zoomLevelPointSelect: 8,
+                        separateSelectionLayer: true
+                    }
+                }
+            ]
+        }).show();
+    });
+
+
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties in addition to
+those listed for `GeoExt.form.FormPanel <http://www.geoext.org/lib/GeoExt/widgets/form/FormPanel.html>`_.
+
+
+.. describe:: autoConfig
+
+    ``Boolean``
+    Should the store and grid columns autoconfigure from loaded features?.
+
+.. describe:: autoConfigMaxSniff
+
+    ``Integer``
+    Maximum number of features to 'sniff' for autoconfigured grid columns (as null columns are often not sent by server).
+
+.. describe:: autoMaxWidth
+
+    ``Integer``
+    The maximum width of a auto adjusted column grid response. Setting to 0 will disable auto column width detection
+
+.. describe:: autoMinWidth
+
+    ``Integer``
+     The minimum width of a auto adjusted column. Requires autoMaxWidth to be > 1 to function.
+
+.. describe:: columnCapitalize
+
+    ``Boolean``
+    Should the column names be capitalized when autoconfig is true?
+
+.. describe:: columnFixedWidth
+
+    ``Integer``
+    The width of a column in a grid response
+
+.. describe:: displayPanels
+
+    ``String Array``
+    
+    tring array  of types of Panels to display GFI info in, default value is ['Table'], a grid table.
+    ther value is 'Detail', a propertyPanel showing records one by one in a "Vertical" view.
+    f multiple display values are given buttons in the toolbar will be shown to switch display types.
+    irst value is the panel to be opened at the first time info is requested
+    nly more than one displayPanel will be available when showTopToolbar = true.
+    ote: The old implementation with 'Tree' and 'XML' was deprecated from v0.75
+
+.. describe:: downloadable
+
+    ``Boolean``
+    Should the features in the panel be downloadble?
+    Download can be effected in 3 ways:
+    1. via Grid export (CSV and XLS only)
+    2. downloading the original feature format (GML2)
+    3. (GeoServer only) requesting the server for a triggered download (all Geoserver WFS formats)
+
+.. describe:: exportConfigs
+
+    ``Object``
+    The supported configs for formatting and exporting feature data. Actual presented download options
+    are configured with exportFormats.
+
+.. describe:: exportFormats
+
+    ``String Array``
+    
+    rray of document formats to be used when exporting the content of the FeaturePanel. This requires the server-side CGI script
+    `heron.cgi`` to be installed. Exporting results in a download of a document with the content of the FeaturePanel.
+    or example when 'XLS' is configured, exporting will result in the Excel (or compatible) program to be
+    tarted with the data in an Excel worksheet.
+    tandard option values are ``CSV``, ``XLS``, ``GMLv2``, ``GeoJSON``, ``Shapefile``, ``WellKnownText``, default is, ``null``,
+    eaning no export (results in no export menu). These configured values select a formatter-object from
+    he ``exportConfigs`` map.
+    ince v0.77 it is also possible to supply your own formatter-objects within this array. For example for
+    dditional OGR-formats and/or -projections. Here is an example of a Shapefile in Dutch projection:
+    
+    .. code-block:: javascript
+    
+                         ['GMLv2', 'GeoJSON',{
+                               name: 'Esri Shapefile (WGS84)',
+                               formatter: 'OpenLayersFormatter',
+                               format: 'OpenLayers.Format.GeoJSON',
+                               targetFormat: 'ESRI Shapefile',
+                               targetSrs: 'EPSG:4326',
+                               fileExt: '.zip',
+                               mimeType: 'application/zip'
+                           }, 'WellKnownText']
+    
+
+.. describe:: featureSelection
+
+    ``Boolean``
+    Should the feature geometries that are shown be selectable in grid and map? Default ``true``.
+
+.. describe:: hideColumns
+
+    ``Array``
+    An array of column names from WFS and WMS GetFeatureInfo results that should be removed and not shown to the user.
+
+.. describe:: separateSelectionLayer
+
+    ``Boolean``
+    Should selected features be managed in separate overlay Layer (handy for printing) ?.
+
+.. describe:: showGeometries
+
+    ``Boolean``
+    Should the feature geometries be shown? Default ``true``.
+
+.. describe:: showTopToolbar
+
+    ``Boolean``
+    Should a top toolbar with feature count, clear button and download combo be shown? Default ``true``.
+
+.. describe:: vectorLayerOptions
+
+    ``Object``
+    Options to be passed on Vector constructors.
+
+.. describe:: zoomLevelPoint
+
+    ``Integer``
+    Zoom level when layer is single point feature, default ``10``.
+
+.. describe:: zoomLevelPointSelect
+
+    ``Integer``
+    Zoom level for point features when selected, default ``10``.
+
+.. describe:: zoomOnFeatureSelect
+
+    ``Boolean``
+    Zoom to feature (extent) when selected ?.
+
+.. describe:: zoomOnRowDoubleClick
+
+    ``Boolean``
+    Zoom to feature (extent) when row is double clicked ?.
+
+.. describe:: zoomToDataExtent
+
+    ``Boolean``
+    Zoom to layer data extent when loaded ?.
+
+
+
+
+
+
+Public Methods
+--------------
+
+Public methods in addition to those
+listed for `GeoExt.form.FormPanel <http://www.geoext.org/lib/GeoExt/widgets/form/FormPanel.html>`_.
+
+
+.. method:: FeaturePanel.createTopToolbar
+
+    Create the top toolbar.
+
+.. method:: FeaturePanel.hasFeatures
+
+    Does this Panel have features?.
+
+.. method:: FeaturePanel.hideLayer
+
+    Hide the layer with features on the map.
+
+.. method:: FeaturePanel.loadFeatures
+
+    Loads array of feature objects in store and shows them on grid and map.
+
+.. method:: FeaturePanel.onAfterlayoutTable
+
+    Called when Panel has been rendered.
+
+.. method:: FeaturePanel.onAfterlayoutTopToolbar
+
+    Called when Panel has been rendered.
+
+.. method:: FeaturePanel.onPanelRendered
+
+    Called when Panel has been rendered.
+
+.. method:: FeaturePanel.removeFeatures
+
+    Removes all feature objects from store .
+
+.. method:: FeaturePanel.showLayer
+
+    Show the layer with features on the map.
+
+
+
+
+

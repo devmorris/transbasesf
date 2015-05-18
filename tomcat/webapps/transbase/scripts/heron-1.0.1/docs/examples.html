@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Examples &mdash; Heron MC v1.0.1</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Heron MC v1.0.1" href="index.html" />
+    <link rel="next" title="Heron Community Involvement" href="developer/index.html" />
+    <link rel="prev" title="Heron Primer" href="primers/heron-primer.html" />
+    
+    
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/extjs/3.4.1-1/adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/extjs/3.4.1-1/ext-all.js"></script>
+    <script src="_static/examples.js"></script>
+    <script>
+        var docversion = "1.0.1";
+    </script>
+    
+
+  </head>
+  <body>
+    <div class="header">
+        <div class="wrap">
+            <h1 id="logo"><a href="index.html">Heron</a></h1>
+            <ul id="top-nav">
+                <li class="first"><a href="docs.html">Documentation</a></li>
+                <li><a href="#">Examples</a></li>
+                <li><a href="downloads.html">Download</a></li>
+                <li><a href="http://code.google.com/p/geoext-viewer">Development</a></li>
+            </ul>
+            <div id="searchbox">
+                <form class="search" action="search.html" method="get">
+                    <input id="searchbox-query" type="text" name="q" size="25" value="Search &hellip;" tabindex="3" onblur="if(this.value=='') this.value='Search &hellip;';" onfocus="if(this.value=='Search &hellip;') this.value='';" />
+                    <input id="searchbox-submit" type="image" value="Search" src="_static/img/search_icon_green.png" />
+                    <input type="hidden" name="check_keywords" value="yes" />
+                    <input type="hidden" name="area" value="default" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">HeronMC</a> &raquo;</li>
+        <li><a href="#">Examples</a></li>
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Examples</a><ul>
+<li><a class="reference internal" href="#active-layers-panel">Active Layers Panel</a></li>
+<li><a class="reference internal" href="#active-themes-panel">Active Themes Panel</a></li>
+<li><a class="reference internal" href="#full-app-demo">Full App Demo</a></li>
+<li><a class="reference internal" href="#baselayercombo">BaseLayerCombo</a></li>
+<li><a class="reference internal" href="#bookmarks">Bookmarks</a></li>
+<li><a class="reference internal" href="#capabilitiestreepanel">CapabilitiesTreePanel</a></li>
+<li><a class="reference internal" href="#columnsautowidth">ColumnsAutoWidth</a></li>
+<li><a class="reference internal" href="#columnsfixedwidth">ColumnsFixedWidth</a></li>
+<li><a class="reference internal" href="#coordinate-search">Coordinate Search</a></li>
+<li><a class="reference internal" href="#default">Default</a></li>
+<li><a class="reference internal" href="#defaultnl">DefaultNL</a></li>
+<li><a class="reference internal" href="#feature-editor-basics">Feature Editor Basics</a></li>
+<li><a class="reference internal" href="#embedded">Embedded</a></li>
+<li><a class="reference internal" href="#feature-grid-format">Feature Grid Format</a></li>
+<li><a class="reference internal" href="#grid-with-feature-selection">Grid with Feature Selection</a></li>
+<li><a class="reference internal" href="#featureinfopanel">FeatureInfoPanel</a></li>
+<li><a class="reference internal" href="#featureinfopopup">FeatureInfoPopup</a></li>
+<li><a class="reference internal" href="#featureinfopopuphover">FeatureInfoPopupHover</a></li>
+<li><a class="reference internal" href="#featureinfopopupvertical">FeatureInfoPopupVertical</a></li>
+<li><a class="reference internal" href="#featureinfotooltip">FeatureInfoTooltip</a></li>
+<li><a class="reference internal" href="#fixedpanelslayout">FixedPanelsLayout</a></li>
+<li><a class="reference internal" href="#floating-window">Floating Window</a></li>
+<li><a class="reference internal" href="#form-search-panel">Form Search Panel</a></li>
+<li><a class="reference internal" href="#search-feature-selection">Search + Feature Selection</a></li>
+<li><a class="reference internal" href="#geoportal">GeoPortal</a></li>
+<li><a class="reference internal" href="#google-maps">Google Maps</a></li>
+<li><a class="reference internal" href="#inspire">INSPIRE</a></li>
+<li><a class="reference internal" href="#layertree">LayerTree</a></li>
+<li><a class="reference internal" href="#custom-legend">Custom Legend</a></li>
+<li><a class="reference internal" href="#map-open-and-save">Map Open and Save</a></li>
+<li><a class="reference internal" href="#map-open-and-save-layertree">Map Open and Save Layertree</a></li>
+<li><a class="reference internal" href="#minimal">Minimal</a></li>
+<li><a class="reference internal" href="#choose-from-multiple-searches">Choose from multiple Searches</a></li>
+<li><a class="reference internal" href="#choose-from-multiple-searches-dutch-pdok-layers">Choose from multiple searches (Dutch/PDOK layers)</a></li>
+<li><a class="reference internal" href="#name-search">Name Search</a></li>
+<li><a class="reference internal" href="#nolaunch">NoLaunch</a></li>
+<li><a class="reference internal" href="#nostatusbar">NoStatusBar</a></li>
+<li><a class="reference internal" href="#openbasiskaart">OpenBasisKaart</a></li>
+<li><a class="reference internal" href="#pdok">PDOK</a></li>
+<li><a class="reference internal" href="#printdialog">PrintDialog</a></li>
+<li><a class="reference internal" href="#printdirect">PrintDirect</a></li>
+<li><a class="reference internal" href="#printvector">PrintVector</a></li>
+<li><a class="reference internal" href="#edit-and-execute-wfs-queries">Edit and execute WFS Queries</a></li>
+<li><a class="reference internal" href="#edit-and-execute-wfs-queries-dutch-wfss">Edit and execute WFS Queries Dutch WFSs</a></li>
+<li><a class="reference internal" href="#search-features-by-drawing-on-map">Search features by drawing on Map</a></li>
+<li><a class="reference internal" href="#search-features-by-features-from-other-layers">Search features by features from other layers</a></li>
+<li><a class="reference internal" href="#statusbar">StatusBar</a></li>
+<li><a class="reference internal" href="#sublayers">Sublayers</a></li>
+<li><a class="reference internal" href="#theming">Theming</a></li>
+<li><a class="reference internal" href="#extend-map-toolbar">Extend Map Toolbar</a></li>
+<li><a class="reference internal" href="#upload-features">Upload Features</a></li>
+<li><a class="reference internal" href="#vector-styler">Vector Styler</a></li>
+<li><a class="reference internal" href="#heron-workshop-dutch-grid">Heron Workshop (Dutch Grid)</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="primers/heron-primer.html"
+                        title="previous chapter">Heron Primer</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="developer/index.html"
+                        title="next chapter">Heron Community Involvement</a></p>
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="examples">
+<span id="id1"></span><h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<div class="exampleblock example-activelayers section" id="active-layers-panel">
+<span id="example-activelayers"></span><h2>Active Layers Panel<a class="headerlink" href="#active-layers-panel" title="Permalink to this headline">¶</a></h2>
+<p>Select layers into a stack of active layers and change opacity/stacking.</p>
+</div>
+<div class="exampleblock example-activethemes section" id="active-themes-panel">
+<span id="example-activethemes"></span><h2>Active Themes Panel<a class="headerlink" href="#active-themes-panel" title="Permalink to this headline">¶</a></h2>
+<p>Select layers into a stack of active layers and change opacity/stacking.</p>
+</div>
+<div class="exampleblock example-appdemo section" id="full-app-demo">
+<span id="example-appdemo"></span><h2>Full App Demo<a class="headerlink" href="#full-app-demo" title="Permalink to this headline">¶</a></h2>
+<p>Full, self-contained, application demo showing basics of Hero configuration and styling/language options.</p>
+</div>
+<div class="exampleblock example-baselayercombo section" id="baselayercombo">
+<span id="example-baselayercombo"></span><h2>BaseLayerCombo<a class="headerlink" href="#baselayercombo" title="Permalink to this headline">¶</a></h2>
+<p>Shows use of the BaseLayerCombo to select Base Layers.</p>
+</div>
+<div class="exampleblock example-bookmarks section" id="bookmarks">
+<span id="example-bookmarks"></span><h2>Bookmarks<a class="headerlink" href="#bookmarks" title="Permalink to this headline">¶</a></h2>
+<p>Lightweight web mapping context manager. Add and persist current map context (layers, zoom, extent etc).</p>
+</div>
+<div class="exampleblock example-capabilitiestreepanel section" id="capabilitiestreepanel">
+<span id="example-capabilitiestreepanel"></span><h2>CapabilitiesTreePanel<a class="headerlink" href="#capabilitiestreepanel" title="Permalink to this headline">¶</a></h2>
+<p>Populate a layer tree from a WMS GetCapabilties result.</p>
+</div>
+<div class="exampleblock example-columnsautowidth section" id="columnsautowidth">
+<span id="example-columnsautowidth"></span><h2>ColumnsAutoWidth<a class="headerlink" href="#columnsautowidth" title="Permalink to this headline">¶</a></h2>
+<p>Show WMS GetFeatureInfo in Panel with automatic column width based on fieldname and values.</p>
+</div>
+<div class="exampleblock example-columnsfixedwidth section" id="columnsfixedwidth">
+<span id="example-columnsfixedwidth"></span><h2>ColumnsFixedWidth<a class="headerlink" href="#columnsfixedwidth" title="Permalink to this headline">¶</a></h2>
+<p>Show WMS GetFeatureInfo in Panel with fixed columnwidth.</p>
+</div>
+<div class="exampleblock example-coordsearch section" id="coordinate-search">
+<span id="example-coordsearch"></span><h2>Coordinate Search<a class="headerlink" href="#coordinate-search" title="Permalink to this headline">¶</a></h2>
+<p>Go to point on map from coordinates entered in form.</p>
+</div>
+<div class="exampleblock example-default section" id="default">
+<span id="example-default"></span><h2>Default<a class="headerlink" href="#default" title="Permalink to this headline">¶</a></h2>
+<p>The default application using the default layout and options.</p>
+</div>
+<div class="exampleblock example-defaultnl section" id="defaultnl">
+<span id="example-defaultnl"></span><h2>DefaultNL<a class="headerlink" href="#defaultnl" title="Permalink to this headline">¶</a></h2>
+<p>The default application using the default layout and options with Dutch (NL) language, Layers and projection.</p>
+</div>
+<div class="exampleblock example-editorbasics section" id="feature-editor-basics">
+<span id="example-editorbasics"></span><h2>Feature Editor Basics<a class="headerlink" href="#feature-editor-basics" title="Permalink to this headline">¶</a></h2>
+<p>Show basic tools and operations using Geops OLE: <a class="reference external" href="https://github.com/geops/ole">https://github.com/geops/ole</a>.</p>
+</div>
+<div class="exampleblock example-embedded section" id="embedded">
+<span id="example-embedded"></span><h2>Embedded<a class="headerlink" href="#embedded" title="Permalink to this headline">¶</a></h2>
+<p>Embed a Heron app within any page div element.</p>
+</div>
+<div class="exampleblock example-featuregridformat section" id="feature-grid-format">
+<span id="example-featuregridformat"></span><h2>Feature Grid Format<a class="headerlink" href="#feature-grid-format" title="Permalink to this headline">¶</a></h2>
+<p>Shows how to format cells within feature display grids such as from WMS GeoFeatureInfo or WFS.</p>
+</div>
+<div class="exampleblock example-featuregridpanel section" id="grid-with-feature-selection">
+<span id="example-featuregridpanel"></span><h2>Grid with Feature Selection<a class="headerlink" href="#grid-with-feature-selection" title="Permalink to this headline">¶</a></h2>
+<p>Grid panel with mutually selectable features on both map and in grid.</p>
+</div>
+<div class="exampleblock example-featureinfopanel section" id="featureinfopanel">
+<span id="example-featureinfopanel"></span><h2>FeatureInfoPanel<a class="headerlink" href="#featureinfopanel" title="Permalink to this headline">¶</a></h2>
+<p>Show WMS GetFeatureInfo in Panel embedded under Map when clicking the Map.</p>
+</div>
+<div class="exampleblock example-featureinfopopup section" id="featureinfopopup">
+<span id="example-featureinfopopup"></span><h2>FeatureInfoPopup<a class="headerlink" href="#featureinfopopup" title="Permalink to this headline">¶</a></h2>
+<p>Show WMS GetFeatureInfo in popup Window when clicking the Map.</p>
+</div>
+<div class="exampleblock example-featureinfopopuphover section" id="featureinfopopuphover">
+<span id="example-featureinfopopuphover"></span><h2>FeatureInfoPopupHover<a class="headerlink" href="#featureinfopopuphover" title="Permalink to this headline">¶</a></h2>
+<p>Show WMS GetFeatureInfo in popup Window when hovering over the Map.</p>
+</div>
+<div class="exampleblock example-featureinfopopupvertical section" id="featureinfopopupvertical">
+<span id="example-featureinfopopupvertical"></span><h2>FeatureInfoPopupVertical<a class="headerlink" href="#featureinfopopupvertical" title="Permalink to this headline">¶</a></h2>
+<p>Show WMS GetFeatureInfo in popup Window when clicking the Map.
+Popup show the attributes in a vertical list (Detail) and in a grid (Table).</p>
+</div>
+<div class="exampleblock example-featureinfotooltips section" id="featureinfotooltip">
+<span id="example-featureinfotooltips"></span><h2>FeatureInfoTooltip<a class="headerlink" href="#featureinfotooltip" title="Permalink to this headline">¶</a></h2>
+<p>Show WMS GetFeatureInfo in popup Window when hovering over the Map.</p>
+</div>
+<div class="exampleblock example-fixedpanelslayout section" id="fixedpanelslayout">
+<span id="example-fixedpanelslayout"></span><h2>FixedPanelsLayout<a class="headerlink" href="#fixedpanelslayout" title="Permalink to this headline">¶</a></h2>
+<p>An application with an alternative layout containing a fixed height
+LayerPanel and LegendPanel.</p>
+</div>
+<div class="exampleblock example-floatingwindow section" id="floating-window">
+<span id="example-floatingwindow"></span><h2>Floating Window<a class="headerlink" href="#floating-window" title="Permalink to this headline">¶</a></h2>
+<p>Demonstrates Heron app within floating Ext JS Window.</p>
+</div>
+<div class="exampleblock example-formsearchbasic section" id="form-search-panel">
+<span id="example-formsearchbasic"></span><h2>Form Search Panel<a class="headerlink" href="#form-search-panel" title="Permalink to this headline">¶</a></h2>
+<p>Embedded FormSearchPanel with backend (exact) WFS search and zoom to result.</p>
+</div>
+<div class="exampleblock example-formsearchcenter section" id="search-feature-selection">
+<span id="example-formsearchcenter"></span><h2>Search + Feature Selection<a class="headerlink" href="#search-feature-selection" title="Permalink to this headline">¶</a></h2>
+<p>Search using Form-based WFS query, showing selectable and downloadable results on map and table.</p>
+</div>
+<div class="exampleblock example-geoportal section" id="geoportal">
+<span id="example-geoportal"></span><h2>GeoPortal<a class="headerlink" href="#geoportal" title="Permalink to this headline">¶</a></h2>
+<p>Use the MenuHandler to specify a complete portal website with content pages.</p>
+</div>
+<div class="exampleblock example-googlemaps section" id="google-maps">
+<span id="example-googlemaps"></span><h2>Google Maps<a class="headerlink" href="#google-maps" title="Permalink to this headline">¶</a></h2>
+<p>Use Google Maps within a Heron app.</p>
+</div>
+<div class="exampleblock example-inspire section" id="inspire">
+<span id="example-inspire"></span><h2>INSPIRE<a class="headerlink" href="#inspire" title="Permalink to this headline">¶</a></h2>
+<p>Visualize INSPIRE layers with a custom LayerTree for INSPIRE data themes.</p>
+</div>
+<div class="exampleblock example-layertree section" id="layertree">
+<span id="example-layertree"></span><h2>LayerTree<a class="headerlink" href="#layertree" title="Permalink to this headline">¶</a></h2>
+<p>Build a custom layer tree for base layers and thematic overlays.</p>
+</div>
+<div class="exampleblock example-legendcustom section" id="custom-legend">
+<span id="example-legendcustom"></span><h2>Custom Legend<a class="headerlink" href="#custom-legend" title="Permalink to this headline">¶</a></h2>
+<p>Demonstrates how to configure a custom legend image as URL for a Layer.</p>
+</div>
+<div class="exampleblock example-mapopensave section" id="map-open-and-save">
+<span id="example-mapopensave"></span><h2>Map Open and Save<a class="headerlink" href="#map-open-and-save" title="Permalink to this headline">¶</a></h2>
+<p>Open and Save a Heron map based on Web Map Context for WMS and TMS layers.</p>
+</div>
+<div class="exampleblock example-mapopensavetree section" id="map-open-and-save-layertree">
+<span id="example-mapopensavetree"></span><h2>Map Open and Save Layertree<a class="headerlink" href="#map-open-and-save-layertree" title="Permalink to this headline">¶</a></h2>
+<p>Open and Save a Heron map based on Web Map Context for WMS and TMS layers.
+Layertree and TMS layer are saved extended to WMC.</p>
+</div>
+<div class="exampleblock example-minimal section" id="minimal">
+<span id="example-minimal"></span><h2>Minimal<a class="headerlink" href="#minimal" title="Permalink to this headline">¶</a></h2>
+<p>The &#8220;Hello World&#8221; app, the most minimal config to define a Heron app.</p>
+</div>
+<div class="exampleblock example-multisearchcenter section" id="choose-from-multiple-searches">
+<span id="example-multisearchcenter"></span><h2>Choose from multiple Searches<a class="headerlink" href="#choose-from-multiple-searches" title="Permalink to this headline">¶</a></h2>
+<p>Select a search from a list of predefined form- or spatial queries or your own queries.</p>
+</div>
+<div class="exampleblock example-multisearchcenternl section" id="choose-from-multiple-searches-dutch-pdok-layers">
+<span id="example-multisearchcenternl"></span><h2>Choose from multiple searches (Dutch/PDOK layers)<a class="headerlink" href="#choose-from-multiple-searches-dutch-pdok-layers" title="Permalink to this headline">¶</a></h2>
+<p>Select a search from a list of predefined form- or spatial queries or your own queries.</p>
+</div>
+<div class="exampleblock example-namesearch section" id="name-search">
+<span id="example-namesearch"></span><h2>Name Search<a class="headerlink" href="#name-search" title="Permalink to this headline">¶</a></h2>
+<p>Name search ala google suggest and zoom via OpenStreetMap Nominatim search.</p>
+</div>
+<div class="exampleblock example-nolaunch section" id="nolaunch">
+<span id="example-nolaunch"></span><h2>NoLaunch<a class="headerlink" href="#nolaunch" title="Permalink to this headline">¶</a></h2>
+<p>Take control over Heron initialization using the NoLaunch.js import.</p>
+</div>
+<div class="exampleblock example-nostatusbar section" id="nostatusbar">
+<span id="example-nostatusbar"></span><h2>NoStatusBar<a class="headerlink" href="#nostatusbar" title="Permalink to this headline">¶</a></h2>
+<p>A default application with a MapPanel without a bottom status bar.</p>
+</div>
+<div class="exampleblock example-openbasiskaart section" id="openbasiskaart">
+<span id="example-openbasiskaart"></span><h2>OpenBasisKaart<a class="headerlink" href="#openbasiskaart" title="Permalink to this headline">¶</a></h2>
+<p>Demonstrates layers from the OpenBasisKaart, OpenStreetMap tiles in Dutch (RD) projection developed by OpenGeoGroep.nl.</p>
+</div>
+<div class="exampleblock example-pdokthijs section" id="pdok">
+<span id="example-pdokthijs"></span><h2>PDOK<a class="headerlink" href="#pdok" title="Permalink to this headline">¶</a></h2>
+<p>Demonstrates layers from the Dutch National SDI: PDOK (Publieke Dienstverlening Op de Kaart).</p>
+</div>
+<div class="exampleblock example-printdialog section" id="printdialog">
+<span id="example-printdialog"></span><h2>PrintDialog<a class="headerlink" href="#printdialog" title="Permalink to this headline">¶</a></h2>
+<p>Printing with popup dialog containing preview and print options.</p>
+</div>
+<div class="exampleblock example-printdirect section" id="printdirect">
+<span id="example-printdirect"></span><h2>PrintDirect<a class="headerlink" href="#printdirect" title="Permalink to this headline">¶</a></h2>
+<p>Immediate printing of visible map area.</p>
+</div>
+<div class="exampleblock example-printvector section" id="printvector">
+<span id="example-printvector"></span><h2>PrintVector<a class="headerlink" href="#printvector" title="Permalink to this headline">¶</a></h2>
+<p>Printing with popup dialog for vector layer and selected features.</p>
+</div>
+<div class="exampleblock example-querybuilder section" id="edit-and-execute-wfs-queries">
+<span id="example-querybuilder"></span><h2>Edit and execute WFS Queries<a class="headerlink" href="#edit-and-execute-wfs-queries" title="Permalink to this headline">¶</a></h2>
+<p>Use the GXP QueryPanel to build and execute WFS spatial and filter-queries.</p>
+</div>
+<div class="exampleblock example-querybuildernl section" id="edit-and-execute-wfs-queries-dutch-wfss">
+<span id="example-querybuildernl"></span><h2>Edit and execute WFS Queries Dutch WFSs<a class="headerlink" href="#edit-and-execute-wfs-queries-dutch-wfss" title="Permalink to this headline">¶</a></h2>
+<p>Use the GXP QueryPanel to build and execute WFS spatial and filter-queries on Dutch WFSs like PDOK/BAG.</p>
+</div>
+<div class="exampleblock example-searchbydraw section" id="search-features-by-drawing-on-map">
+<span id="example-searchbydraw"></span><h2>Search features by drawing on Map<a class="headerlink" href="#search-features-by-drawing-on-map" title="Permalink to this headline">¶</a></h2>
+<p>Search features by drawing geometries on the map.</p>
+</div>
+<div class="exampleblock example-searchbyfeature section" id="search-features-by-features-from-other-layers">
+<span id="example-searchbyfeature"></span><h2>Search features by features from other layers<a class="headerlink" href="#search-features-by-features-from-other-layers" title="Permalink to this headline">¶</a></h2>
+<p>Select and download features by selecting features from other layers.</p>
+</div>
+<div class="exampleblock example-statusbar section" id="statusbar">
+<span id="example-statusbar"></span><h2>StatusBar<a class="headerlink" href="#statusbar" title="Permalink to this headline">¶</a></h2>
+<p>MapPanel with bottom status bar.</p>
+</div>
+<div class="exampleblock example-sublayers section" id="sublayers">
+<span id="example-sublayers"></span><h2>Sublayers<a class="headerlink" href="#sublayers" title="Permalink to this headline">¶</a></h2>
+<p>Layers, each with data-subset via filtering from single WMS/WFS Layer.</p>
+</div>
+<div class="exampleblock example-theming section" id="theming">
+<span id="example-theming"></span><h2>Theming<a class="headerlink" href="#theming" title="Permalink to this headline">¶</a></h2>
+<p>Use other ExtJS themes, this &#8220;Greenery&#8221; theme created through <a class="reference external" href="http://extbuilder.dynalias.com">http://extbuilder.dynalias.com</a>.</p>
+</div>
+<div class="exampleblock example-toolbar-item section" id="extend-map-toolbar">
+<span id="example-toolbar-item"></span><h2>Extend Map Toolbar<a class="headerlink" href="#extend-map-toolbar" title="Permalink to this headline">¶</a></h2>
+<p>Extend the toolbar with your own custom items/menu&#8217;s and handlers.</p>
+</div>
+<div class="exampleblock example-uploadfeatures section" id="upload-features">
+<span id="example-uploadfeatures"></span><h2>Upload Features<a class="headerlink" href="#upload-features" title="Permalink to this headline">¶</a></h2>
+<p>Upload features from local file (GML, CSV etc) into a Layer.</p>
+</div>
+<div class="exampleblock example-vectorstyler section" id="vector-styler">
+<span id="example-vectorstyler"></span><h2>Vector Styler<a class="headerlink" href="#vector-styler" title="Permalink to this headline">¶</a></h2>
+<p>Style Vector Layers interactively.</p>
+</div>
+<div class="exampleblock example-workshopnl section" id="heron-workshop-dutch-grid">
+<span id="example-workshopnl"></span><h2>Heron Workshop (Dutch Grid)<a class="headerlink" href="#heron-workshop-dutch-grid" title="Permalink to this headline">¶</a></h2>
+<p>Answers for Heron Workshop exercises (Dutch Maps/Grid).</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+            <li class="right" style="margin-right: 10px">
+              <a href="genindex.html" title="General Index"
+                 accesskey="I">index</a></li>
+            <li class="right" >
+              <a href="py-modindex.html" title="Python Module Index"
+                 >modules</a> |</li>
+            <li class="right" >
+              <a href="developer/index.html" title="Heron Community Involvement"
+                 accesskey="N">next</a> |</li>
+            <li class="right" >
+              <a href="primers/heron-primer.html" title="Heron Primer"
+                 accesskey="P">previous</a> |</li>
+        <li><a href="index.html">HeronMC</a> &raquo;</li>
+        <li><a href="#">Examples</a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2011+, Heron MC Community.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,190 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Heron.widgets.GridCellRenderer &mdash; Heron MC v1.0.1</title>
+    
+    <link rel="stylesheet" href="../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="top" title="Heron MC v1.0.1" href="../../../../index.html" />
+    <link rel="up" title="Heron.widgets" href="../../widgets.html" />
+    <link rel="next" title="Heron.widgets.HTMLPanel" href="HTMLPanel.html" />
+    <link rel="prev" title="" href="CascadingTreeNode.html" />
+    
+    
+
+  </head>
+  <body>
+    <div class="header">
+        <div class="wrap">
+            <h1 id="logo"><a href="../../../../index.html">Heron</a></h1>
+            <ul id="top-nav">
+                <li class="first"><a href="../../../../docs.html">Documentation</a></li>
+                <li><a href="../../../../examples.html">Examples</a></li>
+                <li><a href="../../../../downloads.html">Download</a></li>
+                <li><a href="http://code.google.com/p/geoext-viewer">Development</a></li>
+            </ul>
+            <div id="searchbox">
+                <form class="search" action="../../../../search.html" method="get">
+                    <input id="searchbox-query" type="text" name="q" size="25" value="Search &hellip;" tabindex="3" onblur="if(this.value=='') this.value='Search &hellip;';" onfocus="if(this.value=='Search &hellip;') this.value='';" />
+                    <input id="searchbox-submit" type="image" value="Search" src="../../../../_static/img/search_icon_green.png" />
+                    <input type="hidden" name="check_keywords" value="yes" />
+                    <input type="hidden" name="area" value="default" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="../../../../index.html">HeronMC</a> &raquo;</li>
+          <li><a href="../../../index.html" >API Reference</a> &raquo;</li>
+          <li><a href="../../widgets.html" accesskey="U"><tt class="docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets</span></tt></a> &raquo;</li>
+        <li><a href="#"><tt class="docutils literal docutils literal"><span class="pre">Heron.widgets.GridCellRenderer</span></tt></a></li>
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><tt class="docutils literal"><span class="pre">Heron.widgets.GridCellRenderer</span></tt></a><ul>
+<li><a class="reference internal" href="#example-use">Example Use</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="CascadingTreeNode.html"
+                        title="previous chapter"><tt class="docutils literal docutils literal docutils literal"></tt></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="HTMLPanel.html"
+                        title="next chapter"><tt class="docutils literal"><span class="pre">Heron.widgets.HTMLPanel</span></tt></a></p>
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="heron-widgets-gridcellrenderer">
+<h1><a class="reference internal" href="#Heron.widgets.GridCellRenderer" title="Heron.widgets.GridCellRenderer"><tt class="xref py py-class docutils literal"><span class="pre">Heron.widgets.GridCellRenderer</span></tt></a><a class="headerlink" href="#heron-widgets-gridcellrenderer" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="Heron.widgets.GridCellRenderer">
+<em class="property">class </em><tt class="descclassname">Heron.widgets.</tt><tt class="descname">GridCellRenderer</tt><a class="headerlink" href="#Heron.widgets.GridCellRenderer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Functions for custom rendering of features within Grids like GetFeatureInfo.</p>
+<p>lobal Singleton class.
+ee <a class="reference external" href="http://my.opera.com/Aux/blog/2010/07/22/proper-singleton-in-javascript">http://my.opera.com/Aux/blog/2010/07/22/proper-singleton-in-javascript</a></p>
+<div class="section" id="example-use">
+<h2>Example Use<a class="headerlink" href="#example-use" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript"><div class="highlight"><pre>      <span class="p">{</span>
+        <span class="nx">xtype</span><span class="o">:</span> <span class="s1">&#39;hr_featureinfopanel&#39;</span><span class="p">,</span>
+        <span class="nx">border</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="p">.</span>
+          <span class="p">.</span>
+  <span class="nx">hropts</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">infoFormat</span><span class="o">:</span> <span class="s1">&#39;application/vnd.ogc.gml&#39;</span><span class="p">,</span>
+          <span class="nx">displayPanels</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Grid&#39;</span><span class="p">,</span> <span class="s1">&#39;XML&#39;</span><span class="p">],</span>
+          <span class="nx">exportFormats</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;CSV&#39;</span><span class="p">,</span> <span class="s1">&#39;XLS&#39;</span><span class="p">],</span>
+          <span class="nx">maxFeatures</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+          <span class="nx">gridCellRenderers</span><span class="o">:</span> <span class="p">[</span>
+         <span class="p">{</span>
+               <span class="nx">featureType</span><span class="o">:</span> <span class="s1">&#39;contracts&#39;</span><span class="p">,</span>
+               <span class="nx">attrName</span><span class="o">:</span> <span class="s1">&#39;contractId&#39;</span>
+               <span class="nx">renderer</span><span class="o">:</span> <span class="p">{</span>
+                 <span class="nx">fn</span> <span class="o">:</span> <span class="nx">Heron</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">GridCellRenderer</span><span class="p">.</span><span class="nx">directLink</span><span class="p">,</span>
+                 <span class="nx">options</span> <span class="o">:</span> <span class="p">{</span>
+                       <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://resources.com/contracts/show?id={companyId}.{contractId}&#39;</span>
+                       <span class="nx">target</span><span class="o">:</span> <span class="s1">&#39;_new&#39;</span>
+                 <span class="p">}</span>
+         <span class="p">},</span>
+         <span class="p">{</span>
+               <span class="nx">featureType</span><span class="o">:</span> <span class="s1">&#39;tst-plan&#39;</span><span class="p">,</span>
+               <span class="nx">attrName</span> <span class="o">:</span> <span class="s1">&#39;planId&#39;</span><span class="p">,</span>
+               <span class="nx">renderer</span> <span class="o">:</span>  <span class="p">{</span>
+                 <span class="nx">fn</span> <span class="o">:</span> <span class="nx">Heron</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">GridCellRenderer</span><span class="p">.</span><span class="nx">browserPopupLink</span><span class="p">,</span>
+                 <span class="nx">options</span> <span class="o">:</span> <span class="p">{</span>
+                       <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://resources.com/plans/show?id={planId}&#39;</span><span class="p">,</span>
+                       <span class="nx">winName</span><span class="o">:</span> <span class="s1">&#39;demoWin&#39;</span><span class="p">,</span>                             <span class="c1">// optional - default: &#39;herongridcellpopup&#39;</span>
+                       <span class="nx">bReopen</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>                                 <span class="c1">// optional - default: false</span>
+                       <span class="nx">hasMenubar</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>                               <span class="c1">// optional - default: false</span>
+                       <span class="nx">hasToolbar</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>                               <span class="c1">// optional - default: false</span>
+                       <span class="nx">hasAddressbar</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>                    <span class="c1">// optional - default: false</span>
+                       <span class="nx">hasStatusbar</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>                             <span class="c1">// optional - default: false</span>
+                       <span class="nx">hasScrollbars</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>                    <span class="c1">// optional - default: false</span>
+                       <span class="nx">isResizable</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>                              <span class="c1">// optional - default: false</span>
+                       <span class="nx">hasPos</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>                                   <span class="c1">// optional - default: false</span>
+                       <span class="nx">xPos</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>                                               <span class="c1">// optional - default: 0</span>
+                       <span class="nx">yPos</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>                                               <span class="c1">// optional - default: 0</span>
+                       <span class="nx">hasSize</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>                                  <span class="c1">// optional - default: false</span>
+                       <span class="nx">wSize</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>                                             <span class="c1">// optional - default: 200</span>
+                       <span class="nx">hSize</span><span class="o">:</span> <span class="mi">800</span><span class="p">,</span>                                             <span class="c1">// optional - default: 100</span>
+                       <span class="nx">attrPreTxt</span><span class="o">:</span> <span class="s1">&#39;Plan: &#39;</span>                    <span class="c1">// optional - default: &#39;&#39;</span>
+               <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">]</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+            <li class="right" style="margin-right: 10px">
+              <a href="../../../../genindex.html" title="General Index"
+                 accesskey="I">index</a></li>
+            <li class="right" >
+              <a href="../../../../py-modindex.html" title="Python Module Index"
+                 >modules</a> |</li>
+            <li class="right" >
+              <a href="HTMLPanel.html" title="Heron.widgets.HTMLPanel"
+                 accesskey="N">next</a> |</li>
+            <li class="right" >
+              <a href="CascadingTreeNode.html" title=""
+                 accesskey="P">previous</a> |</li>
+        <li><a href="../../../../index.html">HeronMC</a> &raquo;</li>
+          <li><a href="../../../index.html" >API Reference</a> &raquo;</li>
+          <li><a href="../../widgets.html" ><tt class="docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets</span></tt></a> &raquo;</li>
+        <li><a href="#"><tt class="docutils literal docutils literal"><span class="pre">Heron.widgets.GridCellRenderer</span></tt></a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2011+, Heron MC Community.
+    </div>
+  </body>
+</html>

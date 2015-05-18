@@ -1,0 +1,93 @@
+
+.. currentmodule:: Heron.widgets
+
+:class:`Heron.widgets.ActiveThemesPanel`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Ext.tree.TreePanel <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.tree.TreePanel>`_
+    
+
+
+
+xtype
+    ``hr_activethemespanel``
+
+
+
+
+.. class:: ActiveThemesPanel(config)
+
+Displays a stack of selected layers from the map.
+The main purpose is to enable to change layer stacking (display) order, supported
+by standard drag-and-drop, plus manipulating individual layer functions.
+
+Example config with a per layer opacity-slider.
+
+.. code-block:: javascript
+
+    {
+		xtype: 'hr_activethemespanel',
+		height: 240,
+		flex: 3,
+		hropts: {
+			// Defines the custom components added with the standard layer node.
+			showOpacity: true,		// true - layer opacity icon / function
+			showTools: false,		// true - layer tools icon / function (not jet completed)
+		showRemove: false		// true - layer remove icon / function
+		}
+	}
+
+
+
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties in addition to
+those listed for `Ext.tree.TreePanel <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.tree.TreePanel>`_.
+
+
+.. describe:: contextMenu
+
+    Context menu (right-click) for layer nodes, for now instance of Heron.widgets.LayerNodeContextMenu. Default value is null.
+
+.. describe:: qtip_down
+
+    default value is "Move down".
+
+.. describe:: qtip_opacity
+
+    default value is "Opacity".
+
+.. describe:: qtip_remove
+
+    default value is "Remove layer from list".
+
+.. describe:: qtip_tools
+
+    default value is "Tools".
+
+.. describe:: qtip_up
+
+    default value is "Move up".
+
+.. describe:: title
+
+    default value is "Active Themes".
+
+
+
+
+
+
+
+
+

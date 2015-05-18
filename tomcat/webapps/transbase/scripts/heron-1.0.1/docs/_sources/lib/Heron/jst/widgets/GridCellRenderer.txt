@@ -1,0 +1,83 @@
+
+.. currentmodule:: Heron.widgets
+
+:class:`Heron.widgets.GridCellRenderer`
+================================================================================
+
+
+
+.. class:: GridCellRenderer()
+
+Functions for custom rendering of features within Grids like GetFeatureInfo.
+
+lobal Singleton class.
+ee http://my.opera.com/Aux/blog/2010/07/22/proper-singleton-in-javascript
+
+
+
+
+Example Use
+-----------
+
+.. code-block:: javascript
+
+       {
+	 xtype: 'hr_featureinfopanel',
+	 border: true,
+	   .
+	   .
+   hropts: {
+	   infoFormat: 'application/vnd.ogc.gml',
+	   displayPanels: ['Grid', 'XML'],
+	   exportFormats: ['CSV', 'XLS'],
+	   maxFeatures: 10,
+	   gridCellRenderers: [
+	  {
+		featureType: 'contracts',
+		attrName: 'contractId'
+		renderer: {
+		  fn : Heron.widgets.GridCellRenderer.directLink,
+		  options : {
+			url: 'http://resources.com/contracts/show?id={companyId}.{contractId}'
+			target: '_new'
+		  }
+	  },
+	  {
+		featureType: 'tst-plan',
+		attrName : 'planId',
+		renderer :  {
+		  fn : Heron.widgets.GridCellRenderer.browserPopupLink,
+		  options : {
+			url: 'http://resources.com/plans/show?id={planId}',
+			winName: 'demoWin',				// optional - default: 'herongridcellpopup'
+			bReopen: false,					// optional - default: false
+			hasMenubar: true,				// optional - default: false
+			hasToolbar: true,				// optional - default: false
+			hasAddressbar: true,			// optional - default: false
+			hasStatusbar: true,				// optional - default: false
+			hasScrollbars: true,			// optional - default: false
+			isResizable: true,				// optional - default: false
+			hasPos: true,					// optional - default: false
+			xPos: 10,						// optional - default: 0
+			yPos: 20,						// optional - default: 0
+			hasSize: true,					// optional - default: false
+			wSize: 400,						// optional - default: 200
+			hSize: 800,						// optional - default: 100
+			attrPreTxt: 'Plan: '			// optional - default: ''
+		}
+	   }
+	 ]
+	 }
+ }
+
+
+    
+
+
+
+
+
+
+
+
+

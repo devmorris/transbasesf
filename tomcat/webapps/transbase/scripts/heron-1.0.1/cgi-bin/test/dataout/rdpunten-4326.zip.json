@@ -1,0 +1,446 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "gid": "94638362", "straatnaam": "Zuwe", "huisnummer": "15", "woonplaats": "Baambrugge", "postcode": "1396KL", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.990070115683984, 52.246064293440497 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "94638363", "straatnaam": "Zuwe", "huisnummer": "17", "woonplaats": "Baambrugge", "postcode": "1396KL", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.98997658221402, 52.246026522722104 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "94638364", "straatnaam": "Zuwe", "huisnummer": "19", "woonplaats": "Baambrugge", "postcode": "1396KL", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989864775272474, 52.245976978035763 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95409190", "straatnaam": "Kleiweg", "huisnummer": "36", "woonplaats": "Baambrugge", "postcode": "1396HX", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987509101566841, 52.249113246176734 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95409197", "straatnaam": "Kleiweg", "huisnummer": "34", "woonplaats": "Baambrugge", "postcode": "1396HX", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987555587408458, 52.24899547809494 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173895", "straatnaam": "Kleiweg", "huisnummer": "19", "woonplaats": "Baambrugge", "postcode": "1396HV", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988197874487653, 52.248018487204078 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173896", "straatnaam": "Kleiweg", "huisnummer": "21", "woonplaats": "Baambrugge", "postcode": "1396HV", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988102510506455, 52.248072008935324 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173897", "straatnaam": "Kleiweg", "huisnummer": "23", "woonplaats": "Baambrugge", "postcode": "1396HV", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987926465626626, 52.248189438938105 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173949", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "7", "woonplaats": "Baambrugge", "postcode": "1396KD", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987665500465877, 52.248108377059282 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173951", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "9", "woonplaats": "Baambrugge", "postcode": "1396KD", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987566931006729, 52.248101176621589 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173952", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "10", "woonplaats": "Baambrugge", "postcode": "1396KE", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987007629997096, 52.248183709542246 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173953", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "11", "woonplaats": "Baambrugge", "postcode": "1396KD", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987495827490553, 52.248045888491333 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173954", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "12", "woonplaats": "Baambrugge", "postcode": "1396KE", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986906210780254, 52.248148112022925 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173955", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "13", "woonplaats": "Baambrugge", "postcode": "1396KD", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987336417002854, 52.247975694937615 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173956", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "14", "woonplaats": "Baambrugge", "postcode": "1396KE", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986763621509005, 52.248081893767178 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173957", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "15", "woonplaats": "Baambrugge", "postcode": "1396KD", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987239567113447, 52.247938477168987 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173958", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "16", "woonplaats": "Baambrugge", "postcode": "1396KE", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986663305847514, 52.248047396417064 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173959", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "17", "woonplaats": "Baambrugge", "postcode": "1396KD", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987089239605179, 52.247869653330142 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173960", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "18", "woonplaats": "Baambrugge", "postcode": "1396KE", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986515697830067, 52.247980756367859 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173962", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "20", "woonplaats": "Baambrugge", "postcode": "1396KE", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986423373565766, 52.247948461188543 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173964", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "22", "woonplaats": "Baambrugge", "postcode": "1396KE", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986272461030809, 52.247881315249593 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "93578248", "straatnaam": "Zand- en Jaagpad", "huisnummer": "7", "woonplaats": "Baambrugge", "postcode": "1396JA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988505495169736, 52.248892335721912 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "93578249", "straatnaam": "Zand- en Jaagpad", "huisnummer": "8", "woonplaats": "Baambrugge", "postcode": "1396JA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988422998395883, 52.248967636179081 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "93578250", "straatnaam": "Zand- en Jaagpad", "huisnummer": "10", "woonplaats": "Baambrugge", "postcode": "1396JA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988259691892357, 52.249147276690479 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "93817033", "straatnaam": "Zand- en Jaagpad", "huisnummer": "3", "woonplaats": "Baambrugge", "postcode": "1396JA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.990056890697828, 52.248122092151149 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "93817034", "straatnaam": "Zand- en Jaagpad", "huisnummer": "9", "woonplaats": "Baambrugge", "postcode": "1396JA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988380517516764, 52.249063629052529 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173892", "straatnaam": "Kleiweg", "huisnummer": "14", "woonplaats": "Baambrugge", "postcode": "1396HW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989275662329692, 52.247907859701527 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173893", "straatnaam": "Kleiweg", "huisnummer": "15", "woonplaats": "Baambrugge", "postcode": "1396HV", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988430730496736, 52.247895603288619 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173894", "straatnaam": "Kleiweg", "huisnummer": "17", "woonplaats": "Baambrugge", "postcode": "1396HV", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988333366794477, 52.24794844429929 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173898", "straatnaam": "Kleiweg", "huisnummer": "24", "woonplaats": "Baambrugge", "postcode": "1396HW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.98893314225811, 52.248036200933107 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173901", "straatnaam": "Kleiweg", "huisnummer": "28", "woonplaats": "Baambrugge", "postcode": "1396HX", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988873665657082, 52.248151283101308 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173902", "straatnaam": "Kleiweg", "huisnummer": "30", "woonplaats": "Baambrugge", "postcode": "1396HX", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988541745328504, 52.248220709802254 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "88169232", "straatnaam": "Dorpsstraat", "huisnummer": "2", "woonplaats": "Baambrugge", "postcode": "1396KJ", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.990294228998935, 52.247284882142175 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426129", "straatnaam": "Prinses Margrietstraat", "huisnummer": "2", "woonplaats": "Baambrugge", "postcode": "1396JX", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989046894373468, 52.247361914239292 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91662378", "straatnaam": "Prinses Margrietstraat", "huisnummer": "10", "woonplaats": "Baambrugge", "postcode": "1396JX", "huisletter": "A" }, "geometry": { "type": "Point", "coordinates": [ 4.988263543959492, 52.247169178289909 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173881", "straatnaam": "Kleiweg", "huisnummer": "1", "woonplaats": "Baambrugge", "postcode": "1396HV", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989332790569644, 52.2474437760537 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173972", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "33", "woonplaats": "Baambrugge", "postcode": "1396KD", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986077440637985, 52.247455947362674 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173973", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "35", "woonplaats": "Baambrugge", "postcode": "1396KD", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.985977838098714, 52.247417280997489 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "94868477", "straatnaam": "Brugstraat", "huisnummer": "1", "woonplaats": "Baambrugge", "postcode": "1396JV", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.990296724177473, 52.247484884169083 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173882", "straatnaam": "Kleiweg", "huisnummer": "2", "woonplaats": "Baambrugge", "postcode": "1396HW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.990158417054528, 52.247494946045208 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173883", "straatnaam": "Kleiweg", "huisnummer": "2", "woonplaats": "Baambrugge", "postcode": "1396HW", "huisletter": "A" }, "geometry": { "type": "Point", "coordinates": [ 4.98998382578531, 52.2475733812215 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173884", "straatnaam": "Kleiweg", "huisnummer": "3", "woonplaats": "Baambrugge", "postcode": "1396HV", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989107618270033, 52.247541509739705 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173885", "straatnaam": "Kleiweg", "huisnummer": "4", "woonplaats": "Baambrugge", "postcode": "1396HW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.98976537463335, 52.247723849527169 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173886", "straatnaam": "Kleiweg", "huisnummer": "5", "woonplaats": "Baambrugge", "postcode": "1396HV", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989013017499539, 52.247590162798936 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173887", "straatnaam": "Kleiweg", "huisnummer": "7", "woonplaats": "Baambrugge", "postcode": "1396HV", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988884663437393, 52.247654837186808 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173888", "straatnaam": "Kleiweg", "huisnummer": "9", "woonplaats": "Baambrugge", "postcode": "1396HV", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.98877950394048, 52.247708326482758 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173889", "straatnaam": "Kleiweg", "huisnummer": "11", "woonplaats": "Baambrugge", "postcode": "1396HV", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988649993878274, 52.247779369840693 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173890", "straatnaam": "Kleiweg", "huisnummer": "12", "woonplaats": "Baambrugge", "postcode": "1396HW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989437295889593, 52.247799835546616 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173891", "straatnaam": "Kleiweg", "huisnummer": "13", "woonplaats": "Baambrugge", "postcode": "1396HV", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988547542319808, 52.247834584929834 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173961", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "19", "woonplaats": "Baambrugge", "postcode": "1396KD", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986998657153989, 52.247839072377666 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173963", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "21", "woonplaats": "Baambrugge", "postcode": "1396KD", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986839446750884, 52.24776959793553 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173965", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "24", "woonplaats": "Baambrugge", "postcode": "1396KE", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.98618113781888, 52.247846856951355 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173966", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "26", "woonplaats": "Baambrugge", "postcode": "1396KE", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.985932120097529, 52.247724383987709 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173967", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "28", "woonplaats": "Baambrugge", "postcode": "1396KE", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.985837014288365, 52.247687206937051 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173968", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "29", "woonplaats": "Baambrugge", "postcode": "1396KD", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986290963245017, 52.247574605317411 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173969", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "30", "woonplaats": "Baambrugge", "postcode": "1396KE", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.985678612197471, 52.247624178698871 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173970", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "31", "woonplaats": "Baambrugge", "postcode": "1396KD", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986241401203184, 52.247527838971685 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173971", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "32", "woonplaats": "Baambrugge", "postcode": "1396KE", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.985591423750575, 52.247587657542475 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173899", "straatnaam": "Kleiweg", "huisnummer": "25", "woonplaats": "Baambrugge", "postcode": "1396HW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987231576432817, 52.248672221608821 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173903", "straatnaam": "Kleiweg", "huisnummer": "32", "woonplaats": "Baambrugge", "postcode": "1396HX", "huisletter": "A" }, "geometry": { "type": "Point", "coordinates": [ 4.987909004388963, 52.24863455437611 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95173950", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "8", "woonplaats": "Baambrugge", "postcode": "1396KE", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987214417763403, 52.248281605663173 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "88457161", "straatnaam": "Dorpsstraat", "huisnummer": "4", "woonplaats": "Baambrugge", "postcode": "1396KJ", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989704505721427, 52.24696248436539 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "88457203", "straatnaam": "Dorpsstraat", "huisnummer": "8", "woonplaats": "Baambrugge", "postcode": "1396KJ", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.990271495283532, 52.2469845322155 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426128", "straatnaam": "Prinses Margrietstraat", "huisnummer": "1", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988785441939677, 52.246858941904058 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426130", "straatnaam": "Prinses Margrietstraat", "huisnummer": "5", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988637954663753, 52.246803451103105 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426131", "straatnaam": "Prinses Margrietstraat", "huisnummer": "7", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988560653169293, 52.246781365630703 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426132", "straatnaam": "Prinses Margrietstraat", "huisnummer": "9", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988491099712586, 52.246749346536383 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426133", "straatnaam": "Prinses Margrietstraat", "huisnummer": "10", "woonplaats": "Baambrugge", "postcode": "1396JX", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988116156240097, 52.246986404573356 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426134", "straatnaam": "Prinses Margrietstraat", "huisnummer": "11", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988379314342922, 52.246700645484538 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426135", "straatnaam": "Prinses Margrietstraat", "huisnummer": "12", "woonplaats": "Baambrugge", "postcode": "1396JX", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987561918629502, 52.246716601867085 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426136", "straatnaam": "Prinses Margrietstraat", "huisnummer": "13", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988690459050023, 52.246608137709281 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426137", "straatnaam": "Prinses Margrietstraat", "huisnummer": "14", "woonplaats": "Baambrugge", "postcode": "1396JX", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987536232676508, 52.246772066405732 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426138", "straatnaam": "Prinses Margrietstraat", "huisnummer": "15", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988751669143265, 52.246569260214834 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426139", "straatnaam": "Prinses Margrietstraat", "huisnummer": "16", "woonplaats": "Baambrugge", "postcode": "1396JX", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987485449849916, 52.246817288702999 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426140", "straatnaam": "Prinses Margrietstraat", "huisnummer": "17", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.98880261532482, 52.246521970482121 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426141", "straatnaam": "Prinses Margrietstraat", "huisnummer": "18", "woonplaats": "Baambrugge", "postcode": "1396JX", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987434812555499, 52.246862601358828 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426142", "straatnaam": "Prinses Margrietstraat", "huisnummer": "19", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988853414958165, 52.246474680233725 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426143", "straatnaam": "Prinses Margrietstraat", "huisnummer": "20", "woonplaats": "Baambrugge", "postcode": "1396JX", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987384029522945, 52.246907823611352 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426144", "straatnaam": "Prinses Margrietstraat", "huisnummer": "21", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988904360923743, 52.246427390455978 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426145", "straatnaam": "Prinses Margrietstraat", "huisnummer": "23", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988945633939448, 52.246359636355173 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426146", "straatnaam": "Prinses Margrietstraat", "huisnummer": "24", "woonplaats": "Baambrugge", "postcode": "1396JX", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987357615465054, 52.24662814403991 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426147", "straatnaam": "Prinses Margrietstraat", "huisnummer": "25", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988310570850127, 52.246381793671453 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426148", "straatnaam": "Prinses Margrietstraat", "huisnummer": "26", "woonplaats": "Baambrugge", "postcode": "1396JX", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987315702172491, 52.246607004332461 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426149", "straatnaam": "Prinses Margrietstraat", "huisnummer": "27", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988336907776222, 52.246431824723203 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426150", "straatnaam": "Prinses Margrietstraat", "huisnummer": "28", "woonplaats": "Baambrugge", "postcode": "1396JX", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987236771438504, 52.246574017955332 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426151", "straatnaam": "Prinses Margrietstraat", "huisnummer": "29", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988296566834982, 52.246468956622095 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426152", "straatnaam": "Prinses Margrietstraat", "huisnummer": "30", "woonplaats": "Baambrugge", "postcode": "1396JX", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.98713780737883, 52.246537745757671 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426153", "straatnaam": "Prinses Margrietstraat", "huisnummer": "31", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988215625836868, 52.246491982855503 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426154", "straatnaam": "Prinses Margrietstraat", "huisnummer": "33", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988182159386362, 52.24653167276611 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426155", "straatnaam": "Prinses Margrietstraat", "huisnummer": "35", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988106349062986, 52.246568828780731 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426156", "straatnaam": "Prinses Margrietstraat", "huisnummer": "37", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987873384168656, 52.246501857460267 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426157", "straatnaam": "Prinses Margrietstraat", "huisnummer": "39", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987805204944624, 52.246480009027728 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426158", "straatnaam": "Prinses Margrietstraat", "huisnummer": "41", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987728144868805, 52.246455604690311 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91426159", "straatnaam": "Prinses Margrietstraat", "huisnummer": "43", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987641472590242, 52.246408947310769 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91662307", "straatnaam": "Prinses Margrietstraat", "huisnummer": "3", "woonplaats": "Baambrugge", "postcode": "1396JW", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988706214392815, 52.246842602926939 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "91662308", "straatnaam": "Prinses Margrietstraat", "huisnummer": "22", "woonplaats": "Baambrugge", "postcode": "1396JX", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987336950797715, 52.246953121284839 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "94868445", "straatnaam": "Zuwe", "huisnummer": "13", "woonplaats": "Baambrugge", "postcode": "1396KL", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.990317045498747, 52.246125446543147 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "94868446", "straatnaam": "Zuwe", "huisnummer": "13", "woonplaats": "Baambrugge", "postcode": "1396KL", "huisletter": "A" }, "geometry": { "type": "Point", "coordinates": [ 4.990219146917616, 52.246091050182876 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "90356962", "straatnaam": "Prins Willem-Alexanderstraat", "huisnummer": "1", "woonplaats": "Baambrugge", "postcode": "1396KC", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986192585838446, 52.24725811483529 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "90356964", "straatnaam": "Prins Willem-Alexanderstraat", "huisnummer": "3", "woonplaats": "Baambrugge", "postcode": "1396KC", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986227362307403, 52.247200038669504 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "90356966", "straatnaam": "Prins Willem-Alexanderstraat", "huisnummer": "5", "woonplaats": "Baambrugge", "postcode": "1396KC", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986294086321071, 52.247141117940679 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "90356967", "straatnaam": "Prins Willem-Alexanderstraat", "huisnummer": "6", "woonplaats": "Baambrugge", "postcode": "1396KC", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.985818587128442, 52.247110354635858 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "90356968", "straatnaam": "Prins Willem-Alexanderstraat", "huisnummer": "7", "woonplaats": "Baambrugge", "postcode": "1396KC", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986365892608398, 52.247095140411218 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "90356969", "straatnaam": "Prins Willem-Alexanderstraat", "huisnummer": "8", "woonplaats": "Baambrugge", "postcode": "1396KC", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.985937303806337, 52.247002216571602 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "90587979", "straatnaam": "Prins Willem-Alexanderstraat", "huisnummer": "14", "woonplaats": "Baambrugge", "postcode": "1396KC", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986506610569721, 52.246732169498934 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "90587980", "straatnaam": "Prins Willem-Alexanderstraat", "huisnummer": "11", "woonplaats": "Baambrugge", "postcode": "1396KC", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.9869672810406, 52.246755320232204 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "90587981", "straatnaam": "Prins Willem-Alexanderstraat", "huisnummer": "13", "woonplaats": "Baambrugge", "postcode": "1396KC", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987018859040727, 52.246716186321052 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "93038156", "straatnaam": "Rijksstraatweg", "huisnummer": "36", "woonplaats": "Baambrugge", "postcode": "1396JM", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989872928500584, 52.24838564867305 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "93578242", "straatnaam": "Zand- en Jaagpad", "huisnummer": "1", "woonplaats": "Baambrugge", "postcode": "1396JA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.990309261388144, 52.247917255509634 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "93578243", "straatnaam": "Zand- en Jaagpad", "huisnummer": "2", "woonplaats": "Baambrugge", "postcode": "1396JA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.990157753921224, 52.247996802100481 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "93578244", "straatnaam": "Zand- en Jaagpad", "huisnummer": "4", "woonplaats": "Baambrugge", "postcode": "1396JA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989688121018734, 52.248252783421819 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "93578245", "straatnaam": "Zand- en Jaagpad", "huisnummer": "5", "woonplaats": "Baambrugge", "postcode": "1396JA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989406564474327, 52.248445394600154 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "93578246", "straatnaam": "Zand- en Jaagpad", "huisnummer": "5", "woonplaats": "Baambrugge", "postcode": "1396JA", "huisletter": "A" }, "geometry": { "type": "Point", "coordinates": [ 4.988949908997934, 52.248623132460757 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "93578247", "straatnaam": "Zand- en Jaagpad", "huisnummer": "6", "woonplaats": "Baambrugge", "postcode": "1396JA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.98867741805853, 52.248788895665967 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95409196", "straatnaam": "Kleiweg", "huisnummer": "32", "woonplaats": "Baambrugge", "postcode": "1396HX", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988260398933773, 52.248484205296464 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95409314", "straatnaam": "Kleiweg", "huisnummer": "34", "woonplaats": "Baambrugge", "postcode": "1396HX", "huisletter": "A" }, "geometry": { "type": "Point", "coordinates": [ 4.987804803053727, 52.248814429704581 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "93038159", "straatnaam": "Rijksstraatweg", "huisnummer": "40", "woonplaats": "Baambrugge", "postcode": "1396JM", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.990254340866509, 52.248030942396483 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95409193", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "27", "woonplaats": "Baambrugge", "postcode": "1396KD", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986423337446969, 52.247602326114716 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95409194", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "23", "woonplaats": "Baambrugge", "postcode": "1396KD", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986744166253541, 52.24776480797285 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "95409195", "straatnaam": "Prinses Beatrixstraat", "huisnummer": "25", "woonplaats": "Baambrugge", "postcode": "1396KD", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986684788072944, 52.247720049064924 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246058", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "21", "woonplaats": "Baambrugge", "postcode": "1396KA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987041034081264, 52.247066522243692 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246059", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "22", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987815989367995, 52.24774590511722 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246060", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "24", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987730029643107, 52.247707690790129 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246061", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "27", "woonplaats": "Baambrugge", "postcode": "1396KA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986807062611744, 52.246968030398968 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246062", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "28", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987521383259579, 52.247644117819952 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246073", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "2", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988812385112646, 52.247273770772566 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246074", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "4", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988720719048938, 52.247341462950615 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246075", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "6", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988574565082224, 52.247423272782441 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246076", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "8", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988505916721229, 52.247483141122295 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246077", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "11", "woonplaats": "Baambrugge", "postcode": "1396KA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.98792683515032, 52.247509008708327 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246078", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "13", "woonplaats": "Baambrugge", "postcode": "1396KA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987873297956877, 52.247490562594109 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246079", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "15", "woonplaats": "Baambrugge", "postcode": "1396KA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987771908154731, 52.247450147865628 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246080", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "16", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988220625061483, 52.247665983991148 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246081", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "19", "woonplaats": "Baambrugge", "postcode": "1396KA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987574173214793, 52.24736698009918 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485060", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "40", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986791792977216, 52.247278859309027 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485061", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "42", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986744287277176, 52.247338968982092 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485062", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "44", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986692622994814, 52.247385967751988 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485063", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "46", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986618921351327, 52.247447283084711 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485064", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "23", "woonplaats": "Baambrugge", "postcode": "1396KA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986959763145853, 52.247052710052159 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485065", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "25", "woonplaats": "Baambrugge", "postcode": "1396KA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986904614651132, 52.247013215064008 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485066", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "17", "woonplaats": "Baambrugge", "postcode": "1396KA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987676088231311, 52.247427181306172 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485067", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "20", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987877945168681, 52.247771166279129 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485068", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "26", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987618354239963, 52.247675951429486 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485069", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "30", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987405799563311, 52.247573020709169 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485070", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "32", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.98729510088813, 52.247538578688086 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485071", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "34", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.98722704363637, 52.247509521258479 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485072", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "36", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987154748447564, 52.247477833693246 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485073", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "38", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987044026718502, 52.247446007123038 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485097", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "12", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988354323937219, 52.247568752627245 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485098", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "14", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988284592320758, 52.247615421505103 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485099", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "18", "woonplaats": "Baambrugge", "postcode": "1396KB", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988168232555244, 52.247707758401191 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739367", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "5", "woonplaats": "Baambrugge", "postcode": "1396KR", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989698046293209, 52.246258183533612 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739368", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "7", "woonplaats": "Baambrugge", "postcode": "1396KR", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989629942679661, 52.246234367839584 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739369", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "11", "woonplaats": "Baambrugge", "postcode": "1396KR", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989487929394277, 52.246159633300465 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739370", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "21", "woonplaats": "Baambrugge", "postcode": "1396KR", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988999420644518, 52.246082869837863 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739371", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "13", "woonplaats": "Baambrugge", "postcode": "1396KR", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989421666230555, 52.246131455074391 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739372", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "4", "woonplaats": "Baambrugge", "postcode": "1396KS", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988489594479077, 52.246213675787118 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739373", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "14", "woonplaats": "Baambrugge", "postcode": "1396KS", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.98800737617151, 52.246188462718607 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739374", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "18", "woonplaats": "Baambrugge", "postcode": "1396KS", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987887283267686, 52.24624832789663 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739375", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "27", "woonplaats": "Baambrugge", "postcode": "1396KR", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988632944273708, 52.245938991047112 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739376", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "35", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988332185430484, 52.245673290586581 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739377", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "37", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988284824222662, 52.245717679814916 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739378", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "39", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988224804981866, 52.24574630476998 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739379", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "41", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988173050277076, 52.245803784933329 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739380", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "49", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987943991975595, 52.245637904198688 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739381", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "57", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987728651225313, 52.245846834044137 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739382", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "59", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.98768980305497, 52.24589387653613 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739383", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "61", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987663558836897, 52.245938175028584 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739384", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "63", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987607924505801, 52.245977457322887 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739385", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "67", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987384348725843, 52.2461522908349 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739386", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "71", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987285370752803, 52.24623843835883 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92739387", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "73", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987233746514134, 52.246282812753343 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246063", "straatnaam": "Prins Johan Frisostraat", "huisnummer": "29", "woonplaats": "Baambrugge", "postcode": "1396KA", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986712058197246, 52.246932706095812 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "90356970", "straatnaam": "Prins Willem-Alexanderstraat", "huisnummer": "9", "woonplaats": "Baambrugge", "postcode": "1396KC", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986946589026999, 52.246799268799165 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "90356971", "straatnaam": "Prins Willem-Alexanderstraat", "huisnummer": "10", "woonplaats": "Baambrugge", "postcode": "1396KC", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986045919976754, 52.246893540759302 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "90356980", "straatnaam": "Prins Willem-Alexanderstraat", "huisnummer": "12", "woonplaats": "Baambrugge", "postcode": "1396KC", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986170780127316, 52.246779571525323 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "90356981", "straatnaam": "Prins Willem-Alexanderstraat", "huisnummer": "16", "woonplaats": "Baambrugge", "postcode": "1396KC", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986580444584875, 52.246598988530543 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "90356982", "straatnaam": "Prins Willem-Alexanderstraat", "huisnummer": "18", "woonplaats": "Baambrugge", "postcode": "1396KC", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986703376453087, 52.246529875734495 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "90356983", "straatnaam": "Prins Willem-Alexanderstraat", "huisnummer": "20", "woonplaats": "Baambrugge", "postcode": "1396KC", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986766250206306, 52.246475526031304 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "90356984", "straatnaam": "Prins Willem-Alexanderstraat", "huisnummer": "22", "woonplaats": "Baambrugge", "postcode": "1396KC", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986829270246208, 52.246421176789518 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "90356985", "straatnaam": "Prins Willem-Alexanderstraat", "huisnummer": "24", "woonplaats": "Baambrugge", "postcode": "1396KC", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.986865433179902, 52.246363464675923 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492117", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "1", "woonplaats": "Baambrugge", "postcode": "1396KR", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989831367120253, 52.246299431988071 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492118", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "2", "woonplaats": "Baambrugge", "postcode": "1396KS", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988527774488438, 52.246247818406708 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492119", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "3", "woonplaats": "Baambrugge", "postcode": "1396KR", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989765143521588, 52.246278265419662 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492120", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "6", "woonplaats": "Baambrugge", "postcode": "1396KS", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.98843532187793, 52.246172818145858 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492121", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "8", "woonplaats": "Baambrugge", "postcode": "1396KS", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988332964924598, 52.246167115698633 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492122", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "9", "woonplaats": "Baambrugge", "postcode": "1396KR", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989547663532215, 52.246162935273105 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492123", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "10", "woonplaats": "Baambrugge", "postcode": "1396KS", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988081336957347, 52.246094490761543 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492124", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "12", "woonplaats": "Baambrugge", "postcode": "1396KS", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988037969122654, 52.246122956065101 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492125", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "15", "woonplaats": "Baambrugge", "postcode": "1396KR", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989342369877249, 52.246088491205469 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492126", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "16", "woonplaats": "Baambrugge", "postcode": "1396KS", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987936096881005, 52.246215197818586 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492127", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "17", "woonplaats": "Baambrugge", "postcode": "1396KR", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989086056986861, 52.245994279320946 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492128", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "19", "woonplaats": "Baambrugge", "postcode": "1396KR", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989047058770699, 52.246036953149691 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492129", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "20", "woonplaats": "Baambrugge", "postcode": "1396KS", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987838705249727, 52.24629111281385 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492130", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "23", "woonplaats": "Baambrugge", "postcode": "1396KR", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988953319066245, 52.246123982625122 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492131", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "25", "woonplaats": "Baambrugge", "postcode": "1396KR", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988578503270505, 52.245974295739018 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492132", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "29", "woonplaats": "Baambrugge", "postcode": "1396KR", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988708242179067, 52.245903289166897 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492133", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "31", "woonplaats": "Baambrugge", "postcode": "1396KR", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988720670651358, 52.245849739288303 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492134", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "33", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988360190812495, 52.245625195583294 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492135", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "43", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988057250610956, 52.245503749707424 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492136", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "45", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.98803104802114, 52.245548372024494 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492137", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "47", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987987041848245, 52.245589302745508 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492138", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "51", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.98789902926008, 52.24567116413693 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492139", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "53", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987844263050763, 52.245703510052451 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492140", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "55", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987766003445208, 52.245786959345487 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492141", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "65", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987546526315496, 52.246024225839555 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492142", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "69", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.987316097374872, 52.246185903305744 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "92492143", "straatnaam": "Wethouder van Oostveenstraat", "huisnummer": "73", "woonplaats": "Baambrugge", "postcode": "1396KT", "huisletter": "A" }, "geometry": { "type": "Point", "coordinates": [ 4.986846231359691, 52.24612739646652 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246064", "straatnaam": "Prins Mauritsstraat", "huisnummer": "2", "woonplaats": "Baambrugge", "postcode": "1396JZ", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989094016005303, 52.246759143417215 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246065", "straatnaam": "Prins Mauritsstraat", "huisnummer": "4", "woonplaats": "Baambrugge", "postcode": "1396JZ", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.988996419855221, 52.24670231980226 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246066", "straatnaam": "Prins Mauritsstraat", "huisnummer": "5", "woonplaats": "Baambrugge", "postcode": "1396JZ", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.990249121174485, 52.246660282025019 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246067", "straatnaam": "Prins Mauritsstraat", "huisnummer": "6", "woonplaats": "Baambrugge", "postcode": "1396JZ", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989393814323165, 52.246634990694815 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246068", "straatnaam": "Prins Mauritsstraat", "huisnummer": "7", "woonplaats": "Baambrugge", "postcode": "1396JZ", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.990133754372694, 52.24653669320498 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246069", "straatnaam": "Prins Mauritsstraat", "huisnummer": "10", "woonplaats": "Baambrugge", "postcode": "1396JZ", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989599714171977, 52.246577749532186 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246070", "straatnaam": "Prins Mauritsstraat", "huisnummer": "12", "woonplaats": "Baambrugge", "postcode": "1396JZ", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989628690036545, 52.246517630374832 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246071", "straatnaam": "Prins Mauritsstraat", "huisnummer": "14", "woonplaats": "Baambrugge", "postcode": "1396JZ", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989274753969606, 52.246389004936518 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96246072", "straatnaam": "Prins Mauritsstraat", "huisnummer": "16", "woonplaats": "Baambrugge", "postcode": "1396JZ", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989233652925858, 52.246444112367193 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485057", "straatnaam": "Prins Mauritsstraat", "huisnummer": "8", "woonplaats": "Baambrugge", "postcode": "1396JZ", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989553907135936, 52.246621964703522 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485058", "straatnaam": "Prins Mauritsstraat", "huisnummer": "18", "woonplaats": "Baambrugge", "postcode": "1396JZ", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989183715349176, 52.246481832515478 ] } }
+,
+{ "type": "Feature", "properties": { "gid": "96485059", "straatnaam": "Prins Mauritsstraat", "huisnummer": "20", "woonplaats": "Baambrugge", "postcode": "1396JZ", "huisletter": null }, "geometry": { "type": "Point", "coordinates": [ 4.989132054708633, 52.246528823374213 ] } }
+
+]
+}

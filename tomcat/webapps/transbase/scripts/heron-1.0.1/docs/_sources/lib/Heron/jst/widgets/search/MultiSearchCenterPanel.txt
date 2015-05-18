@@ -1,0 +1,233 @@
+
+.. currentmodule:: Heron.widgets.search
+
+:class:`Heron.widgets.search.MultiSearchCenterPanel`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `GeoExt.form.FormPanel <http://www.geoext.org/lib/GeoExt/widgets/form/FormPanel.html>`_
+    
+
+
+
+xtype
+    ``hr_multisearchcenterpanel``
+
+
+
+
+.. class:: MultiSearchCenterPanel(config)
+
+A panel designed to hold a multiple Search/ResultPanel combinations and a
+combobox selector to select a specific Search.
+
+
+
+Example Use
+-----------
+
+Sample code showing how to configure a Heron MultiSearchCenterPanel.
+Note that the  config contains an array of objects that each have a SearchPanel and a ResultPanel.
+SearchPanels may use any SearchPanel (Form-, GXP_Query- and/or SpatialSearchPanel).
+
+.. code-block:: javascript
+
+   {
+       xtype: 'hr_multisearchcenterpanel',
+       height: 600,
+       hropts: [
+           {
+               searchPanel: {
+                   xtype: 'hr_formsearchpanel',
+                   name: 'Attribute (Form) Search: USA States',
+                   header: false,
+                   protocol: new OpenLayers.Protocol.WFS({
+                       version: "1.1.0",
+                       url: "http://suite.opengeo.org/geoserver/ows?",
+                       srsName: "EPSG:4326",
+                       featureType: "states",
+                       featureNS: "http://usa.opengeo.org"
+                   }),
+                   items: [
+                       {
+                           xtype: "textfield",
+                           name: "STATE_NAME__like",
+                           value: 'ah',
+                           fieldLabel: "  name"
+                       },
+                       {
+                           xtype: "label",
+                           id: "helplabel",
+                           html: 'Type name of a USA state, wildcards are appended and match is case-insensitive.<br/>Almost any single letter will yield results.<br/>',
+                           style: {
+                               fontSize: '10px',
+                               color: '#AAAAAA'
+                           }
+                       }
+                   ],
+                   hropts: {
+                       onSearchCompleteZoom: 10,
+                       autoWildCardAttach: true,
+                       caseInsensitiveMatch: true,
+                       logicalOperator: OpenLayers.Filter.Logical.AND
+                   }
+               },
+               resultPanel: {
+                    xtype: 'hr_featuregridpanel',
+                    id: 'hr-featuregridpanel',
+                    header: false,
+                    autoConfig: true,
+                    hropts: {
+                        zoomOnRowDoubleClick: true,
+                        zoomOnFeatureSelect: false,
+                        zoomLevelPointSelect: 8,
+                        zoomToDataExtent: false
+                    }
+                }
+           },
+           {
+               searchPanel: {
+                   xtype: 'hr_spatialsearchpanel',
+                   name: __('Spatial Search'),
+                   header: false,
+                   bodyStyle: 'padding: 6px',
+                   style: {
+                       fontFamily: 'Verdana, Arial, Helvetica, sans-serif',
+                       fontSize: '12px'
+                   },
+                   selectFirst: true
+
+               },
+               resultPanel: {
+                   xtype: 'hr_featuregridpanel',
+                   id: 'hr-featuregridpanel',
+                   header: false,
+                   autoConfig: true,
+                   hropts: {
+                       zoomOnRowDoubleClick: true,
+                       zoomOnFeatureSelect: false,
+                       zoomLevelPointSelect: 8,
+                       zoomToDataExtent: false
+                   }
+               }
+           },
+           {
+               searchPanel: {
+                   xtype: 'hr_spatialsearchpanel',
+                   name: __('Spatial Search: with last result geometries'),
+                   description: 'This search uses the feature-geometries of the last result to construct and perform a spatial search.',
+                   header: false,
+                   border: false,
+                   bodyStyle: 'padding: 6px',
+                   style: {
+                       fontFamily: 'Verdana, Arial, Helvetica, sans-serif',
+                       fontSize: '12px'
+                   },
+                   hropts: {
+                       fromLastResult: true,
+                       maxFilterGeometries: 50,
+                       selectFirst: false
+                   }
+               },
+               resultPanel: {
+                   xtype: 'hr_featuregridpanel',
+                   id: 'hr-featuregridpanel',
+                   header: false,
+                   border: false,
+                   autoConfig: true,
+                   hropts: {
+                       zoomOnRowDoubleClick: true,
+                       zoomOnFeatureSelect: false,
+                       zoomLevelPointSelect: 8,
+                       zoomToDataExtent: false
+                   }
+               }
+           },
+           {
+               searchPanel: {
+                   xtype: 'hr_gxpquerypanel',
+                   name: __('Spatial and Attributes: build your own queries'),
+                   description: 'This search uses both search within Map extent and/or your own attribute criteria',
+                   header: false,
+                   border: false
+               },
+               resultPanel: {
+                   xtype: 'hr_featuregridpanel',
+                   id: 'hr-featuregridpanel',
+                   header: false,
+                   border: false,
+                   autoConfig: true,
+                   hropts: {
+                       zoomOnRowDoubleClick: true,
+                       zoomOnFeatureSelect: false,
+                       zoomLevelPointSelect: 8,
+                       zoomToDataExtent: true
+                   }
+               }
+           }
+       ]
+   }
+
+nd then enable the MultiSearchCenterPanel as a MapPanel toolbar item (type: 'searchcenter', icon: binoculars).
+
+.. code-block:: javascript
+
+
+   Heron.options.map.toolbar = [
+       {type: "featureinfo", options: {max_features: 20}},
+       {type: "-"} ,
+       {type: "pan"},
+       {type: "zoomin"},
+       {type: "zoomout"},
+       {type: "zoomvisible"},
+       {type: "-"} ,
+       {type: "zoomprevious"},
+       {type: "zoomnext"},
+       {type: "-"},
+       {
+           type: "searchcenter",
+           // Options for SearchPanel window
+           options: {
+               show: true,
+
+               searchWindow: {
+                   title: __('Multiple Searches'),
+                   x: 100,
+                   y: undefined,
+                   width: 360,
+                   height: 440,
+                   items: [
+                       Heron.examples.searchPanelConfig
+                   ]
+               }
+           }
+       }
+   ];
+
+
+    
+
+
+
+
+
+
+Public Methods
+--------------
+
+Public methods in addition to those
+listed for `GeoExt.form.FormPanel <http://www.geoext.org/lib/GeoExt/widgets/form/FormPanel.html>`_.
+
+
+.. method:: MultiSearchCenterPanel.onSearchSelect
+
+    Called when search selected in combo box.
+
+
+
+
+

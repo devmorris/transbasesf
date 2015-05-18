@@ -1,0 +1,216 @@
+
+.. currentmodule:: Heron.widgets.search
+
+:class:`Heron.widgets.search.FormSearchPanel`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `GeoExt.form.FormPanel <http://www.geoext.org/lib/GeoExt/widgets/form/FormPanel.html>`_
+    
+
+
+
+xtype
+    ``hr_searchpanel``
+
+
+
+
+.. class:: FormSearchPanel(config)
+
+A panel designed to hold a (geo-)search form.
+
+    For the ``items[] array``: when run this Form (via GeoExt
+    `GeoExt.form.SearchAction <http://geoext.org/lib/GeoExt/widgets/form/SearchAction.html>`_)
+    builds an ``OpenLayers.Filter`` from the form
+    and passes this filter to its protocol's read method. The form fields
+    must be named after a specific convention, so that an appropriate
+    ``OpenLayers.Filter.Comparison`` filter is created for each
+    field.
+
+    For example a field with the name ``foo__like`` would result in an
+    ``OpenLayers.Filter.Comparison`` of type
+    ``OpenLayers.Filter.Comparison.LIKE`` being created.
+
+    Here is the convention:
+
+    * ``<name>__eq: OpenLayers.Filter.Comparison.EQUAL_TO``
+    * ``<name>__ne: OpenLayers.Filter.Comparison.NOT_EQUAL_TO``
+    * ``<name>__lt: OpenLayers.Filter.Comparison.LESS_THAN``
+    * ``<name>__le: OpenLayers.Filter.Comparison.LESS_THAN_OR_EQUAL_TO``
+    * ``<name>__gt: OpenLayers.Filter.Comparison.GREATER_THAN``
+    * ``<name>__ge: OpenLayers.Filter.Comparison.GREATER_THAN_OR_EQUAL_TO``
+    * ``<name>__like: OpenLayers.Filter.Comparison.LIKE``
+
+
+
+Example Use
+-----------
+
+Sample code showing how to configure a Heron FormSearchPanel.
+This example uses the internal default progress messages and action (zoom).
+Note that the fields in the items must follow the convention outlined in
+`GeoExt.form.SearchAction <http://geoext.org/lib/GeoExt/widgets/form/SearchAction.html>`_.
+
+.. code-block:: javascript
+
+  {
+   xtype: 'hr_formsearchpanel',
+   name: 'Attribute (Form) Search: USA States',
+   header: false,
+   protocol: new OpenLayers.Protocol.WFS({
+       version: "1.1.0",
+       url: "http://suite.opengeo.org/geoserver/ows?",
+       srsName: "EPSG:4326",
+       featureType: "states",
+       featureNS: "http://usa.opengeo.org"
+   }),
+   downloadFormats: [
+       {
+           name: 'CSV',
+           outputFormat: 'csv',
+           fileExt: '.csv'
+       },
+       {
+           name: 'GML (version 2.1.2)',
+           outputFormat: 'text/xml; subtype=gml/2.1.2',
+           fileExt: '.gml'
+       },
+       {
+           name: 'ESRI Shapefile (zipped)',
+           outputFormat: 'SHAPE-ZIP',
+           fileExt: '.zip'
+       },
+       {
+           name: 'GeoJSON',
+           outputFormat: 'json',
+           fileExt: '.json'
+       }
+   ],
+   items: [
+       {
+           xtype: "textfield",
+           name: "STATE_NAME__like",
+           value: 'ah',
+           fieldLabel: "  name"
+       },
+       {
+           xtype: "label",
+           id: "helplabel",
+           html: 'Type name of a USA state, wildcards are appended and match is case-insensitive.<br/>Almost any single letter will yield results.<br/>',
+           style: {
+               fontSize: '10px',
+               color: '#AAAAAA'
+           }
+       }
+   ],
+   hropts: {
+       onSearchCompleteZoom: 10,
+       autoWildCardAttach: true,
+       caseInsensitiveMatch: true,
+       logicalOperator: OpenLayers.Filter.Logical.AND
+   }
+  }
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties in addition to
+those listed for `GeoExt.form.FormPanel <http://www.geoext.org/lib/GeoExt/widgets/form/FormPanel.html>`_.
+
+
+.. describe:: autoWildCardAttach
+
+    Should search strings (LIKE comparison only) always be pre/postpended with a wildcard '*' character.
+    default value is false.
+
+.. describe:: caseInsensitiveMatch
+
+    Should search strings (LIKE and EQUALS comparison only) be matched case insensitive?
+    NB case insensitive matching is only supported for WFS 1.1.0 and higher (not for WFS 1.0.0!).
+    default value is false.
+
+.. describe:: layerOpts
+
+    Options for layer activation when search successful.
+
+.. describe:: logicalOperator
+
+    The logical operator to use when combining multiple fields into a filter expresssion.
+    Values can be OpenLayers.Filter.Logical.OR ('||') or OpenLayers.Filter.Logical.AND ('&&')
+    default value is OpenLayers.Filter.Logical.AND.
+
+.. describe:: onSearchComplete
+
+    Function to call when search is complete.
+    Default is to show "Search completed" with feature count on progress label.
+
+.. describe:: onSearchCompleteAction
+
+    Function to call to perform action when search is complete.
+    Either zoom to single Point feature or zoom to extent (bbox) of multiple features
+
+.. describe:: onSearchCompleteZoom
+
+    Zoomlevel to zoom into when feature(s) found and panned to feature.
+    default value is 11.
+
+.. describe:: onSearchFailed
+
+    Function to call when search has failed.
+
+.. describe:: onSearchInProgress
+
+    Function to call when search is starting.
+    Default is to show "Searching..." on progress label.
+
+
+
+
+Public Properties
+-----------------
+
+Public properties in addition to those
+listed for `GeoExt.form.FormPanel <http://www.geoext.org/lib/GeoExt/widgets/form/FormPanel.html>`_.
+
+
+.. attribute:: FormSearchPanel.statusPanelOpts
+
+    Layout for the status Panel.
+
+
+
+
+Public Methods
+--------------
+
+Public methods in addition to those
+listed for `GeoExt.form.FormPanel <http://www.geoext.org/lib/GeoExt/widgets/form/FormPanel.html>`_.
+
+
+.. method:: FormSearchPanel.onSearchCanceled
+
+    Function called when search is canceled.
+
+.. method:: FormSearchPanel.search
+
+    :param options: ``Object`` The options passed to the
+        :class:`GeoExt.form.SearchAction` constructor.
+    
+    Interceptor to the internal form's search method.
+
+.. method:: FormSearchPanel.searchAbort
+
+    Abort/cancel search via protocol.
+
+
+
+
+

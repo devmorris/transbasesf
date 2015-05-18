@@ -1,0 +1,31 @@
+
+.. currentmodule:: Heron.data
+
+:class:`Heron.data.OpenLS_XLSReader`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Ext.data.XmlReader <http://dev.sencha.com/deploy/ext-3.3.1/docs?class=Ext.data.XmlReader>`_
+    
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,102 @@
+
+.. currentmodule:: Heron.widgets
+
+:class:`Heron.widgets.ScaleSelectorCombo`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Ext.form.ComboBox <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.form.ComboBox>`_
+    
+
+
+
+xtype
+    ``hr_scaleselectorcombo``
+
+
+
+
+
+
+
+Example Use
+-----------
+
+Sample code showing how to show a scale combobox in your MapPanel toolbar.
+
+.. code-block:: javascript
+
+	Heron.layout = {
+	 	xtype: 'hr_mappanel',
+
+	 	hropts: {
+			 layers: [
+				 new OpenLayers.Layer.WMS( "World Map",
+				   "http://tilecache.osgeo.org/wms-c/Basic.py?", {layers: 'basic', format: 'image/png' } )
+			 ],
+			toolbar : [
+				{type: "scale"},
+				{type: "-"},
+				{type: "pan"},
+				{type: "zoomin"},
+				{type: "zoomout"}
+			]
+		  }
+		};
+
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties in addition to
+those listed for `Ext.form.ComboBox <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.form.ComboBox>`_.
+
+
+.. describe:: decimalNumber
+
+    Number of decimal number for the scale. Default: 0
+
+.. describe:: emptyText
+
+    See http://www.dev.sencha.com/deploy/dev/docs/source/TextField.html#cfg-Ext.form.TextField-emptyText,
+    default value is "Search location in Geozet".
+
+.. describe:: fakeScaleValue
+
+    Array of fake scale value
+
+.. describe:: listWidth
+
+    See http://www.dev.sencha.com/deploy/dev/docs/source/BoxComponent.html#cfg-Ext.BoxComponent-listWidth,
+    default value is 120.
+
+.. describe:: map
+
+    ``OpenLayers.Map or Object``  A configured map or a configuration object
+    for the map constructor, required only if :attr:`zoom` is set to
+    value greater than or equal to 0.
+
+.. describe:: thousandSeparator
+
+    The thousand separator string for the scale. Default: '
+
+.. describe:: width
+
+    See http://www.dev.sencha.com/deploy/dev/docs/source/BoxComponent.html#cfg-Ext.BoxComponent-width,
+    default value is 240.
+
+
+
+
+
+
+
+
+

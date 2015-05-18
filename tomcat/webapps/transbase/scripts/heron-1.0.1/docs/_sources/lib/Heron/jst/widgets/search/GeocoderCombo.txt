@@ -1,0 +1,155 @@
+
+.. currentmodule:: Heron.widgets.search
+
+:class:`Heron.widgets.search.GeocoderCombo`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Ext.form.ComboBox <http://dev.sencha.com/deploy/dev/docs/?class=Ext.form.ComboBox>`_
+    
+
+
+
+xtype
+    ``hr_geocodercombo``
+
+
+
+
+.. class:: GeocoderCombo(config)
+
+Creates a combo box that handles results from a geocoding service. By
+default it uses OSM Nominatim, but it can be configured with a custom store
+to use other services like WFS. If the user enters a valid address in the search
+box, the combo's store will be populated with records that match the
+address.  By default, records have the following fields:
+
+* name - ``String`` The formatted address.
+* lonlat - ``Array`` Location matching address, for use with
+    OpenLayers.LonLat.fromArray.
+* bounds - ``Array`` Recommended viewing bounds, for use with
+    OpenLayers.Bounds.fromArray.
+
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties in addition to
+those listed for `Ext.form.ComboBox <http://dev.sencha.com/deploy/dev/docs/?class=Ext.form.ComboBox>`_.
+
+
+.. describe:: displayField
+
+    ``String`` The field to display in the combo boy. Default is
+    "name" for instant use with the default store for this component.
+
+.. describe:: emptyText
+
+    ``String`` Text to display for an empty field (i18n).
+
+.. describe:: layer
+
+    ``OpenLayers.Layer.Vector`` If provided, a marker will be drawn on this
+    layer with the location returned by the geocoder.
+    DISABLED: The location will be cleared when the map panned.
+
+.. describe:: layerOpts
+
+    Options for layer activation when search was successful.
+
+.. describe:: loadingText
+
+    ``String`` Text to display for an empty field (i18n).
+
+.. describe:: locationField
+
+    ``String`` The field to get the location from. This field is supposed
+    to contain an array of [x, y] for a location. Default is "lonlat" for
+    instant use with the default store for this component.
+
+.. describe:: map
+
+    ``GeoExt.MapPanel|OpenLayers.Map`` The map that will be controlled by
+    this GeoCoderComboBox. Only used if this component is not added as item
+    or toolbar item to a ``GeoExt.MapPanel``.
+
+.. describe:: minChars
+
+    ``Number`` Minimum number of entered characters to trigger a search.
+    Default is 3.
+
+.. describe:: queryDelay
+
+    ``Number`` Delay before the search occurs.  Default is 200ms.
+
+.. describe:: queryParam
+
+    ``String`` The query parameter for the user entered search text.
+    Default is "q" for instant use with OSM Nominatim.
+
+.. describe:: srs
+
+    ``String|OpenLayers.Projection`` The srs used by the geocoder service.
+    Default is "EPSG:4326".
+
+.. describe:: store
+
+    ``Ext.data.Store`` The store used for this combo box. Default is a
+    store with a ScriptTagProxy and the url configured as :obj:`url`
+    property.
+
+.. describe:: tooltip
+
+    See http://www.dev.sencha.com/deploy/dev/docs/source/TextField.html#cfg-Ext.form.TextField-emptyText,
+    default value is "Search".
+
+.. describe:: url
+
+    ``String`` URL template for querying the geocoding service. If a
+    :obj:`store` is configured, this will be ignored. Note that the
+    :obj:`queryParam` will be used to append the user's combo box
+    input to the url. Default is
+    "http://nominatim.openstreetmap.org/search?format=json", for instant
+    use with the OSM Nominatim geolocator. However, if you intend to use
+    that, note the
+    `Nominatim Usage Policy <http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy>`_.
+
+.. describe:: valueField
+
+    ``String`` Field from selected record to use when the combo's
+    :meth:`getValue` method is called.  Default is "bounds". This field is
+    supposed to contain an array of [left, bottom, right, top] coordinates
+    for a bounding box or [x, y] for a location.
+
+.. describe:: zoom
+
+    ``String`` The minimum zoom level to use when zooming to a location.
+    If zoom < 0 then zoom to extent. Default is 10.
+
+
+
+
+Public Properties
+-----------------
+
+Public properties in addition to those
+listed for `Ext.form.ComboBox <http://dev.sencha.com/deploy/dev/docs/?class=Ext.form.ComboBox>`_.
+
+
+.. attribute:: GeocoderCombo.hideTrigger
+
+    Hide trigger of the combo.
+
+
+
+
+
+
+

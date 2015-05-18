@@ -1,0 +1,138 @@
+
+.. currentmodule:: Heron.widgets.search
+
+:class:`Heron.widgets.search.OpenLSSearchCombo`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Ext.form.ComboBox <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.form.ComboBox>`_
+    
+
+
+
+xtype
+    ``hr_openlssearchcombo``
+
+
+
+
+.. class:: OpenLSSearchCombo(config)
+
+Create a ComboBox that provides a "search and zoom" function using OGC OpenLS XLS search.
+To use this class you need to include additional JS files in your page.
+See also the example HTML file under examples/namesearch.
+
+#. If your map is not in EPSG:4326 (WGS84) you need to import Proj4JS, e.g.
+http://cdnjs.cloudflare.com/ajax/libs/proj4js/1.1.0/proj4js-compressed.js
+
+#. You need a proxy server that should proxy the domain `open.mapquestapi.com`.
+
+
+
+Example Use
+-----------
+
+Sample code showing how to include the Dutch national address (GEOZET, PDOK) search in your MapPanel toolbar.
+
+.. code-block:: javascript
+
+	Heron.layout = {
+		 xtype: 'hr_mappanel',
+
+		 hropts: {
+			 layers: [
+				 new OpenLayers.Layer.WMS( "World Map",
+				   "http://tilecache.osgeo.org/wms-c/Basic.py?", {layers: 'basic', format: 'image/png' } )
+			 ],
+			toolbar : [
+				{type: "pan"},
+				{type: "zoomin"},
+			       .
+			       .
+				{type: "namesearch",
+					// Optional options, see OpenLSSearchCombo.js
+					options : {
+						 xtype : 'hr_openlssearchcombo',
+						 id: "pdoksearchcombo",
+						 width: 320,
+						 listWidth: 400,
+						 minChars: 5,
+						 queryDelay: 240,
+						 zoom: 11,
+						 emptyText: __('Search PDOK'),
+						 tooltip: __('Search PDOK'),
+						 url: 'http://localhost:8081/geocoder/Geocoder?max=5'
+					}
+			]
+		  }
+		};
+
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties in addition to
+those listed for `Ext.form.ComboBox <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.form.ComboBox>`_.
+
+
+.. describe:: emptyText
+
+    See http://www.dev.sencha.com/deploy/dev/docs/source/TextField.html#cfg-Ext.form.TextField-emptyText,
+    default value is "Search location in Geozet".
+
+.. describe:: listWidth
+
+    See http://www.dev.sencha.com/deploy/dev/docs/source/Combo.html#cfg-Ext.form.ComboBox-listWidth,
+    default value is 350.
+
+.. describe:: loadingText
+
+    See http://www.dev.sencha.com/deploy/dev/docs/source/Combo.html#cfg-Ext.form.ComboBox-loadingText,
+    default value is "Search in Geozet...".
+
+.. describe:: map
+
+    ``OpenLayers.Map or Object``  A configured map or a configuration object
+    for the map constructor, required only if :attr:`zoom` is set to
+    value greater than or equal to 0.
+
+.. describe:: maxRows
+
+    `String` The maximum number of rows in the responses, defaults to 20,
+    maximum allowed value is 1000.
+    See: http://www.geonames.org/export/geonames-search.html
+
+.. describe:: minChars
+
+    ``Number`` Minimum number of characters to be typed before
+    search occurs, defaults to 1.
+
+.. describe:: queryDelay
+
+    ``Number`` Delay before the search occurs, defaults to 200 ms.
+
+.. describe:: width
+
+    See http://www.dev.sencha.com/deploy/dev/docs/source/BoxComponent.html#cfg-Ext.BoxComponent-width,
+    default value is 240.
+
+.. describe:: zoom
+
+    ``Number`` Zoom level for recentering the map after search, if set to
+    a negative number the map isn't recentered, defaults to 8.
+
+
+
+
+
+
+
+
+

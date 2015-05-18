@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Heron.widgets.search.FeaturePanel &mdash; Heron MC v1.0.1</title>
+    
+    <link rel="stylesheet" href="../../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../../',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="top" title="Heron MC v1.0.1" href="../../../../../index.html" />
+    <link rel="up" title="Heron.widgets.search" href="../../../widgets.search.html" />
+    <link rel="next" title="Heron.widgets.search.FormSearchPanel" href="FormSearchPanel.html" />
+    <link rel="prev" title="Heron.widgets.search.FeatureInfoPopup" href="FeatureInfoPopup.html" />
+    
+    
+
+  </head>
+  <body>
+    <div class="header">
+        <div class="wrap">
+            <h1 id="logo"><a href="../../../../../index.html">Heron</a></h1>
+            <ul id="top-nav">
+                <li class="first"><a href="../../../../../docs.html">Documentation</a></li>
+                <li><a href="../../../../../examples.html">Examples</a></li>
+                <li><a href="../../../../../downloads.html">Download</a></li>
+                <li><a href="http://code.google.com/p/geoext-viewer">Development</a></li>
+            </ul>
+            <div id="searchbox">
+                <form class="search" action="../../../../../search.html" method="get">
+                    <input id="searchbox-query" type="text" name="q" size="25" value="Search &hellip;" tabindex="3" onblur="if(this.value=='') this.value='Search &hellip;';" onfocus="if(this.value=='Search &hellip;') this.value='';" />
+                    <input id="searchbox-submit" type="image" value="Search" src="../../../../../_static/img/search_icon_green.png" />
+                    <input type="hidden" name="check_keywords" value="yes" />
+                    <input type="hidden" name="area" value="default" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="../../../../../index.html">HeronMC</a> &raquo;</li>
+          <li><a href="../../../../index.html" >API Reference</a> &raquo;</li>
+          <li><a href="../../../widgets.search.html" accesskey="U"><tt class="docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets.search</span></tt></a> &raquo;</li>
+        <li><a href="#"><tt class="docutils literal docutils literal"><span class="pre">Heron.widgets.search.FeaturePanel</span></tt></a></li>
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><tt class="docutils literal"><span class="pre">Heron.widgets.search.FeaturePanel</span></tt></a><ul>
+<li><a class="reference internal" href="#example-use">Example Use</a></li>
+<li><a class="reference internal" href="#config-options">Config Options</a></li>
+<li><a class="reference internal" href="#public-methods">Public Methods</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="FeatureInfoPopup.html"
+                        title="previous chapter"><tt class="docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets.search.FeatureInfoPopup</span></tt></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="FormSearchPanel.html"
+                        title="next chapter"><tt class="docutils literal"><span class="pre">Heron.widgets.search.FormSearchPanel</span></tt></a></p>
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="heron-widgets-search-featurepanel">
+<h1><a class="reference internal" href="#Heron.widgets.search.FeaturePanel" title="Heron.widgets.search.FeaturePanel"><tt class="xref py py-class docutils literal"><span class="pre">Heron.widgets.search.FeaturePanel</span></tt></a><a class="headerlink" href="#heron-widgets-search-featurepanel" title="Permalink to this headline">¶</a></h1>
+<dl class="meta docutils">
+<dt>Extends</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://www.geoext.org/lib/GeoExt/widgets/form/FormPanel.html">GeoExt.form.FormPanel</a></li>
+</ul>
+</dd>
+<dt>xtype</dt>
+<dd><tt class="docutils literal"><span class="pre">hr_featurepanel</span></tt></dd>
+</dl>
+<dl class="class">
+<dt id="Heron.widgets.search.FeaturePanel">
+<em class="property">class </em><tt class="descclassname">Heron.widgets.search.</tt><tt class="descname">FeaturePanel</tt><big>(</big><em>config</em><big>)</big><a class="headerlink" href="#Heron.widgets.search.FeaturePanel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Show features both in a grid and on the map and have them selectable.</p>
+<div class="section" id="example-use">
+<h2>Example Use<a class="headerlink" href="#example-use" title="Permalink to this headline">¶</a></h2>
+<p>Sample code showing how to configure a Heron FeaturePanel. In this case
+a popup ExtJS Window is created with a single FeaturePanel (xtype: &#8216;hr_featurepanel&#8217;).</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">Ext</span><span class="p">.</span><span class="nx">onReady</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// create a panel and add the map panel and grid panel</span>
+    <span class="c1">// inside it</span>
+    <span class="k">new</span> <span class="nx">Ext</span><span class="p">.</span><span class="nx">Window</span><span class="p">({</span>
+        <span class="nx">title</span><span class="o">:</span> <span class="nx">__</span><span class="p">(</span><span class="s1">&#39;Click Map or Grid to Select - Double Click to Zoom to feature&#39;</span><span class="p">),</span>
+        <span class="nx">layout</span><span class="o">:</span> <span class="s2">&quot;fit&quot;</span><span class="p">,</span>
+        <span class="nx">x</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="nx">y</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="nx">height</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>
+        <span class="nx">width</span><span class="o">:</span> <span class="mi">280</span><span class="p">,</span>
+        <span class="nx">items</span><span class="o">:</span> <span class="p">[{</span>
+                <span class="nx">xtype</span><span class="o">:</span> <span class="s1">&#39;hr_featurepanel&#39;</span><span class="p">,</span>
+                <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;hr-featurepanel&#39;</span><span class="p">,</span>
+                <span class="nx">title</span><span class="o">:</span> <span class="nx">__</span><span class="p">(</span><span class="s1">&#39;Parcels&#39;</span><span class="p">),</span>
+                <span class="nx">header</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="nx">columns</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nx">header</span><span class="o">:</span> <span class="s2">&quot;Fid&quot;</span><span class="p">,</span>
+                        <span class="nx">width</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
+                        <span class="nx">dataIndex</span><span class="o">:</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span>
+                        <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;string&#39;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nx">header</span><span class="o">:</span> <span class="s2">&quot;ObjectNum&quot;</span><span class="p">,</span>
+                        <span class="nx">width</span><span class="o">:</span> <span class="mi">180</span><span class="p">,</span>
+                        <span class="nx">dataIndex</span><span class="o">:</span> <span class="s2">&quot;objectnumm&quot;</span><span class="p">,</span>
+                        <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;string&#39;</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="nx">hropts</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="nx">storeOpts</span><span class="o">:</span> <span class="p">{</span>
+                        <span class="nx">proxy</span><span class="o">:</span> <span class="k">new</span> <span class="nx">GeoExt</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">ProtocolProxy</span><span class="p">({</span>
+                            <span class="nx">protocol</span><span class="o">:</span> <span class="k">new</span> <span class="nx">OpenLayers</span><span class="p">.</span><span class="nx">Protocol</span><span class="p">.</span><span class="nx">HTTP</span><span class="p">({</span>
+                                <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;data/parcels.json&#39;</span><span class="p">,</span>
+                                <span class="nx">format</span><span class="o">:</span> <span class="k">new</span> <span class="nx">OpenLayers</span><span class="p">.</span><span class="nx">Format</span><span class="p">.</span><span class="nx">GeoJSON</span><span class="p">()</span>
+                            <span class="p">})</span>
+                        <span class="p">}),</span>
+                        <span class="nx">autoLoad</span><span class="o">:</span> <span class="kc">true</span>
+                    <span class="p">},</span>
+                    <span class="nx">zoomOnRowDoubleClick</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                    <span class="nx">zoomOnFeatureSelect</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                    <span class="nx">zoomLevelPointSelect</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+                    <span class="nx">separateSelectionLayer</span><span class="o">:</span> <span class="kc">true</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}).</span><span class="nx">show</span><span class="p">();</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="config-options">
+<h2>Config Options<a class="headerlink" href="#config-options" title="Permalink to this headline">¶</a></h2>
+<p>Configuration properties in addition to
+those listed for <a class="reference external" href="http://www.geoext.org/lib/GeoExt/widgets/form/FormPanel.html">GeoExt.form.FormPanel</a>.</p>
+<dl class="describe">
+<dt>
+<tt class="descname">autoConfig</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt>
+Should the store and grid columns autoconfigure from loaded features?.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">autoConfigMaxSniff</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Integer</span></tt>
+Maximum number of features to &#8216;sniff&#8217; for autoconfigured grid columns (as null columns are often not sent by server).</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">autoMaxWidth</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Integer</span></tt>
+The maximum width of a auto adjusted column grid response. Setting to 0 will disable auto column width detection</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">autoMinWidth</tt></dt>
+<dd><dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">Integer</span></tt></dt>
+<dd>The minimum width of a auto adjusted column. Requires autoMaxWidth to be &gt; 1 to function.</dd>
+</dl>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">columnCapitalize</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt>
+Should the column names be capitalized when autoconfig is true?</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">columnFixedWidth</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Integer</span></tt>
+The width of a column in a grid response</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">displayPanels</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">String</span> <span class="pre">Array</span></tt></p>
+<p>tring array  of types of Panels to display GFI info in, default value is [&#8216;Table&#8217;], a grid table.
+ther value is &#8216;Detail&#8217;, a propertyPanel showing records one by one in a &#8220;Vertical&#8221; view.
+f multiple display values are given buttons in the toolbar will be shown to switch display types.
+irst value is the panel to be opened at the first time info is requested
+nly more than one displayPanel will be available when showTopToolbar = true.
+ote: The old implementation with &#8216;Tree&#8217; and &#8216;XML&#8217; was deprecated from v0.75</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">downloadable</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt>
+Should the features in the panel be downloadble?
+Download can be effected in 3 ways:
+1. via Grid export (CSV and XLS only)
+2. downloading the original feature format (GML2)
+3. (GeoServer only) requesting the server for a triggered download (all Geoserver WFS formats)</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">exportConfigs</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Object</span></tt>
+The supported configs for formatting and exporting feature data. Actual presented download options
+are configured with exportFormats.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">exportFormats</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">String</span> <span class="pre">Array</span></tt></p>
+<p>rray of document formats to be used when exporting the content of the FeaturePanel. This requires the server-side CGI script
+<cite>heron.cgi`</cite> to be installed. Exporting results in a download of a document with the content of the FeaturePanel.
+or example when &#8216;XLS&#8217; is configured, exporting will result in the Excel (or compatible) program to be
+tarted with the data in an Excel worksheet.
+tandard option values are <tt class="docutils literal"><span class="pre">CSV</span></tt>, <tt class="docutils literal"><span class="pre">XLS</span></tt>, <tt class="docutils literal"><span class="pre">GMLv2</span></tt>, <tt class="docutils literal"><span class="pre">GeoJSON</span></tt>, <tt class="docutils literal"><span class="pre">Shapefile</span></tt>, <tt class="docutils literal"><span class="pre">WellKnownText</span></tt>, default is, <tt class="docutils literal"><span class="pre">null</span></tt>,
+eaning no export (results in no export menu). These configured values select a formatter-object from
+he <tt class="docutils literal"><span class="pre">exportConfigs</span></tt> map.
+ince v0.77 it is also possible to supply your own formatter-objects within this array. For example for
+dditional OGR-formats and/or -projections. Here is an example of a Shapefile in Dutch projection:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">[</span><span class="s1">&#39;GMLv2&#39;</span><span class="p">,</span> <span class="s1">&#39;GeoJSON&#39;</span><span class="p">,{</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Esri Shapefile (WGS84)&#39;</span><span class="p">,</span>
+      <span class="nx">formatter</span><span class="o">:</span> <span class="s1">&#39;OpenLayersFormatter&#39;</span><span class="p">,</span>
+      <span class="nx">format</span><span class="o">:</span> <span class="s1">&#39;OpenLayers.Format.GeoJSON&#39;</span><span class="p">,</span>
+      <span class="nx">targetFormat</span><span class="o">:</span> <span class="s1">&#39;ESRI Shapefile&#39;</span><span class="p">,</span>
+      <span class="nx">targetSrs</span><span class="o">:</span> <span class="s1">&#39;EPSG:4326&#39;</span><span class="p">,</span>
+      <span class="nx">fileExt</span><span class="o">:</span> <span class="s1">&#39;.zip&#39;</span><span class="p">,</span>
+      <span class="nx">mimeType</span><span class="o">:</span> <span class="s1">&#39;application/zip&#39;</span>
+  <span class="p">},</span> <span class="s1">&#39;WellKnownText&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">featureSelection</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt>
+Should the feature geometries that are shown be selectable in grid and map? Default <tt class="docutils literal"><span class="pre">true</span></tt>.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">hideColumns</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Array</span></tt>
+An array of column names from WFS and WMS GetFeatureInfo results that should be removed and not shown to the user.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">separateSelectionLayer</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt>
+Should selected features be managed in separate overlay Layer (handy for printing) ?.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">showGeometries</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt>
+Should the feature geometries be shown? Default <tt class="docutils literal"><span class="pre">true</span></tt>.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">showTopToolbar</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt>
+Should a top toolbar with feature count, clear button and download combo be shown? Default <tt class="docutils literal"><span class="pre">true</span></tt>.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">vectorLayerOptions</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Object</span></tt>
+Options to be passed on Vector constructors.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">zoomLevelPoint</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Integer</span></tt>
+Zoom level when layer is single point feature, default <tt class="docutils literal"><span class="pre">10</span></tt>.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">zoomLevelPointSelect</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Integer</span></tt>
+Zoom level for point features when selected, default <tt class="docutils literal"><span class="pre">10</span></tt>.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">zoomOnFeatureSelect</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt>
+Zoom to feature (extent) when selected ?.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">zoomOnRowDoubleClick</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt>
+Zoom to feature (extent) when row is double clicked ?.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">zoomToDataExtent</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt>
+Zoom to layer data extent when loaded ?.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="public-methods">
+<h2>Public Methods<a class="headerlink" href="#public-methods" title="Permalink to this headline">¶</a></h2>
+<p>Public methods in addition to those
+listed for <a class="reference external" href="http://www.geoext.org/lib/GeoExt/widgets/form/FormPanel.html">GeoExt.form.FormPanel</a>.</p>
+<dl class="method">
+<dt id="Heron.widgets.search.FeaturePanel.createTopToolbar">
+<tt class="descclassname">FeaturePanel.</tt><tt class="descname">createTopToolbar</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.FeaturePanel.createTopToolbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the top toolbar.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Heron.widgets.search.FeaturePanel.hasFeatures">
+<tt class="descclassname">FeaturePanel.</tt><tt class="descname">hasFeatures</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.FeaturePanel.hasFeatures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does this Panel have features?.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Heron.widgets.search.FeaturePanel.hideLayer">
+<tt class="descclassname">FeaturePanel.</tt><tt class="descname">hideLayer</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.FeaturePanel.hideLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hide the layer with features on the map.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Heron.widgets.search.FeaturePanel.loadFeatures">
+<tt class="descclassname">FeaturePanel.</tt><tt class="descname">loadFeatures</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.FeaturePanel.loadFeatures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads array of feature objects in store and shows them on grid and map.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Heron.widgets.search.FeaturePanel.onAfterlayoutTable">
+<tt class="descclassname">FeaturePanel.</tt><tt class="descname">onAfterlayoutTable</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.FeaturePanel.onAfterlayoutTable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when Panel has been rendered.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Heron.widgets.search.FeaturePanel.onAfterlayoutTopToolbar">
+<tt class="descclassname">FeaturePanel.</tt><tt class="descname">onAfterlayoutTopToolbar</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.FeaturePanel.onAfterlayoutTopToolbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when Panel has been rendered.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Heron.widgets.search.FeaturePanel.onPanelRendered">
+<tt class="descclassname">FeaturePanel.</tt><tt class="descname">onPanelRendered</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.FeaturePanel.onPanelRendered" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when Panel has been rendered.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Heron.widgets.search.FeaturePanel.removeFeatures">
+<tt class="descclassname">FeaturePanel.</tt><tt class="descname">removeFeatures</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.FeaturePanel.removeFeatures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes all feature objects from store .</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Heron.widgets.search.FeaturePanel.showLayer">
+<tt class="descclassname">FeaturePanel.</tt><tt class="descname">showLayer</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.FeaturePanel.showLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show the layer with features on the map.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+            <li class="right" style="margin-right: 10px">
+              <a href="../../../../../genindex.html" title="General Index"
+                 accesskey="I">index</a></li>
+            <li class="right" >
+              <a href="../../../../../py-modindex.html" title="Python Module Index"
+                 >modules</a> |</li>
+            <li class="right" >
+              <a href="FormSearchPanel.html" title="Heron.widgets.search.FormSearchPanel"
+                 accesskey="N">next</a> |</li>
+            <li class="right" >
+              <a href="FeatureInfoPopup.html" title="Heron.widgets.search.FeatureInfoPopup"
+                 accesskey="P">previous</a> |</li>
+        <li><a href="../../../../../index.html">HeronMC</a> &raquo;</li>
+          <li><a href="../../../../index.html" >API Reference</a> &raquo;</li>
+          <li><a href="../../../widgets.search.html" ><tt class="docutils literal docutils literal docutils literal docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets.search</span></tt></a> &raquo;</li>
+        <li><a href="#"><tt class="docutils literal docutils literal"><span class="pre">Heron.widgets.search.FeaturePanel</span></tt></a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2011+, Heron MC Community.
+    </div>
+  </body>
+</html>

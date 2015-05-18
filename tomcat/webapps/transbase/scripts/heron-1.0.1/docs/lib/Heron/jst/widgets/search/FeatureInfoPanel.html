@@ -1,0 +1,431 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Heron.widgets.search.FeatureInfoPanel &mdash; Heron MC v1.0.1</title>
+    
+    <link rel="stylesheet" href="../../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../../',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="top" title="Heron MC v1.0.1" href="../../../../../index.html" />
+    <link rel="up" title="Heron.widgets.search" href="../../../widgets.search.html" />
+    <link rel="next" title="Heron.widgets.search.FeatureInfoPopup" href="FeatureInfoPopup.html" />
+    <link rel="prev" title="Heron.widgets.search.CoordSearchPanel" href="CoordSearchPanel.html" />
+    
+    
+
+  </head>
+  <body>
+    <div class="header">
+        <div class="wrap">
+            <h1 id="logo"><a href="../../../../../index.html">Heron</a></h1>
+            <ul id="top-nav">
+                <li class="first"><a href="../../../../../docs.html">Documentation</a></li>
+                <li><a href="../../../../../examples.html">Examples</a></li>
+                <li><a href="../../../../../downloads.html">Download</a></li>
+                <li><a href="http://code.google.com/p/geoext-viewer">Development</a></li>
+            </ul>
+            <div id="searchbox">
+                <form class="search" action="../../../../../search.html" method="get">
+                    <input id="searchbox-query" type="text" name="q" size="25" value="Search &hellip;" tabindex="3" onblur="if(this.value=='') this.value='Search &hellip;';" onfocus="if(this.value=='Search &hellip;') this.value='';" />
+                    <input id="searchbox-submit" type="image" value="Search" src="../../../../../_static/img/search_icon_green.png" />
+                    <input type="hidden" name="check_keywords" value="yes" />
+                    <input type="hidden" name="area" value="default" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="../../../../../index.html">HeronMC</a> &raquo;</li>
+          <li><a href="../../../../index.html" >API Reference</a> &raquo;</li>
+          <li><a href="../../../widgets.search.html" accesskey="U"><tt class="docutils literal docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets.search</span></tt></a> &raquo;</li>
+        <li><a href="#"><tt class="docutils literal docutils literal"><span class="pre">Heron.widgets.search.FeatureInfoPanel</span></tt></a></li>
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><tt class="docutils literal"><span class="pre">Heron.widgets.search.FeatureInfoPanel</span></tt></a><ul>
+<li><a class="reference internal" href="#example-use">Example Use</a></li>
+<li><a class="reference internal" href="#config-options">Config Options</a></li>
+<li><a class="reference internal" href="#public-methods">Public Methods</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="CoordSearchPanel.html"
+                        title="previous chapter"><tt class="docutils literal docutils literal"><span class="pre">Heron.widgets.search.CoordSearchPanel</span></tt></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="FeatureInfoPopup.html"
+                        title="next chapter"><tt class="docutils literal"><span class="pre">Heron.widgets.search.FeatureInfoPopup</span></tt></a></p>
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="heron-widgets-search-featureinfopanel">
+<h1><a class="reference internal" href="#Heron.widgets.search.FeatureInfoPanel" title="Heron.widgets.search.FeatureInfoPanel"><tt class="xref py py-class docutils literal"><span class="pre">Heron.widgets.search.FeatureInfoPanel</span></tt></a><a class="headerlink" href="#heron-widgets-search-featureinfopanel" title="Permalink to this headline">¶</a></h1>
+<dl class="meta docutils">
+<dt>Extends</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.Panel">Ext.Panel</a></li>
+</ul>
+</dd>
+<dt>xtype</dt>
+<dd><tt class="docutils literal"><span class="pre">hr_featureinfopanel</span></tt></dd>
+</dl>
+<dl class="class">
+<dt id="Heron.widgets.search.FeatureInfoPanel">
+<em class="property">class </em><tt class="descclassname">Heron.widgets.search.</tt><tt class="descname">FeatureInfoPanel</tt><big>(</big><em>config</em><big>)</big><a class="headerlink" href="#Heron.widgets.search.FeatureInfoPanel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Panel to hold Feature Information for one or more WMS (GetFeatureInfo) and/or Vector (e.g. WFS) layers.</p>
+<div class="section" id="example-use">
+<h2>Example Use<a class="headerlink" href="#example-use" title="Permalink to this headline">¶</a></h2>
+<p>Sample code showing how to configure a Heron FeatureInfoPanel.
+All regular ExtJS <a class="reference external" href="http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.Panel">Ext.Panel</a>
+config params also apply.
+The <tt class="docutils literal"><span class="pre">infoFormat</span></tt> config parameter is the default <tt class="docutils literal"><span class="pre">INFO_FORMAT</span></tt> to be used for WMS GetFeatureInfo (GFI).
+This value can be overruled by an optional per-Layer <tt class="docutils literal"><span class="pre">infoFormat</span></tt> WMS Layer config parameter.
+GetFeatureInfo-response data may be displayed as a Grid, a Tree or formatted XML. The <tt class="docutils literal"><span class="pre">displayPanels</span></tt>
+config option can be used to trigger a menu with display options. Note also the use of &#8220;GridCellRenderers&#8221;.
+These allow you to render specific formatting of cell content within the feature grid. For example
+URL substitution to render external links in a new tab or browser window. You can even supply your own formatting
+function. This function is according to the ExtJS ColumnModel renderers (see e.g. <a class="reference external" href="http://snipplr.com/view/40942">http://snipplr.com/view/40942</a>).
+More finegrained grid-control can be obtained with <tt class="docutils literal"><span class="pre">gridColumns</span></tt>. Here the standard ExtJS <tt class="docutils literal"><span class="pre">columns</span></tt>
+layout can be specified per feature type. Via <tt class="docutils literal"><span class="pre">gridColumns</span></tt> should become the preferred method.</p>
+<div class="highlight-javascript"><div class="highlight"><pre>       <span class="nx">xtype</span><span class="o">:</span> <span class="s1">&#39;hr_featureinfopanel&#39;</span><span class="p">,</span>
+       <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;hr-feature-info&#39;</span><span class="p">,</span>
+       <span class="nx">region</span><span class="o">:</span> <span class="s2">&quot;south&quot;</span><span class="p">,</span>
+       <span class="nx">border</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+       <span class="nx">collapsible</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+       <span class="nx">collapsed</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+       <span class="nx">height</span><span class="o">:</span> <span class="mi">205</span><span class="p">,</span>
+       <span class="nx">split</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+       <span class="nx">infoFormat</span><span class="o">:</span> <span class="s1">&#39;application/vnd.ogc.gml&#39;</span><span class="p">,</span>
+       <span class="nx">displayPanels</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Grid&#39;</span><span class="p">,</span> <span class="s1">&#39;XML&#39;</span><span class="p">],</span>
+       <span class="nx">exportFormats</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;CSV&#39;</span><span class="p">,</span> <span class="s1">&#39;XLS&#39;</span><span class="p">],</span>
+       <span class="nx">maxFeatures</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+       <span class="nx">columnCapitalize</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+       <span class="nx">discardStylesForDups</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+       <span class="nx">gridCellRenderers</span><span class="o">:</span> <span class="p">[</span>
+                              <span class="p">{</span>
+                                      <span class="nx">featureType</span><span class="o">:</span> <span class="s1">&#39;cities&#39;</span><span class="p">,</span>
+                                      <span class="nx">attrName</span><span class="o">:</span> <span class="s1">&#39;City&#39;</span><span class="p">,</span>
+                                      <span class="nx">renderer</span><span class="o">:</span> <span class="p">{</span>
+                                              <span class="nx">fn</span> <span class="o">:</span> <span class="nx">Heron</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">GridCellRenderer</span><span class="p">.</span><span class="nx">directLink</span><span class="p">,</span>
+                                              <span class="nx">options</span> <span class="o">:</span> <span class="p">{</span>
+                                                      <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://en.wikipedia.org/wiki/{City}&#39;</span><span class="p">,</span>
+                                                      <span class="nx">target</span><span class="o">:</span> <span class="s1">&#39;_new&#39;</span>
+                                              <span class="p">}</span>
+                                      <span class="p">}</span>
+                              <span class="p">},</span>
+                              <span class="p">{</span>
+                                      <span class="nx">featureType</span><span class="o">:</span> <span class="s1">&#39;cities&#39;</span><span class="p">,</span>
+                                      <span class="nx">attrName</span> <span class="o">:</span> <span class="s1">&#39;Country&#39;</span><span class="p">,</span>
+                                      <span class="nx">renderer</span> <span class="o">:</span>  <span class="p">{</span>
+                                              <span class="nx">fn</span> <span class="o">:</span> <span class="nx">Heron</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">GridCellRenderer</span><span class="p">.</span><span class="nx">browserPopupLink</span><span class="p">,</span>
+                                              <span class="nx">options</span> <span class="o">:</span> <span class="p">{</span>
+                                                      <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://en.wikipedia.org/wiki/{Country}&#39;</span><span class="p">,</span>
+                                                      <span class="nx">winName</span><span class="o">:</span> <span class="s1">&#39;demoWin&#39;</span><span class="p">,</span>
+                                                      <span class="nx">width</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>
+                                                      <span class="nx">height</span><span class="o">:</span> <span class="mi">800</span><span class="p">,</span>
+                                                      <span class="nx">scrollbars</span><span class="o">:</span> <span class="s1">&#39;yes&#39;</span>
+                                              <span class="p">}</span>
+                                      <span class="p">}</span>
+                              <span class="p">},</span>
+                              <span class="p">{</span>   <span class="c1">// Example for custom HTML, could use also with e.g. links</span>
+                                      <span class="nx">featureType</span><span class="o">:</span> <span class="s1">&#39;cities&#39;</span><span class="p">,</span>
+                                      <span class="nx">attrName</span> <span class="o">:</span> <span class="s1">&#39;longitude&#39;</span><span class="p">,</span>
+                                      <span class="nx">renderer</span> <span class="o">:</span>  <span class="p">{</span>
+                                              <span class="nx">fn</span> <span class="o">:</span> <span class="nx">Heron</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">GridCellRenderer</span><span class="p">.</span><span class="nx">valueSubstitutor</span><span class="p">,</span>
+                                              <span class="nx">options</span> <span class="o">:</span> <span class="p">{</span>
+                                                      <span class="nx">template</span><span class="o">:</span> <span class="s1">&#39;&lt;i&gt;ll={latitude},{longitude}{empty}&lt;/i&gt;&#39;</span>
+                                              <span class="p">}</span>
+                                      <span class="p">}</span>
+                              <span class="p">},</span>
+                              <span class="p">{</span>
+                                      <span class="c1">// Example: supply your own function, parms as in ExtJS ColumnModel</span>
+                                      <span class="nx">featureType</span><span class="o">:</span> <span class="s1">&#39;cities&#39;</span><span class="p">,</span>
+                                      <span class="nx">attrName</span> <span class="o">:</span> <span class="s1">&#39;population&#39;</span><span class="p">,</span>
+                                      <span class="nx">renderer</span> <span class="o">:</span>  <span class="p">{</span>
+                                              <span class="nx">fn</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">metaData</span><span class="p">,</span> <span class="nx">record</span><span class="p">,</span> <span class="nx">rowIndex</span><span class="p">,</span> <span class="nx">colIndex</span><span class="p">,</span> <span class="nx">store</span><span class="p">)</span> <span class="p">{</span>
+                                                      <span class="c1">// Custom formatting, may also use this.options if needed</span>
+                                                      <span class="k">return</span> <span class="s1">&#39;&lt;b&gt;&#39;</span> <span class="o">+</span> <span class="nx">value</span> <span class="o">+</span> <span class="s1">&#39; inh.&lt;/b&gt;&#39;</span><span class="p">;</span>
+                                              <span class="p">},</span>
+                                              <span class="nx">options</span> <span class="o">:</span> <span class="p">{</span>
+
+                                              <span class="p">}</span>
+                                      <span class="p">}</span>
+                              <span class="p">}</span>
+                      <span class="p">],</span>
+
+    <span class="nx">gridColumns</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+    <span class="nx">featureType</span><span class="o">:</span> <span class="s1">&#39;states&#39;</span><span class="p">,</span>
+      <span class="nx">columns</span><span class="o">:</span> <span class="p">[</span>
+       <span class="p">{</span>
+              <span class="nx">header</span><span class="o">:</span> <span class="s2">&quot;State Name&quot;</span><span class="p">,</span>
+              <span class="nx">width</span><span class="o">:</span> <span class="mi">120</span><span class="p">,</span>
+              <span class="nx">dataIndex</span><span class="o">:</span> <span class="s2">&quot;STATE_NAME&quot;</span>
+       <span class="p">},</span>
+       <span class="p">{</span>
+              <span class="nx">header</span><span class="o">:</span> <span class="s2">&quot;Inhabitants&quot;</span><span class="p">,</span>
+              <span class="nx">width</span><span class="o">:</span> <span class="mi">120</span><span class="p">,</span>
+              <span class="nx">dataIndex</span><span class="o">:</span> <span class="s2">&quot;PERSONS&quot;</span>
+       <span class="p">},</span>
+       <span class="p">{</span>
+              <span class="nx">header</span><span class="o">:</span> <span class="s2">&quot;More Info&quot;</span><span class="p">,</span>
+              <span class="nx">width</span><span class="o">:</span> <span class="mi">120</span><span class="p">,</span>
+              <span class="nx">renderer</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">metaData</span><span class="p">,</span> <span class="nx">record</span><span class="p">,</span> <span class="nx">rowIndex</span><span class="p">,</span> <span class="nx">colIndex</span><span class="p">,</span> <span class="nx">store</span><span class="p">)</span> <span class="p">{</span>
+                  <span class="kd">var</span> <span class="nx">template</span> <span class="o">=</span> <span class="s1">&#39;&lt;a target=&quot;_new&quot; href=&quot;http://en.wikipedia.org/wiki/{STATE_NAME}&quot;&gt;Wikipedia Info&lt;/a&gt;&#39;</span><span class="p">;</span>
+                  <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span><span class="nx">attrNames</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;STATE_NAME&#39;</span><span class="p">]};</span>
+                  <span class="k">return</span> <span class="nx">Heron</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">GridCellRenderer</span><span class="p">.</span><span class="nx">substituteAttrValues</span><span class="p">(</span><span class="nx">template</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span> <span class="nx">record</span><span class="p">);</span>
+              <span class="p">}</span>
+        <span class="p">}</span>
+
+       <span class="p">]</span>
+     <span class="p">}</span>
+  <span class="p">]</span>
+
+
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="config-options">
+<h2>Config Options<a class="headerlink" href="#config-options" title="Permalink to this headline">¶</a></h2>
+<p>Configuration properties in addition to
+those listed for <a class="reference external" href="http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.Panel">Ext.Panel</a>.</p>
+<dl class="describe">
+<dt>
+<tt class="descname">autoConfigMaxSniff</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Integer</span></tt>
+Maximum number of features to &#8216;sniff&#8217; for autoconfigured grid columns (as null columns are often not sent by server).</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">autoMaxWidth</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Integer</span></tt>
+The maximum width of a auto adjusted column grid response. Setting to 0 will disable auto column width detection</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">autoMinWidth</tt></dt>
+<dd><dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">Integer</span></tt></dt>
+<dd>The minimum width of a auto adjusted column. Requires autoMaxWidth to be &gt; 1 to function.</dd>
+</dl>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">columnCapitalize</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt>
+Should the column names be capitalized when autoconfig is true?</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">columnFixedWidth</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Integer</span></tt>
+The width of a column in a grid response</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">discardStylesForDups</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt>
+In case the same Layer is present multiple times, request only once without any STYLES= parameter.
+Default is <tt class="docutils literal"><span class="pre">false</span></tt>.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">displayPanels</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">String</span> <span class="pre">Array</span></tt></p>
+<p>tring array  of types of Panels to display GFI info in, default value is [&#8216;Table&#8217;], a grid table.
+ther value is &#8216;Detail&#8217;, a propertyPanel showing records one by one in a &#8220;Vertical&#8221; view.
+f multiple display values are given buttons in the toolbar will be shown to switch display types.
+irst value is the panel to be opened at the first time info is requested
+ote: The old implementation with &#8216;Tree&#8217; and &#8216;XML&#8217; was deprecated from v0.75</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">drillDown</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt>
+Show features from all visible layers that are queryable.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">exportFormats</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">String</span> <span class="pre">Array</span></tt></p>
+<p>rray of document formats to be used when exporting the content of a GFI response. This requires the server-side CGI script
+<cite>heron.cgi`</cite> to be installed. Exporting results in a download of a document with the contents of the (Grid) Panel.
+or example when &#8216;XLS&#8217; is configured, exporting will result in the Excel (or compatible) program to be
+tarted with the GFI data in an Excel worksheet.
+ption values are &#8216;CSV&#8217; and/or &#8216;XLS&#8217;, , &#8216;GMLv2&#8217;, &#8216;GeoJSON&#8217;, &#8216;WellKnownText&#8217; default is, <tt class="docutils literal"><span class="pre">null</span></tt>, meaning no export (results in no export menu).
+he value [&#8216;CSV&#8217;, &#8216;XLS&#8217;] configures a menu to choose from a <tt class="docutils literal"><span class="pre">.csv</span></tt> or <tt class="docutils literal"><span class="pre">.xls</span></tt> export document format.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">featureSelection</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt>
+Should the feature geometries that are shown be selectable in grid and map? Default <tt class="docutils literal"><span class="pre">true</span></tt>.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">gridCellRenderers</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Array</span></tt>
+Have all columns displayed but only these specifically formatted per feature type (see example).</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">gridColumns</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Array</span></tt>
+Have only specific columns displayed and formatted per feature type (see example).</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">hideColumns</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Array</span></tt>
+An array of column names from WFS and WMS GetFeatureInfo results that should be removed and not shown to the user.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">hover</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt>
+Show features on hovering.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">infoFormat</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">String</span></tt>
+Default GFI INFO_FORMAT parameter, may be overruled per Layer object infoFormat WMS param. If not set
+the value <tt class="docutils literal"><span class="pre">application/vnd.ogc.gml</span></tt> will be used.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">layer</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">string</span></tt>
+The layer to get feature information from. Parameter value will be <tt class="docutils literal"><span class="pre">&quot;&quot;</span></tt> if not set.
+If not set, all visible layers of the map will be searched. In case the drillDown
+parameter is <tt class="docutils literal"><span class="pre">false</span></tt>, the topmost visible layer will searched.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">maxFeatures</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">int</span></tt>
+Default GFI MAX_FEATURES parameter. Will be <tt class="docutils literal"><span class="pre">5</span></tt> if not set.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">showGeometries</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt>
+Should the feature geometries be shown? Default <tt class="docutils literal"><span class="pre">true</span></tt>.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt>
+<tt class="descname">showTopToolbar</tt></dt>
+<dd><p><tt class="docutils literal"><span class="pre">Boolean</span></tt>
+Show the toolbar with object count, clear and export buttons.
+Default is <tt class="docutils literal"><span class="pre">false</span></tt>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="public-methods">
+<h2>Public Methods<a class="headerlink" href="#public-methods" title="Permalink to this headline">¶</a></h2>
+<p>Public methods in addition to those
+listed for <a class="reference external" href="http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=Ext.Panel">Ext.Panel</a>.</p>
+<dl class="method">
+<dt id="Heron.widgets.search.FeatureInfoPanel.onPanelRender">
+<tt class="descclassname">FeatureInfoPanel.</tt><tt class="descname">onPanelRender</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.FeatureInfoPanel.onPanelRender" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when Panel has been rendered.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Heron.widgets.search.FeatureInfoPanel.onPanelRendered">
+<tt class="descclassname">FeatureInfoPanel.</tt><tt class="descname">onPanelRendered</tt><big>(</big><big>)</big><a class="headerlink" href="#Heron.widgets.search.FeatureInfoPanel.onPanelRendered" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when Panel has been rendered.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+            <li class="right" style="margin-right: 10px">
+              <a href="../../../../../genindex.html" title="General Index"
+                 accesskey="I">index</a></li>
+            <li class="right" >
+              <a href="../../../../../py-modindex.html" title="Python Module Index"
+                 >modules</a> |</li>
+            <li class="right" >
+              <a href="FeatureInfoPopup.html" title="Heron.widgets.search.FeatureInfoPopup"
+                 accesskey="N">next</a> |</li>
+            <li class="right" >
+              <a href="CoordSearchPanel.html" title="Heron.widgets.search.CoordSearchPanel"
+                 accesskey="P">previous</a> |</li>
+        <li><a href="../../../../../index.html">HeronMC</a> &raquo;</li>
+          <li><a href="../../../../index.html" >API Reference</a> &raquo;</li>
+          <li><a href="../../../widgets.search.html" ><tt class="docutils literal docutils literal docutils literal docutils literal"><span class="pre">Heron.widgets.search</span></tt></a> &raquo;</li>
+        <li><a href="#"><tt class="docutils literal docutils literal"><span class="pre">Heron.widgets.search.FeatureInfoPanel</span></tt></a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2011+, Heron MC Community.
+    </div>
+  </body>
+</html>

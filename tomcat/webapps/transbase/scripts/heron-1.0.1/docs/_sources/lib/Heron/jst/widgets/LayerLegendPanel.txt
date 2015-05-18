@@ -1,0 +1,76 @@
+
+.. currentmodule:: Heron.widgets
+
+:class:`Heron.widgets.LayerLegendPanel`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `GeoExt.LegendPanel <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=GeoExt.LegendPanel>`_
+    
+
+
+
+xtype
+    ``hr_layerlegendpanel``
+
+
+
+
+.. class:: LayerLegendPanel(config)
+
+A panel designed to hold legends for Map Layers (WMS GetLegendGraphic results).
+Optionally enable prefetching Legends before Layer becomes visible.
+
+.. code-block:: javascript
+
+            items: [
+               {
+			 xtype: 'hr_layerlegendpanel',
+			 defaults: {
+			 	 useScaleParameter : false,
+				 baseParams: {
+				     // Override default image/gif in WMS GetLegendGraphic
+					 FORMAT: 'image/png'
+				 }
+			 },
+			 hropts: {
+				 // Preload Legends on initial startup
+				 // Will fire WMS GetLegendGraphic's for WMS Legends
+				 // Otherwise Legends will be loaded only when Layer
+				 // becomes visible. Default: false
+				 prefetchLegends: false
+			 }
+		 }
+           ]
+
+
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties in addition to
+those listed for `GeoExt.LegendPanel <http://dev.sencha.com/deploy/ext-3.3.1/docs/?class=GeoExt.LegendPanel>`_.
+
+
+.. describe:: defaults
+
+    Optional parameters to add to the legend url, this can e.g. be used to
+    support vendor-specific parameters in a SLD WMS GetLegendGraphic
+    request. To override the default MIME type of image/gif use the
+    FORMAT parameter in defaults.baseParams. See GeoExt WMSLegend.js
+
+
+
+
+
+
+
+
+

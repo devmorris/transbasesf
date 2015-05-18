@@ -1,0 +1,52 @@
+
+.. currentmodule:: Heron.widgets
+
+:class:`Heron.widgets.BaseLayerCombo`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Heron.widgets.LayerCombo <LayerCombo.html>`_
+    
+
+
+
+xtype
+    ``hr_baselayer_combobox``
+
+
+
+
+
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties in addition to
+those listed for `Heron.widgets.LayerCombo <LayerCombo.html>`_.
+
+
+.. describe:: emptyText
+
+    See http://www.dev.sencha.com/deploy/dev/docs/source/TextField.html#cfg-Ext.form.TextField-emptyText,
+    default value is "Choose a Base Layer".
+
+.. describe:: tooltip
+
+    See http://www.dev.sencha.com/deploy/dev/docs/source/TextField.html#cfg-Ext.form.TextField-emptyText,
+    default value is "Basemaps".
+
+
+
+
+
+
+
+
+

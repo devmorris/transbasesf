@@ -1,0 +1,238 @@
+
+.. currentmodule:: Heron.widgets
+
+:class:`Heron.widgets.BookmarksPanel`
+================================================================================
+
+
+.. cssclass:: meta
+
+
+Extends
+    * `Heron.widgets.HTMLPanel <HTMLPanel.html>`_
+    
+
+
+
+xtype
+    ``hr_bookmarkspanel``
+
+
+
+
+.. class:: BookmarksPanel(config)
+
+A panel designed to hold link bookmarks to map contexts (layers/zoom/center).
+A map context is a set of layers to be activated, a zoomlevel to be zoomed into plus
+the point (x,y) where the map should be centered.
+
+
+
+Example Use
+-----------
+
+A panel designed to hold link bookmarks to map contexts (layers/zoom/center).
+A map context is a set of layers to be activated, a zoomlevel to be zoomed into plus
+the point (x,y) where the map should be centered.
+
+.. code-block:: javascript
+
+    {
+    xtype: 'hr_bookmarkspanel',
+    id: 'hr-bookmarks',
+    title: 'My title',
+    titleDescription: 'Text for explanation',
+    titleBookmarkProject: 'My Project bookmarks',
+    titleBookmarkUser: 'My bookmarks',
+    showProjectBookmarks: true,
+    showUserBookmarks: true,
+    autoProjectBookmarksTitle: true,
+    autoUserBookmarksTitle: true,
+    appBookmarkSign: 'MyAppSign',
+
+    // The contexts to create project bookmarks in the bookmark panel.
+    hropts: [
+    {
+    id: 'bookmark_XXX',
+    name: 'Change layers - jump - zoom',
+    desc: 'Bookmark XXX - change + jump + zoom',
+    addLayers: false,
+    layers: ['XXX_baselayer','XXX_overlay1','XXX_overlay2']
+    , x: 3796558,	y: 5830315
+    , zoom: 16
+    },
+    {
+    id: 'bookmark_XXX add',
+    name: 'Add layers - jump - zoom',
+    desc: 'Bookmark XXX - add + jump + zoom',
+    addLayers: true,
+    layers: ['XXX_overlay1','XXX_overlay2']
+    , x: 3796558,	y: 5830315
+    , zoom: 16
+    },
+    {
+    id: 'bookmark_XXX_delete',
+    name: 'Delete all overlays',
+    desc: '',
+    layers: []
+    },
+    {
+    id: 'bookmark_empty_1',
+    name: '',
+    desc: '',
+    layers: []
+    },
+    {
+    id: 'bookmark_change_jump',
+    name: 'Change layers - jump',
+    desc: 'Bookmark XXX - change + jump',
+    layers: ['XXX_baselayer','XXX_overlay1','XXX_overlay2']
+    , x: 3796558,	y: 5830315
+    },
+    {
+    id: 'bookmark_change_zoom',
+    name: 'Change layers - zoom',
+    desc: 'Bookmark XXX - change + zoom',
+    layers: ['XXX_baselayer','XXX_overlay1','XXX_overlay2']
+    , zoom: 16
+    },
+    {
+    id: 'bookmark_empty_2',
+    name: '',
+    desc: '',
+    layers: []
+    },
+    {
+    id: 'bookmark_only_jump',
+    name: 'Only - jump',
+    desc: 'Bookmark XXX - jump',
+    layers: []
+    , x: 3796558,	y: 5830315
+    },
+    {
+    id: 'bookmark_only_zoom',
+    name: 'Only - zoom',
+    desc: 'Bookmark XXX - zoom',
+    layers: []
+    , zoom: 16
+    }
+    ]
+    },
+
+The design of the bookmark panel areas could be modified by
+'overloading' the css entries in 'default.css' with your own
+definitions using ::
+
+    hr-bookmark-panel-bode
+    hr-bookmark-title-description
+    hr-bookmark-title-header
+    hr-bookmark-title-hr
+    hr-bookmark-link-project
+    hr-bookmark-link-user
+    hr-bookmark-link-invalid
+    hr-bookmark-close-icon
+
+Remark:
+with pre v0.73. Heron.widgets.ContextBrowserPanel was renamed to
+Heron.widgets.BookmarksPanel. Existing code can be converted (and
+expanded) like this:
+
+Existing 'ContextBrowserPanel'
+
+.. code-block:: javascript
+
+    {
+    xtype: 'hr_contextbrowserpanel',
+    id: 'my-old-hr-contextbrowser',
+    hropts: [ { . . } ]
+    }
+
+Converted to 'BookmarksPanel'
+
+.. code-block:: javascript
+
+    {
+    xtype: 'hr_bookmarkspanel',
+    id: 'my-new-hr-bookmarks',
+    showProjectBookmarks: true,
+    showUserBookmarks: false,
+    autoProjectBookmarksTitle: true,
+    .,
+    hropts: [ { . . } ]
+    }
+
+
+    
+
+
+Config Options
+--------------
+
+Configuration properties in addition to
+those listed for `Heron.widgets.HTMLPanel <HTMLPanel.html>`_.
+
+
+.. describe:: appBookmarkSign
+
+    With 'appBookmarkSign' you can configure different user bookmarks for
+    different heron geo applications. Each application named by an extra
+    signature then holds a different user bookmark set.
+    Default is "null" - all user bookmarks are shown in all heron
+    applications configured with "null".
+
+.. describe:: autoProjectBookmarksTitle
+
+    ``Boolean`` If set to true, the 'titleBookmarkProject' is only shown,
+    if there are any entries. If set to false, the title will be shown
+    in each case in this panel.
+    Default is true.
+
+.. describe:: autoUserBookmarksTitle
+
+    ``Boolean`` If set to true, the 'titleBookmarkUser' is only shown,
+    if there are any entries. If set to false, the title will be shown
+    in each case in this panel.
+    Default is true.
+
+.. describe:: showProjectBookmarks
+
+    ``Boolean`` If set to true, the project bookmarks will be shown.
+    If set to false, no project bookmarks will be shown in this panel.
+    Default is true.
+
+.. describe:: showUserBookmarks
+
+    ``Boolean`` If set to true, the user bookmarks will be shown.
+    If set to false, no user bookmarks will be shown in this panel -
+    for compatibility with pre v0.73 - Heronon.widgets.ContextBrowserPanel or
+    just for configuring only static bookmarks (showProjectBookmarks = true).
+    Default is true.
+
+.. describe:: title
+
+    title of the panel
+    default value is "Bookmarks".
+
+.. describe:: titleBookmarkProject
+
+    title of the project bookmarks
+    default value is "Project bookmarks".
+
+.. describe:: titleBookmarkUser
+
+    title of the user bookmarks
+    default value is "Your bookmarks".
+
+.. describe:: titleDescription
+
+    description line under the title line
+    default value is "null".
+
+
+
+
+
+
+
+
+
