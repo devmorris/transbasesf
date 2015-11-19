@@ -1,181 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sld:UserStyle xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml">
-  <sld:Name>Default Styler</sld:Name>
-  <sld:Title>AtlasStyler v1.9-r201311141536, Layer:DB: postgresql://transbasesf.org/transbase_v1 vw_geo_st_sgmt_infrstcr, Export-Mode: PRODUCTION</sld:Title>
-  <sld:FeatureTypeStyle>
-    <sld:Name>name</sld:Name>
-    <sld:FeatureTypeName>vw_geo_st_sgmt_infrstcr</sld:FeatureTypeName>
-    <sld:Rule>
-      <sld:Name>AS: 1/4 GraduatedColorLineRuleList</sld:Name>
-      <sld:Title>1-31 Feet</sld:Title>
-      <ogc:Filter>
-        <ogc:And>
-          <ogc:Not>
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se">
+  <NamedLayer>
+    <se:Name>vw_geo_st_sgmt_infrstcr</se:Name>
+    <UserStyle>
+      <se:Name>vw_geo_st_sgmt_infrstcr</se:Name>
+      <se:FeatureTypeStyle>
+        <se:Rule>
+          <se:Name>0 - 25 Feet</se:Name>
+          <se:Description>
+            <se:Title>0 - 25 Feet</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
             <ogc:And>
-              <ogc:PropertyIsEqualTo>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-              </ogc:PropertyIsEqualTo>
-              <ogc:Or>
-                <ogc:PropertyIsNull>
-                  <ogc:PropertyName>st_width</ogc:PropertyName>
-                </ogc:PropertyIsNull>
-                <ogc:PropertyIsEqualTo>
-                  <ogc:Literal>NEVER</ogc:Literal>
-                  <ogc:Literal>TRUE</ogc:Literal>
-                </ogc:PropertyIsEqualTo>
-              </ogc:Or>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>st_width</ogc:PropertyName>
+                <ogc:Literal>0</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>st_width</ogc:PropertyName>
+                <ogc:Literal>25</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
             </ogc:And>
-          </ogc:Not>
-          <ogc:PropertyIsBetween>
-            <ogc:PropertyName>st_width</ogc:PropertyName>
-            <ogc:LowerBoundary>
-              <ogc:Literal>0</ogc:Literal>
-            </ogc:LowerBoundary>
-            <ogc:UpperBoundary>
-              <ogc:Literal>31</ogc:Literal>
-            </ogc:UpperBoundary>
-          </ogc:PropertyIsBetween>
-        </ogc:And>
-      </ogc:Filter>
-      <sld:MaxScaleDenominator>1.7976931348623157E308</sld:MaxScaleDenominator>
-      <sld:LineSymbolizer>
-        <sld:Geometry>
-          <ogc:PropertyName>geom</ogc:PropertyName>
-        </sld:Geometry>
-        <sld:Stroke>
-          <sld:CssParameter name="stroke">#FEF0D9</sld:CssParameter>
-        </sld:Stroke>
-      </sld:LineSymbolizer>
-    </sld:Rule>
-    <sld:Rule>
-      <sld:Name>AS: 2/4 GraduatedColorLineRuleList</sld:Name>
-      <sld:Title>31-39 Feet</sld:Title>
-      <ogc:Filter>
-        <ogc:And>
-          <ogc:Not>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#ffffcc</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>26 - 35 Feet</se:Name>
+          <se:Description>
+            <se:Title>26 - 35 Feet</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
             <ogc:And>
-              <ogc:PropertyIsEqualTo>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-              </ogc:PropertyIsEqualTo>
-              <ogc:Or>
-                <ogc:PropertyIsNull>
-                  <ogc:PropertyName>st_width</ogc:PropertyName>
-                </ogc:PropertyIsNull>
-                <ogc:PropertyIsEqualTo>
-                  <ogc:Literal>NEVER</ogc:Literal>
-                  <ogc:Literal>TRUE</ogc:Literal>
-                </ogc:PropertyIsEqualTo>
-              </ogc:Or>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>st_width</ogc:PropertyName>
+                <ogc:Literal>26</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>st_width</ogc:PropertyName>
+                <ogc:Literal>35</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
             </ogc:And>
-          </ogc:Not>
-          <ogc:PropertyIsBetween>
-            <ogc:PropertyName>st_width</ogc:PropertyName>
-            <ogc:LowerBoundary>
-              <ogc:Literal>31</ogc:Literal>
-            </ogc:LowerBoundary>
-            <ogc:UpperBoundary>
-              <ogc:Literal>39</ogc:Literal>
-            </ogc:UpperBoundary>
-          </ogc:PropertyIsBetween>
-        </ogc:And>
-      </ogc:Filter>
-      <sld:MaxScaleDenominator>1.7976931348623157E308</sld:MaxScaleDenominator>
-      <sld:LineSymbolizer>
-        <sld:Geometry>
-          <ogc:PropertyName>geom</ogc:PropertyName>
-        </sld:Geometry>
-        <sld:Stroke>
-          <sld:CssParameter name="stroke">#FDCC8A</sld:CssParameter>
-        </sld:Stroke>
-      </sld:LineSymbolizer>
-    </sld:Rule>
-    <sld:Rule>
-      <sld:Name>AS: 3/4 GraduatedColorLineRuleList</sld:Name>
-      <sld:Title>39-42 Feet</sld:Title>
-      <ogc:Filter>
-        <ogc:And>
-          <ogc:Not>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#a1dab4</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>36 - 45 Feet</se:Name>
+          <se:Description>
+            <se:Title>36 - 45 Feet</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
             <ogc:And>
-              <ogc:PropertyIsEqualTo>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-              </ogc:PropertyIsEqualTo>
-              <ogc:Or>
-                <ogc:PropertyIsNull>
-                  <ogc:PropertyName>st_width</ogc:PropertyName>
-                </ogc:PropertyIsNull>
-                <ogc:PropertyIsEqualTo>
-                  <ogc:Literal>NEVER</ogc:Literal>
-                  <ogc:Literal>TRUE</ogc:Literal>
-                </ogc:PropertyIsEqualTo>
-              </ogc:Or>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>st_width</ogc:PropertyName>
+                <ogc:Literal>36</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>st_width</ogc:PropertyName>
+                <ogc:Literal>45</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
             </ogc:And>
-          </ogc:Not>
-          <ogc:PropertyIsBetween>
-            <ogc:PropertyName>st_width</ogc:PropertyName>
-            <ogc:LowerBoundary>
-              <ogc:Literal>39</ogc:Literal>
-            </ogc:LowerBoundary>
-            <ogc:UpperBoundary>
-              <ogc:Literal>42</ogc:Literal>
-            </ogc:UpperBoundary>
-          </ogc:PropertyIsBetween>
-        </ogc:And>
-      </ogc:Filter>
-      <sld:MaxScaleDenominator>1.7976931348623157E308</sld:MaxScaleDenominator>
-      <sld:LineSymbolizer>
-        <sld:Geometry>
-          <ogc:PropertyName>geom</ogc:PropertyName>
-        </sld:Geometry>
-        <sld:Stroke>
-          <sld:CssParameter name="stroke">#FC8D59</sld:CssParameter>
-        </sld:Stroke>
-      </sld:LineSymbolizer>
-    </sld:Rule>
-    <sld:Rule>
-      <sld:Name>AS: 4/4 GraduatedColorLineRuleList</sld:Name>
-      <sld:Title>42-99 Feet</sld:Title>
-      <ogc:Filter>
-        <ogc:And>
-          <ogc:Not>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#41b6c4</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>46 - 55 Feet</se:Name>
+          <se:Description>
+            <se:Title>46 - 55 Feet</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
             <ogc:And>
-              <ogc:PropertyIsEqualTo>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-              </ogc:PropertyIsEqualTo>
-              <ogc:Or>
-                <ogc:PropertyIsNull>
-                  <ogc:PropertyName>st_width</ogc:PropertyName>
-                </ogc:PropertyIsNull>
-                <ogc:PropertyIsEqualTo>
-                  <ogc:Literal>NEVER</ogc:Literal>
-                  <ogc:Literal>TRUE</ogc:Literal>
-                </ogc:PropertyIsEqualTo>
-              </ogc:Or>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>st_width</ogc:PropertyName>
+                <ogc:Literal>46</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>st_width</ogc:PropertyName>
+                <ogc:Literal>55</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
             </ogc:And>
-          </ogc:Not>
-          <ogc:PropertyIsBetween>
-            <ogc:PropertyName>st_width</ogc:PropertyName>
-            <ogc:LowerBoundary>
-              <ogc:Literal>42</ogc:Literal>
-            </ogc:LowerBoundary>
-            <ogc:UpperBoundary>
-              <ogc:Literal>99</ogc:Literal>
-            </ogc:UpperBoundary>
-          </ogc:PropertyIsBetween>
-        </ogc:And>
-      </ogc:Filter>
-      <sld:MaxScaleDenominator>1.7976931348623157E308</sld:MaxScaleDenominator>
-      <sld:LineSymbolizer>
-        <sld:Geometry>
-          <ogc:PropertyName>geom</ogc:PropertyName>
-        </sld:Geometry>
-        <sld:Stroke>
-          <sld:CssParameter name="stroke">#D7301F</sld:CssParameter>
-        </sld:Stroke>
-      </sld:LineSymbolizer>
-    </sld:Rule>
-  </sld:FeatureTypeStyle>
-</sld:UserStyle>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#2c7fb8</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>56 - 99 Feet</se:Name>
+          <se:Description>
+            <se:Title>56 - 99 Feet</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>st_width</ogc:PropertyName>
+                <ogc:Literal>56</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>st_width</ogc:PropertyName>
+                <ogc:Literal>99</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#253494</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+      </se:FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>

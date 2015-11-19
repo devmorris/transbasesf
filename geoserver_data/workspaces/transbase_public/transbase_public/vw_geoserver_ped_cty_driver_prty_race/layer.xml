@@ -1,0 +1,15 @@
+<layer>
+  <name>vw_geoserver_ped_cty_driver_prty_race</name>
+  <id>LayerInfoImpl--4d69f6ac:143d58f33d4:-300</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fdf</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--4d69f6ac:143d58f33d4:-301</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

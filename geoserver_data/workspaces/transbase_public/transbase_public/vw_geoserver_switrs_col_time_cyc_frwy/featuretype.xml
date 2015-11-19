@@ -1,0 +1,58 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-773f4145:1449e017db4:-800000</id>
+  <name>vw_geoserver_switrs_col_time_cyc_frwy</name>
+  <nativeName>vw_geoserver_switrs_col_time_cyc</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-31118007:141e5ef58cc:-7ff7</id>
+  </namespace>
+  <title>vw_geoserver_switrs_col_time_cyc_frwy</title>
+  <keywords>
+    <string>vw_geoserver_switrs_col_time_cyc</string>
+    <string>features</string>
+  </keywords>
+  <srs>EPSG:3857</srs>
+  <nativeBoundingBox>
+    <minx>-1.36373600375E7</minx>
+    <maxx>-1.36233013016E7</maxx>
+    <miny>4538294.4438</miny>
+    <maxy>4552309.5234</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-122.5064895672702</minx>
+    <maxx>-122.38019779392651</maxx>
+    <miny>37.708260896147294</miny>
+    <maxy>37.80779756894554</maxy>
+    <crs>GEOGCS["WGS84(DD)", 
+  DATUM["WGS84", 
+    SPHEROID["WGS84", 6378137.0, 298.257223563]], 
+  PRIMEM["Greenwich", 0.0], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH]]</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="JDBC_VIRTUAL_TABLE">
+      <virtualTable>
+        <name>vw_geoserver_switrs_col_time_cyc</name>
+        <sql>select * from vw_geo_intrsctn_switrs_all_types_cyc_col_frwy where time_cat = '%timed%' and dph_col_grp = 'CC'
+</sql>
+        <escapeSql>false</escapeSql>
+        <parameter>
+          <name>timed</name>
+          <defaultValue>A</defaultValue>
+          <regexpValidator>[^;']+</regexpValidator>
+        </parameter>
+      </virtualTable>
+    </entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-1bcbd938:142293c7282:-8000</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

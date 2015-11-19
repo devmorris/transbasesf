@@ -1,0 +1,57 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--636a7810:143d156980c:-517f00</id>
+  <name>vw_geoserver_switrs_vctm_doi_ped_frwy</name>
+  <nativeName>ped_doi</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-31118007:141e5ef58cc:-7ff7</id>
+  </namespace>
+  <title>vw_geoserver_switrs_vctm_doi_ped_frwy</title>
+  <keywords>
+    <string>features</string>
+    <string>ped_doi</string>
+  </keywords>
+  <srs>EPSG:3857</srs>
+  <nativeBoundingBox>
+    <minx>-1.0</minx>
+    <maxx>0.0</maxx>
+    <miny>-1.0</miny>
+    <maxy>0.0</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-8.9831528412E-6</minx>
+    <maxx>0.0</maxx>
+    <miny>-8.983152841E-6</miny>
+    <maxy>0.0</maxy>
+    <crs>GEOGCS["WGS84(DD)", 
+  DATUM["WGS84", 
+    SPHEROID["WGS84", 6378137.0, 298.257223563]], 
+  PRIMEM["Greenwich", 0.0], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH]]</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="JDBC_VIRTUAL_TABLE">
+      <virtualTable>
+        <name>ped_doi</name>
+        <sql>select * from vw_geo_intrsctn_switrs_all_types_ped_col_prty_vctm_frwy where victim_degree_of_injury = '%doi%' and dph_col_grp = 'BB'
+</sql>
+        <escapeSql>false</escapeSql>
+        <parameter>
+          <name>doi</name>
+          <regexpValidator>^[\w\d\s]+$</regexpValidator>
+        </parameter>
+      </virtualTable>
+    </entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-1bcbd938:142293c7282:-8000</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

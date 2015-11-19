@@ -1,206 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sld:UserStyle xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml">
-  <sld:Name>AtlasStyler 1.9</sld:Name>
-  <sld:Title/>
-  <sld:FeatureTypeStyle>
-    <sld:Name>QUANTITIES_COLORIZED_LINE:VALUE#slope:NORM#null:METHOD#QUANTILES:PALETTE#PuBuGn</sld:Name>
-    <sld:Title>GraduatedColorLineRuleList</sld:Title>
-    <sld:FeatureTypeName>Feature</sld:FeatureTypeName>
-    <sld:Rule>
-      <sld:Name>AS: 1/4 GraduatedColorLineRuleList</sld:Name>
-      <sld:Title>0-4 Degrees</sld:Title>
-      <ogc:Filter>
-        <ogc:And>
-          <ogc:PropertyIsEqualTo>
-            <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-            <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-          </ogc:PropertyIsEqualTo>
-          <ogc:And>
-            <ogc:Not>
-              <ogc:And>
-                <ogc:PropertyIsEqualTo>
-                  <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                  <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                </ogc:PropertyIsEqualTo>
-                <ogc:Or>
-                  <ogc:PropertyIsNull>
-                    <ogc:PropertyName>slope</ogc:PropertyName>
-                  </ogc:PropertyIsNull>
-                  <ogc:PropertyIsEqualTo>
-                    <ogc:Literal>NEVER</ogc:Literal>
-                    <ogc:Literal>TRUE</ogc:Literal>
-                  </ogc:PropertyIsEqualTo>
-                </ogc:Or>
-              </ogc:And>
-            </ogc:Not>
-            <ogc:PropertyIsBetween>
-              <ogc:PropertyName>slope</ogc:PropertyName>
-              <ogc:LowerBoundary>
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se">
+  <NamedLayer>
+    <se:Name>vw_geo_st_sgmt_infrstcr</se:Name>
+    <UserStyle>
+      <se:Name>vw_geo_st_sgmt_infrstcr</se:Name>
+      <se:FeatureTypeStyle>
+        <se:Rule>
+          <se:Name>0.0000 - 2.0000</se:Name>
+          <se:Description>
+            <se:Title>0 - 2 Percent</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>slope</ogc:PropertyName>
                 <ogc:Literal>0</ogc:Literal>
-              </ogc:LowerBoundary>
-              <ogc:UpperBoundary>
-                <ogc:Literal>4</ogc:Literal>
-              </ogc:UpperBoundary>
-            </ogc:PropertyIsBetween>
-          </ogc:And>
-        </ogc:And>
-      </ogc:Filter>
-      <sld:MaxScaleDenominator>1.7976931348623157E308</sld:MaxScaleDenominator>
-      <sld:LineSymbolizer>
-        <sld:Geometry>
-          <ogc:PropertyName>geom</ogc:PropertyName>
-        </sld:Geometry>
-        <sld:Stroke>
-          <sld:CssParameter name="stroke">#F6EFF7</sld:CssParameter>
-        </sld:Stroke>
-      </sld:LineSymbolizer>
-    </sld:Rule>
-    <sld:Rule>
-      <sld:Name>AS: 2/4 GraduatedColorLineRuleList</sld:Name>
-      <sld:Title>4-10 Degrees</sld:Title>
-      <ogc:Filter>
-        <ogc:And>
-          <ogc:PropertyIsEqualTo>
-            <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-            <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-          </ogc:PropertyIsEqualTo>
-          <ogc:And>
-            <ogc:Not>
-              <ogc:And>
-                <ogc:PropertyIsEqualTo>
-                  <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                  <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                </ogc:PropertyIsEqualTo>
-                <ogc:Or>
-                  <ogc:PropertyIsNull>
-                    <ogc:PropertyName>slope</ogc:PropertyName>
-                  </ogc:PropertyIsNull>
-                  <ogc:PropertyIsEqualTo>
-                    <ogc:Literal>NEVER</ogc:Literal>
-                    <ogc:Literal>TRUE</ogc:Literal>
-                  </ogc:PropertyIsEqualTo>
-                </ogc:Or>
-              </ogc:And>
-            </ogc:Not>
-            <ogc:PropertyIsBetween>
-              <ogc:PropertyName>slope</ogc:PropertyName>
-              <ogc:LowerBoundary>
-                <ogc:Literal>4</ogc:Literal>
-              </ogc:LowerBoundary>
-              <ogc:UpperBoundary>
-                <ogc:Literal>10</ogc:Literal>
-              </ogc:UpperBoundary>
-            </ogc:PropertyIsBetween>
-          </ogc:And>
-        </ogc:And>
-      </ogc:Filter>
-      <sld:MaxScaleDenominator>1.7976931348623157E308</sld:MaxScaleDenominator>
-      <sld:LineSymbolizer>
-        <sld:Geometry>
-          <ogc:PropertyName>geom</ogc:PropertyName>
-        </sld:Geometry>
-        <sld:Stroke>
-          <sld:CssParameter name="stroke">#BDC9E1</sld:CssParameter>
-        </sld:Stroke>
-      </sld:LineSymbolizer>
-    </sld:Rule>
-    <sld:Rule>
-      <sld:Name>AS: 3/4 GraduatedColorLineRuleList</sld:Name>
-      <sld:Title>10-20 Degrees</sld:Title>
-      <ogc:Filter>
-        <ogc:And>
-          <ogc:PropertyIsEqualTo>
-            <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-            <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-          </ogc:PropertyIsEqualTo>
-          <ogc:And>
-            <ogc:Not>
-              <ogc:And>
-                <ogc:PropertyIsEqualTo>
-                  <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                  <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                </ogc:PropertyIsEqualTo>
-                <ogc:Or>
-                  <ogc:PropertyIsNull>
-                    <ogc:PropertyName>slope</ogc:PropertyName>
-                  </ogc:PropertyIsNull>
-                  <ogc:PropertyIsEqualTo>
-                    <ogc:Literal>NEVER</ogc:Literal>
-                    <ogc:Literal>TRUE</ogc:Literal>
-                  </ogc:PropertyIsEqualTo>
-                </ogc:Or>
-              </ogc:And>
-            </ogc:Not>
-            <ogc:PropertyIsBetween>
-              <ogc:PropertyName>slope</ogc:PropertyName>
-              <ogc:LowerBoundary>
-                <ogc:Literal>10</ogc:Literal>
-              </ogc:LowerBoundary>
-              <ogc:UpperBoundary>
-                <ogc:Literal>20</ogc:Literal>
-              </ogc:UpperBoundary>
-            </ogc:PropertyIsBetween>
-          </ogc:And>
-        </ogc:And>
-      </ogc:Filter>
-      <sld:MaxScaleDenominator>1.7976931348623157E308</sld:MaxScaleDenominator>
-      <sld:LineSymbolizer>
-        <sld:Geometry>
-          <ogc:PropertyName>geom</ogc:PropertyName>
-        </sld:Geometry>
-        <sld:Stroke>
-          <sld:CssParameter name="stroke">#74A9CF</sld:CssParameter>
-        </sld:Stroke>
-      </sld:LineSymbolizer>
-    </sld:Rule>
-    <sld:Rule>
-      <sld:Name>AS: 4/4 GraduatedColorLineRuleList</sld:Name>
-      <sld:Title>20-81 Degrees</sld:Title>
-      <ogc:Filter>
-        <ogc:And>
-          <ogc:PropertyIsEqualTo>
-            <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-            <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-          </ogc:PropertyIsEqualTo>
-          <ogc:And>
-            <ogc:Not>
-              <ogc:And>
-                <ogc:PropertyIsEqualTo>
-                  <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                  <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                </ogc:PropertyIsEqualTo>
-                <ogc:Or>
-                  <ogc:PropertyIsNull>
-                    <ogc:PropertyName>slope</ogc:PropertyName>
-                  </ogc:PropertyIsNull>
-                  <ogc:PropertyIsEqualTo>
-                    <ogc:Literal>NEVER</ogc:Literal>
-                    <ogc:Literal>TRUE</ogc:Literal>
-                  </ogc:PropertyIsEqualTo>
-                </ogc:Or>
-              </ogc:And>
-            </ogc:Not>
-            <ogc:PropertyIsBetween>
-              <ogc:PropertyName>slope</ogc:PropertyName>
-              <ogc:LowerBoundary>
-                <ogc:Literal>20</ogc:Literal>
-              </ogc:LowerBoundary>
-              <ogc:UpperBoundary>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>slope</ogc:PropertyName>
+                <ogc:Literal>2</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#fef0d9</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>2.0000 - 3.0000</se:Name>
+          <se:Description>
+            <se:Title>2 - 3 Percent</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>slope</ogc:PropertyName>
+                <ogc:Literal>2</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>slope</ogc:PropertyName>
+                <ogc:Literal>3</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#fdcc8a</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>3.0000 - 6.0000</se:Name>
+          <se:Description>
+            <se:Title>3 - 6 Percent</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>slope</ogc:PropertyName>
+                <ogc:Literal>3</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>slope</ogc:PropertyName>
+                <ogc:Literal>6</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#fc8d59</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>6.0000 - 9.0000</se:Name>
+          <se:Description>
+            <se:Title>6 - 9 Percent</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>slope</ogc:PropertyName>
+                <ogc:Literal>6</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>slope</ogc:PropertyName>
+                <ogc:Literal>9</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#e34a33</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>9.0000 - 81.0000</se:Name>
+          <se:Description>
+            <se:Title>9 - 81 Percent</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>slope</ogc:PropertyName>
+                <ogc:Literal>9</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>slope</ogc:PropertyName>
                 <ogc:Literal>81</ogc:Literal>
-              </ogc:UpperBoundary>
-            </ogc:PropertyIsBetween>
-          </ogc:And>
-        </ogc:And>
-      </ogc:Filter>
-      <sld:MaxScaleDenominator>1.7976931348623157E308</sld:MaxScaleDenominator>
-      <sld:LineSymbolizer>
-        <sld:Geometry>
-          <ogc:PropertyName>geom</ogc:PropertyName>
-        </sld:Geometry>
-        <sld:Stroke>
-          <sld:CssParameter name="stroke">#02818A</sld:CssParameter>
-        </sld:Stroke>
-      </sld:LineSymbolizer>
-    </sld:Rule>
-  </sld:FeatureTypeStyle>
-</sld:UserStyle>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#b30000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+      </se:FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>

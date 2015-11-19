@@ -1,206 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sld:UserStyle xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml">
-  <sld:Name>AtlasStyler 1.9</sld:Name>
-  <sld:Title/>
-  <sld:FeatureTypeStyle>
-    <sld:Name>QUANTITIES_COLORIZED_LINE:VALUE#speed_avg_mta:NORM#null:METHOD#MANUAL:PALETTE#PuRd</sld:Name>
-    <sld:Title>GraduatedColorLineRuleList</sld:Title>
-    <sld:FeatureTypeName>Feature</sld:FeatureTypeName>
-    <sld:Rule>
-      <sld:Name>AS: 1/4 GraduatedColorLineRuleList</sld:Name>
-      <sld:Title>13-25 mph</sld:Title>
-      <ogc:Filter>
-        <ogc:And>
-          <ogc:PropertyIsEqualTo>
-            <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-            <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-          </ogc:PropertyIsEqualTo>
-          <ogc:And>
-            <ogc:Not>
-              <ogc:And>
-                <ogc:PropertyIsEqualTo>
-                  <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                  <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                </ogc:PropertyIsEqualTo>
-                <ogc:Or>
-                  <ogc:PropertyIsNull>
-                    <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
-                  </ogc:PropertyIsNull>
-                  <ogc:PropertyIsEqualTo>
-                    <ogc:Literal>NEVER</ogc:Literal>
-                    <ogc:Literal>TRUE</ogc:Literal>
-                  </ogc:PropertyIsEqualTo>
-                </ogc:Or>
-              </ogc:And>
-            </ogc:Not>
-            <ogc:PropertyIsBetween>
-              <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
-              <ogc:LowerBoundary>
-                <ogc:Literal>13</ogc:Literal>
-              </ogc:LowerBoundary>
-              <ogc:UpperBoundary>
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se">
+  <NamedLayer>
+    <se:Name>vw_geo_st_sgmt_trnsprtn</se:Name>
+    <UserStyle>
+      <se:Name>vw_geo_st_sgmt_trnsprtn</se:Name>
+      <se:FeatureTypeStyle>
+        <se:Rule>
+          <se:Name>0- 14 MPH</se:Name>
+          <se:Description>
+            <se:Title>0- 14 MPH</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
+                <ogc:Literal>0</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
+                <ogc:Literal>14</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#ffffb2</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>15 - 19 MPH</se:Name>
+          <se:Description>
+            <se:Title>15 - 19 MPH</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
+                <ogc:Literal>15</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
+                <ogc:Literal>19</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#fee180</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>20 - 24 MPH</se:Name>
+          <se:Description>
+            <se:Title>20 - 24 MPH</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
+                <ogc:Literal>20</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
+                <ogc:Literal>24</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#fdc357</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>25 - 29 MPH</se:Name>
+          <se:Description>
+            <se:Title>25 - 29 MPH</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
                 <ogc:Literal>25</ogc:Literal>
-              </ogc:UpperBoundary>
-            </ogc:PropertyIsBetween>
-          </ogc:And>
-        </ogc:And>
-      </ogc:Filter>
-      <sld:MaxScaleDenominator>1.7976931348623157E308</sld:MaxScaleDenominator>
-      <sld:LineSymbolizer>
-        <sld:Geometry>
-          <ogc:PropertyName>geom</ogc:PropertyName>
-        </sld:Geometry>
-        <sld:Stroke>
-          <sld:CssParameter name="stroke">#F1EEF6</sld:CssParameter>
-        </sld:Stroke>
-      </sld:LineSymbolizer>
-    </sld:Rule>
-    <sld:Rule>
-      <sld:Name>AS: 2/4 GraduatedColorLineRuleList</sld:Name>
-      <sld:Title>25-27 mph</sld:Title>
-      <ogc:Filter>
-        <ogc:And>
-          <ogc:PropertyIsEqualTo>
-            <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-            <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-          </ogc:PropertyIsEqualTo>
-          <ogc:And>
-            <ogc:Not>
-              <ogc:And>
-                <ogc:PropertyIsEqualTo>
-                  <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                  <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                </ogc:PropertyIsEqualTo>
-                <ogc:Or>
-                  <ogc:PropertyIsNull>
-                    <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
-                  </ogc:PropertyIsNull>
-                  <ogc:PropertyIsEqualTo>
-                    <ogc:Literal>NEVER</ogc:Literal>
-                    <ogc:Literal>TRUE</ogc:Literal>
-                  </ogc:PropertyIsEqualTo>
-                </ogc:Or>
-              </ogc:And>
-            </ogc:Not>
-            <ogc:PropertyIsBetween>
-              <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
-              <ogc:LowerBoundary>
-                <ogc:Literal>25</ogc:Literal>
-              </ogc:LowerBoundary>
-              <ogc:UpperBoundary>
-                <ogc:Literal>27</ogc:Literal>
-              </ogc:UpperBoundary>
-            </ogc:PropertyIsBetween>
-          </ogc:And>
-        </ogc:And>
-      </ogc:Filter>
-      <sld:MaxScaleDenominator>1.7976931348623157E308</sld:MaxScaleDenominator>
-      <sld:LineSymbolizer>
-        <sld:Geometry>
-          <ogc:PropertyName>geom</ogc:PropertyName>
-        </sld:Geometry>
-        <sld:Stroke>
-          <sld:CssParameter name="stroke">#D7B5D8</sld:CssParameter>
-        </sld:Stroke>
-      </sld:LineSymbolizer>
-    </sld:Rule>
-    <sld:Rule>
-      <sld:Name>AS: 3/4 GraduatedColorLineRuleList</sld:Name>
-      <sld:Title>28-31 mph</sld:Title>
-      <ogc:Filter>
-        <ogc:And>
-          <ogc:PropertyIsEqualTo>
-            <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-            <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-          </ogc:PropertyIsEqualTo>
-          <ogc:And>
-            <ogc:Not>
-              <ogc:And>
-                <ogc:PropertyIsEqualTo>
-                  <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                  <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                </ogc:PropertyIsEqualTo>
-                <ogc:Or>
-                  <ogc:PropertyIsNull>
-                    <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
-                  </ogc:PropertyIsNull>
-                  <ogc:PropertyIsEqualTo>
-                    <ogc:Literal>NEVER</ogc:Literal>
-                    <ogc:Literal>TRUE</ogc:Literal>
-                  </ogc:PropertyIsEqualTo>
-                </ogc:Or>
-              </ogc:And>
-            </ogc:Not>
-            <ogc:PropertyIsBetween>
-              <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
-              <ogc:LowerBoundary>
-                <ogc:Literal>27</ogc:Literal>
-              </ogc:LowerBoundary>
-              <ogc:UpperBoundary>
-                <ogc:Literal>31</ogc:Literal>
-              </ogc:UpperBoundary>
-            </ogc:PropertyIsBetween>
-          </ogc:And>
-        </ogc:And>
-      </ogc:Filter>
-      <sld:MaxScaleDenominator>1.7976931348623157E308</sld:MaxScaleDenominator>
-      <sld:LineSymbolizer>
-        <sld:Geometry>
-          <ogc:PropertyName>geom</ogc:PropertyName>
-        </sld:Geometry>
-        <sld:Stroke>
-          <sld:CssParameter name="stroke">#DF65B0</sld:CssParameter>
-        </sld:Stroke>
-      </sld:LineSymbolizer>
-    </sld:Rule>
-    <sld:Rule>
-      <sld:Name>AS: 4/4 GraduatedColorLineRuleList</sld:Name>
-      <sld:Title>32-47 mph</sld:Title>
-      <ogc:Filter>
-        <ogc:And>
-          <ogc:PropertyIsEqualTo>
-            <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-            <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-          </ogc:PropertyIsEqualTo>
-          <ogc:And>
-            <ogc:Not>
-              <ogc:And>
-                <ogc:PropertyIsEqualTo>
-                  <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                  <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                </ogc:PropertyIsEqualTo>
-                <ogc:Or>
-                  <ogc:PropertyIsNull>
-                    <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
-                  </ogc:PropertyIsNull>
-                  <ogc:PropertyIsEqualTo>
-                    <ogc:Literal>NEVER</ogc:Literal>
-                    <ogc:Literal>TRUE</ogc:Literal>
-                  </ogc:PropertyIsEqualTo>
-                </ogc:Or>
-              </ogc:And>
-            </ogc:Not>
-            <ogc:PropertyIsBetween>
-              <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
-              <ogc:LowerBoundary>
-                <ogc:Literal>31</ogc:Literal>
-              </ogc:LowerBoundary>
-              <ogc:UpperBoundary>
-                <ogc:Literal>47</ogc:Literal>
-              </ogc:UpperBoundary>
-            </ogc:PropertyIsBetween>
-          </ogc:And>
-        </ogc:And>
-      </ogc:Filter>
-      <sld:MaxScaleDenominator>1.7976931348623157E308</sld:MaxScaleDenominator>
-      <sld:LineSymbolizer>
-        <sld:Geometry>
-          <ogc:PropertyName>geom</ogc:PropertyName>
-        </sld:Geometry>
-        <sld:Stroke>
-          <sld:CssParameter name="stroke">#CE1256</sld:CssParameter>
-        </sld:Stroke>
-      </sld:LineSymbolizer>
-    </sld:Rule>
-  </sld:FeatureTypeStyle>
-</sld:UserStyle>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
+                <ogc:Literal>29</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#fd9f45</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>30 - 34 MPH</se:Name>
+          <se:Description>
+            <se:Title>30 - 34 MPH</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
+                <ogc:Literal>30</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
+                <ogc:Literal>34</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#f97534</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>35 - 39 MPH</se:Name>
+          <se:Description>
+            <se:Title>35 - 39 MPH</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
+                <ogc:Literal>35</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
+                <ogc:Literal>39</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#f14624</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>40 - 44 MPH</se:Name>
+          <se:Description>
+            <se:Title>40 - 44 MPH</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
+                <ogc:Literal>40</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
+                <ogc:Literal>44</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#da2122</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>45 - 49 MPH</se:Name>
+          <se:Description>
+            <se:Title>45 - 49 MPH</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
+                <ogc:Literal>45</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>speed_avg_mta</ogc:PropertyName>
+                <ogc:Literal>49</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#bd0026</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+      </se:FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>

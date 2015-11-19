@@ -1,0 +1,15 @@
+<layer>
+  <name>vw_geoserver_switrs_col_pcf_veh_cty</name>
+  <id>LayerInfoImpl-74c9851d:14aaba59be2:-3d63</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fdf</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-74c9851d:14aaba59be2:-3d64</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

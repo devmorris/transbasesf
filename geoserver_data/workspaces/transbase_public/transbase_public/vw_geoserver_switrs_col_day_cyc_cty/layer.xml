@@ -1,0 +1,15 @@
+<layer>
+  <name>vw_geoserver_switrs_col_day_cyc_cty</name>
+  <id>LayerInfoImpl-773f4145:1449e017db4:53fe</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fdf</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-773f4145:1449e017db4:53fd</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

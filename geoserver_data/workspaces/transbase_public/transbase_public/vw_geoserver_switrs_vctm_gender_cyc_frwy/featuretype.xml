@@ -1,0 +1,57 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-773f4145:1449e8824fd:764200</id>
+  <name>vw_geoserver_switrs_vctm_gender_cyc_frwy</name>
+  <nativeName>vw_geoserver_switrs_vctm_gender_cyc</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-31118007:141e5ef58cc:-7ff7</id>
+  </namespace>
+  <title>vw_geoserver_switrs_vctm_gender_cyc_frwy</title>
+  <keywords>
+    <string>features</string>
+    <string>vw_geoserver_switrs_vctm_gender_cyc</string>
+  </keywords>
+  <srs>EPSG:3857</srs>
+  <nativeBoundingBox>
+    <minx>-1.0</minx>
+    <maxx>0.0</maxx>
+    <miny>-1.0</miny>
+    <maxy>0.0</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-8.9831528412E-6</minx>
+    <maxx>0.0</maxx>
+    <miny>-8.983152841E-6</miny>
+    <maxy>0.0</maxy>
+    <crs>GEOGCS["WGS84(DD)", 
+  DATUM["WGS84", 
+    SPHEROID["WGS84", 6378137.0, 298.257223563]], 
+  PRIMEM["Greenwich", 0.0], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH]]</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="JDBC_VIRTUAL_TABLE">
+      <virtualTable>
+        <name>vw_geoserver_switrs_vctm_gender_cyc</name>
+        <sql>select * from vw_geo_intrsctn_switrs_all_types_cyc_col_prty_vctm_frwy where victim_sex = '%gender%' and dph_col_grp = 'CC'
+</sql>
+        <escapeSql>false</escapeSql>
+        <parameter>
+          <name>gender</name>
+          <regexpValidator>[^;']+</regexpValidator>
+        </parameter>
+      </virtualTable>
+    </entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-1bcbd938:142293c7282:-8000</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

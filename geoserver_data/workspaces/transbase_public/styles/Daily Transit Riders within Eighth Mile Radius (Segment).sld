@@ -1,181 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sld:UserStyle xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml">
-  <sld:Name>Default Styler</sld:Name>
-  <sld:Title>Daily Riders</sld:Title>
-  <sld:FeatureTypeStyle>
-    <sld:Name>name</sld:Name>
-    <sld:FeatureTypeName>vw_geo_st_sgmt_trnsprtn</sld:FeatureTypeName>
-    <sld:Rule>
-      <sld:Name>AS: 1/4 GraduatedColorLineRuleList</sld:Name>
-      <sld:Title>0-11308 Riders</sld:Title>
-      <ogc:Filter>
-        <ogc:And>
-          <ogc:Not>
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se">
+  <NamedLayer>
+    <se:Name>vw_geo_st_sgmt_trnsprtn</se:Name>
+    <UserStyle>
+      <se:Name>vw_geo_st_sgmt_trnsprtn</se:Name>
+      <se:FeatureTypeStyle>
+        <se:Rule>
+          <se:Name>0 - 1556 Riders</se:Name>
+          <se:Description>
+            <se:Title>0 - 1556 Riders</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
             <ogc:And>
-              <ogc:PropertyIsEqualTo>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-              </ogc:PropertyIsEqualTo>
-              <ogc:Or>
-                <ogc:PropertyIsNull>
-                  <ogc:PropertyName>daily_ride_eght</ogc:PropertyName>
-                </ogc:PropertyIsNull>
-                <ogc:PropertyIsEqualTo>
-                  <ogc:Literal>NEVER</ogc:Literal>
-                  <ogc:Literal>TRUE</ogc:Literal>
-                </ogc:PropertyIsEqualTo>
-              </ogc:Or>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>daily_ride_eght</ogc:PropertyName>
+                <ogc:Literal>0</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>daily_ride_eght</ogc:PropertyName>
+                <ogc:Literal>1556.4</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
             </ogc:And>
-          </ogc:Not>
-          <ogc:PropertyIsBetween>
-            <ogc:PropertyName>daily_ride_eght</ogc:PropertyName>
-            <ogc:LowerBoundary>
-              <ogc:Literal>0</ogc:Literal>
-            </ogc:LowerBoundary>
-            <ogc:UpperBoundary>
-              <ogc:Literal>11308</ogc:Literal>
-            </ogc:UpperBoundary>
-          </ogc:PropertyIsBetween>
-        </ogc:And>
-      </ogc:Filter>
-      <sld:MaxScaleDenominator>1.7976931348623157E308</sld:MaxScaleDenominator>
-      <sld:LineSymbolizer>
-        <sld:Geometry>
-          <ogc:PropertyName>geom</ogc:PropertyName>
-        </sld:Geometry>
-        <sld:Stroke>
-          <sld:CssParameter name="stroke">#F1EEF6</sld:CssParameter>
-        </sld:Stroke>
-      </sld:LineSymbolizer>
-    </sld:Rule>
-    <sld:Rule>
-      <sld:Name>AS: 2/4 GraduatedColorLineRuleList</sld:Name>
-      <sld:Title>11309-29928 Riders</sld:Title>
-      <ogc:Filter>
-        <ogc:And>
-          <ogc:Not>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#f7fbff</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>1557 - 5177 Riders</se:Name>
+          <se:Description>
+            <se:Title>1557 - 5177 Riders</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
             <ogc:And>
-              <ogc:PropertyIsEqualTo>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-              </ogc:PropertyIsEqualTo>
-              <ogc:Or>
-                <ogc:PropertyIsNull>
-                  <ogc:PropertyName>daily_ride_eght</ogc:PropertyName>
-                </ogc:PropertyIsNull>
-                <ogc:PropertyIsEqualTo>
-                  <ogc:Literal>NEVER</ogc:Literal>
-                  <ogc:Literal>TRUE</ogc:Literal>
-                </ogc:PropertyIsEqualTo>
-              </ogc:Or>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>daily_ride_eght</ogc:PropertyName>
+                <ogc:Literal>1556.4</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>daily_ride_eght</ogc:PropertyName>
+                <ogc:Literal>5177.4</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
             </ogc:And>
-          </ogc:Not>
-          <ogc:PropertyIsBetween>
-            <ogc:PropertyName>daily_ride_eght</ogc:PropertyName>
-            <ogc:LowerBoundary>
-              <ogc:Literal>11309</ogc:Literal>
-            </ogc:LowerBoundary>
-            <ogc:UpperBoundary>
-              <ogc:Literal>29928</ogc:Literal>
-            </ogc:UpperBoundary>
-          </ogc:PropertyIsBetween>
-        </ogc:And>
-      </ogc:Filter>
-      <sld:MaxScaleDenominator>1.7976927383348622738357E308</sld:MaxScaleDenominator>
-      <sld:LineSymbolizer>
-        <sld:Geometry>
-          <ogc:PropertyName>geom</ogc:PropertyName>
-        </sld:Geometry>
-        <sld:Stroke>
-          <sld:CssParameter name="stroke">#BDC9E1</sld:CssParameter>
-        </sld:Stroke>
-      </sld:LineSymbolizer>
-    </sld:Rule>
-    <sld:Rule>
-      <sld:Name>AS: 3/4 GraduatedColorLineRuleList</sld:Name>
-      <sld:Title>29929-60778 Riders</sld:Title>
-      <ogc:Filter>
-        <ogc:And>
-          <ogc:Not>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#c7dcef</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>5178 - 10939 Riders</se:Name>
+          <se:Description>
+            <se:Title>5178 - 10939 Riders</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
             <ogc:And>
-              <ogc:PropertyIsEqualTo>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-              </ogc:PropertyIsEqualTo>
-              <ogc:Or>
-                <ogc:PropertyIsNull>
-                  <ogc:PropertyName>daily_ride_eght</ogc:PropertyName>
-                </ogc:PropertyIsNull>
-                <ogc:PropertyIsEqualTo>
-                  <ogc:Literal>NEVER</ogc:Literal>
-                  <ogc:Literal>TRUE</ogc:Literal>
-                </ogc:PropertyIsEqualTo>
-              </ogc:Or>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>daily_ride_eght</ogc:PropertyName>
+                <ogc:Literal>5177.4</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>daily_ride_eght</ogc:PropertyName>
+                <ogc:Literal>10939</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
             </ogc:And>
-          </ogc:Not>
-          <ogc:PropertyIsBetween>
-            <ogc:PropertyName>daily_ride_eght</ogc:PropertyName>
-            <ogc:LowerBoundary>
-              <ogc:Literal>29929</ogc:Literal>
-            </ogc:LowerBoundary>
-            <ogc:UpperBoundary>
-              <ogc:Literal>60778</ogc:Literal>
-            </ogc:UpperBoundary>
-          </ogc:PropertyIsBetween>
-        </ogc:And>
-      </ogc:Filter>
-      <sld:MaxScaleDenominator>1.7976927383348622738357E308</sld:MaxScaleDenominator>
-      <sld:LineSymbolizer>
-        <sld:Geometry>
-          <ogc:PropertyName>geom</ogc:PropertyName>
-        </sld:Geometry>
-        <sld:Stroke>
-          <sld:CssParameter name="stroke">#74A9CF</sld:CssParameter>
-        </sld:Stroke>
-      </sld:LineSymbolizer>
-    </sld:Rule>
-    <sld:Rule>
-      <sld:Name>AS: 4/4 GraduatedColorLineRuleList</sld:Name>
-      <sld:Title>60779-154916 Riders</sld:Title>
-      <ogc:Filter>
-        <ogc:And>
-          <ogc:Not>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#72b2d7</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>10940 - 21694 Riders</se:Name>
+          <se:Description>
+            <se:Title>10940 - 21694 Riders</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
             <ogc:And>
-              <ogc:PropertyIsEqualTo>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-              </ogc:PropertyIsEqualTo>
-              <ogc:Or>
-                <ogc:PropertyIsNull>
-                  <ogc:PropertyName>daily_ride_eght</ogc:PropertyName>
-                </ogc:PropertyIsNull>
-                <ogc:PropertyIsEqualTo>
-                  <ogc:Literal>NEVER</ogc:Literal>
-                  <ogc:Literal>TRUE</ogc:Literal>
-                </ogc:PropertyIsEqualTo>
-              </ogc:Or>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>daily_ride_eght</ogc:PropertyName>
+                <ogc:Literal>10939</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>daily_ride_eght</ogc:PropertyName>
+                <ogc:Literal>21694.6</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
             </ogc:And>
-          </ogc:Not>
-          <ogc:PropertyIsBetween>
-            <ogc:PropertyName>daily_ride_eght</ogc:PropertyName>
-            <ogc:LowerBoundary>
-              <ogc:Literal>60779</ogc:Literal>
-            </ogc:LowerBoundary>
-            <ogc:UpperBoundary>
-              <ogc:Literal>154916</ogc:Literal>
-            </ogc:UpperBoundary>
-          </ogc:PropertyIsBetween>
-        </ogc:And>
-      </ogc:Filter>
-      <sld:MaxScaleDenominator>1.7976927383348622738357E308</sld:MaxScaleDenominator>
-      <sld:LineSymbolizer>
-        <sld:Geometry>
-          <ogc:PropertyName>geom</ogc:PropertyName>
-        </sld:Geometry>
-        <sld:Stroke>
-          <sld:CssParameter name="stroke">#0570B0</sld:CssParameter>
-        </sld:Stroke>
-      </sld:LineSymbolizer>
-    </sld:Rule>
-  </sld:FeatureTypeStyle>
-</sld:UserStyle>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#2878b8</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>21695 - 154916 Riders</se:Name>
+          <se:Description>
+            <se:Title>21695 - 154916 Riders</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>daily_ride_eght</ogc:PropertyName>
+                <ogc:Literal>21694.6</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>daily_ride_eght</ogc:PropertyName>
+                <ogc:Literal>154916</ogc:Literal>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
+          </ogc:Filter>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#08306b</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+      </se:FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>

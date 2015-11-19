@@ -1,0 +1,15 @@
+<layer>
+  <name>vw_geoserver_cyc_frwy_prty_fault</name>
+  <id>LayerInfoImpl-773f4145:1449e8824fd:-54d500</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fdf</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-773f4145:1449e8824fd:-54d600</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

@@ -1,0 +1,15 @@
+<layer>
+  <name>vw_geoserver_switrs_col_hitrun_ped_frwy</name>
+  <id>LayerInfoImpl--636a7810:143d2717be2:-30a100</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fdf</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--636a7810:143d2717be2:-30a200</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

@@ -1,129 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sld:StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" version="1.0.0">
-  <sld:NamedLayer>
-    <sld:Name>Daily Transit Riders within Quarter Mile Radius</sld:Name>
-    <sld:UserStyle>
-      <sld:Name>Daily Transit Riders within Quarter Mile Radius</sld:Name>
-      <sld:Title>Daily Transit Riders within Quarter Mile Radius</sld:Title>
-      <sld:FeatureTypeStyle>
-        <sld:Name>name</sld:Name>
-        <sld:Rule>
-          <sld:Title>1-78724 Riders</sld:Title>
-          <ogc:Filter>
-            <ogc:PropertyIsBetween>
-              <ogc:PropertyName>daily_ride_qrt</ogc:PropertyName>
-              <ogc:LowerBoundary>
-                <ogc:Literal>1</ogc:Literal>
-              </ogc:LowerBoundary>
-              <ogc:UpperBoundary>
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se">
+  <NamedLayer>
+    <se:Name>vw_geo_intrsctn_trnsprtn</se:Name>
+    <UserStyle>
+      <se:Name>vw_geo_intrsctn_trnsprtn</se:Name>
+      <se:FeatureTypeStyle>
+        <se:Rule>
+          <se:Name> 40 - 78724 </se:Name>
+          <se:Description>
+            <se:Title> 40 - 78724 Riders</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>daily_ride_qrt</ogc:PropertyName>
+                <ogc:Literal>40</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>daily_ride_qrt</ogc:PropertyName>
                 <ogc:Literal>78724</ogc:Literal>
-              </ogc:UpperBoundary>
-            </ogc:PropertyIsBetween>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
           </ogc:Filter>
-          <sld:PointSymbolizer>
-            <sld:Graphic>
-              <sld:Mark>
-                <sld:WellKnownName>circle</sld:WellKnownName>
-                <sld:Fill>
-                  <sld:CssParameter name="fill">#FEE2EE</sld:CssParameter>
-                </sld:Fill>
-                <sld:Stroke>
-                  <sld:CssParameter name="stroke">#383A37</sld:CssParameter>
-                  <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
-                </sld:Stroke>
-              </sld:Mark>
-              <sld:Size>6</sld:Size>
-            </sld:Graphic>
-          </sld:PointSymbolizer>
-        </sld:Rule>
-        <sld:Rule>
-          <sld:Title>78725-157408 Riders</sld:Title>
-          <ogc:Filter>
-            <ogc:PropertyIsBetween>
-              <ogc:PropertyName>daily_ride_qrt</ogc:PropertyName>
-              <ogc:LowerBoundary>
-                <ogc:Literal>78725</ogc:Literal>
-              </ogc:LowerBoundary>
-              <ogc:UpperBoundary>
+          <se:PointSymbolizer>
+            <se:Graphic>
+              <se:Mark>
+                <se:WellKnownName>circle</se:WellKnownName>
+                <se:Fill>
+                  <se:SvgParameter name="fill">#f7fbff</se:SvgParameter>
+                </se:Fill>
+                <se:Stroke>
+                  <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
+                </se:Stroke>
+              </se:Mark>
+              <se:Size>6</se:Size>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name> 78724 - 157408 </se:Name>
+          <se:Description>
+            <se:Title> 78724 - 157408 Riders</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>daily_ride_qrt</ogc:PropertyName>
+                <ogc:Literal>78724</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>daily_ride_qrt</ogc:PropertyName>
                 <ogc:Literal>157408</ogc:Literal>
-              </ogc:UpperBoundary>
-            </ogc:PropertyIsBetween>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
           </ogc:Filter>
-          <sld:PointSymbolizer>
-            <sld:Graphic>
-              <sld:Mark>
-                <sld:WellKnownName>circle</sld:WellKnownName>
-                <sld:Fill>
-                  <sld:CssParameter name="fill">#C78DBF</sld:CssParameter>
-                </sld:Fill>
-                <sld:Stroke>
-                  <sld:CssParameter name="stroke">#383A37</sld:CssParameter>
-                  <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
-                </sld:Stroke>
-              </sld:Mark>
-              <sld:Size>9</sld:Size>
-            </sld:Graphic>
-          </sld:PointSymbolizer>
-        </sld:Rule>
-        <sld:Rule>
-          <sld:Title>157409-236092 Riders</sld:Title>
-          <ogc:Filter>
-            <ogc:PropertyIsBetween>
-              <ogc:PropertyName>daily_ride_qrt</ogc:PropertyName>
-              <ogc:LowerBoundary>
-                <ogc:Literal>157409</ogc:Literal>
-              </ogc:LowerBoundary>
-              <ogc:UpperBoundary>
+          <se:PointSymbolizer>
+            <se:Graphic>
+              <se:Mark>
+                <se:WellKnownName>circle</se:WellKnownName>
+                <se:Fill>
+                  <se:SvgParameter name="fill">#afd1e7</se:SvgParameter>
+                </se:Fill>
+                <se:Stroke>
+                  <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
+                </se:Stroke>
+              </se:Mark>
+              <se:Size>9</se:Size>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name> 157408 - 236092 </se:Name>
+          <se:Description>
+            <se:Title> 157408 - 236092 Riders</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>daily_ride_qrt</ogc:PropertyName>
+                <ogc:Literal>157408</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>daily_ride_qrt</ogc:PropertyName>
                 <ogc:Literal>236092</ogc:Literal>
-              </ogc:UpperBoundary>
-            </ogc:PropertyIsBetween>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
           </ogc:Filter>
-          <sld:PointSymbolizer>
-            <sld:Graphic>
-              <sld:Mark>
-                <sld:WellKnownName>circle</sld:WellKnownName>
-                <sld:Fill>
-                  <sld:CssParameter name="fill">#9062A7</sld:CssParameter>
-                </sld:Fill>
-                <sld:Stroke>
-                  <sld:CssParameter name="stroke">#383A37</sld:CssParameter>
-                  <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
-                </sld:Stroke>
-              </sld:Mark>
-              <sld:Size>13</sld:Size>
-            </sld:Graphic>
-          </sld:PointSymbolizer>
-        </sld:Rule>
-        <sld:Rule>
-          <sld:Title>236093-314776 Riders</sld:Title>
-          <ogc:Filter>
-            <ogc:PropertyIsBetween>
-              <ogc:PropertyName>daily_ride_qrt</ogc:PropertyName>
-              <ogc:LowerBoundary>
-                <ogc:Literal>236093</ogc:Literal>
-              </ogc:LowerBoundary>
-              <ogc:UpperBoundary>
+          <se:PointSymbolizer>
+            <se:Graphic>
+              <se:Mark>
+                <se:WellKnownName>circle</se:WellKnownName>
+                <se:Fill>
+                  <se:SvgParameter name="fill">#3d8dc3</se:SvgParameter>
+                </se:Fill>
+                <se:Stroke>
+                  <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
+                </se:Stroke>
+              </se:Mark>
+              <se:Size>13</se:Size>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name> 236092 - 314776 </se:Name>
+          <se:Description>
+            <se:Title> 236092 - 314776 Riders</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:And>
+              <ogc:PropertyIsGreaterThan>
+                <ogc:PropertyName>daily_ride_qrt</ogc:PropertyName>
+                <ogc:Literal>236092</ogc:Literal>
+              </ogc:PropertyIsGreaterThan>
+              <ogc:PropertyIsLessThanOrEqualTo>
+                <ogc:PropertyName>daily_ride_qrt</ogc:PropertyName>
                 <ogc:Literal>314776</ogc:Literal>
-              </ogc:UpperBoundary>
-            </ogc:PropertyIsBetween>
+              </ogc:PropertyIsLessThanOrEqualTo>
+            </ogc:And>
           </ogc:Filter>
-          <sld:PointSymbolizer>
-            <sld:Graphic>
-              <sld:Mark>
-                <sld:WellKnownName>circle</sld:WellKnownName>
-                <sld:Fill>
-                  <sld:CssParameter name="fill">#593790</sld:CssParameter>
-                </sld:Fill>
-                <sld:Stroke>
-                  <sld:CssParameter name="stroke">#383A37</sld:CssParameter>
-                  <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
-                </sld:Stroke>
-              </sld:Mark>
-              <sld:Size>17</sld:Size>
-            </sld:Graphic>
-          </sld:PointSymbolizer>
-        </sld:Rule>
-      </sld:FeatureTypeStyle>
-    </sld:UserStyle>
-  </sld:NamedLayer>
-</sld:StyledLayerDescriptor>
+          <se:PointSymbolizer>
+            <se:Graphic>
+              <se:Mark>
+                <se:WellKnownName>circle</se:WellKnownName>
+                <se:Fill>
+                  <se:SvgParameter name="fill">#08306b</se:SvgParameter>
+                </se:Fill>
+                <se:Stroke>
+                  <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                  <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
+                </se:Stroke>
+              </se:Mark>
+              <se:Size>17</se:Size>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+      </se:FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>
