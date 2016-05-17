@@ -58,7 +58,7 @@
     <entry key="JDBC_VIRTUAL_TABLE">
       <virtualTable>
         <name>vw_geoserver_switrs_vctm_age_veh</name>
-        <sql>select * from vw_geo_intrsctn_switrs_all_types_veh_col_prty_vctm_frwy where victim_age between %age1% and %age2% and dph_col_grp = 'AA'
+        <sql>select * from vw_geo_switrs_all_types_veh_col_prty_vctm_frwy where victim_age between %age1% and %age2% and dph_col_grp = 'AA'
 </sql>
         <escapeSql>false</escapeSql>
         <geometry>

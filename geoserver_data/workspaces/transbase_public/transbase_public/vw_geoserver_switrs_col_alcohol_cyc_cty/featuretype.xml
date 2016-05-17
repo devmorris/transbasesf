@@ -36,7 +36,7 @@
     <entry key="JDBC_VIRTUAL_TABLE">
       <virtualTable>
         <name>vw_geoserver_switrs_col_alcohol_cyc</name>
-        <sql>select * from vw_geo_intrsctn_switrs_all_types_cyc_col_cty where alcohol_involved = &apos;%alcohol%&apos; and dph_col_grp = &apos;CC&apos;
+        <sql>select * from vw_geo_switrs_all_types_cyc_col_cty where alcohol_involved = &apos;%alcohol%&apos; and dph_col_grp = &apos;CC&apos;
 </sql>
         <escapeSql>false</escapeSql>
         <geometry>

@@ -36,7 +36,7 @@
     <entry key="JDBC_VIRTUAL_TABLE">
       <virtualTable>
         <name>vw_geoserver_ped_prty_race</name>
-        <sql>select * from vw_geo_intrsctn_switrs_all_types_ped_col_prties_all_frwy where race = '%race%' and dph_col_grp = 'BB' and party_type = 'Pedestrian'
+        <sql>select * from vw_geo_switrs_all_types_ped_col_prties_all_frwy where race = '%race%' and dph_col_grp = 'BB' and party_type = 'Pedestrian'
 </sql>
         <escapeSql>false</escapeSql>
         <geometry>

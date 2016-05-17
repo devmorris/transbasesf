@@ -37,7 +37,7 @@
     <entry key="JDBC_VIRTUAL_TABLE">
       <virtualTable>
         <name>vw_geoserver_switrs_col_type</name>
-        <sql>select * from vw_geo_intrsctn_switrs_all_types_ped_col_frwy where type_of_collision = '%typec%' and dph_col_grp = 'BB'
+        <sql>select * from vw_geo_switrs_all_types_ped_col_frwy where type_of_collision = '%typec%' and dph_col_grp = 'BB'
 </sql>
         <escapeSql>false</escapeSql>
         <parameter>

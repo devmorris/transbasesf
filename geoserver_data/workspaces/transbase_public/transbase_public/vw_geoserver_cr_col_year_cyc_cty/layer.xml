@@ -1,0 +1,15 @@
+<layer>
+  <name>vw_geoserver_cr_col_year_cyc_cty</name>
+  <id>LayerInfoImpl--4480beff:153e37f0b6c:-5be1</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--62c969ff:1502a17d25a:-8000</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--4480beff:153e37f0b6c:-5be2</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

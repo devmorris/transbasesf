@@ -1,0 +1,15 @@
+<layer>
+  <name>_test_</name>
+  <id>LayerInfoImpl-55072b71:1540710ec96:-e34</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--62c969ff:1502a17d25a:-8000</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-55072b71:1540710ec96:-e35</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

@@ -58,7 +58,7 @@
     <entry key="JDBC_VIRTUAL_TABLE">
       <virtualTable>
         <name>vw_geoserver_switrs_col_weather_veh</name>
-        <sql>select * from vw_geo_intrsctn_switrs_all_types_veh_col_cty where weather_1 = &apos;%weather%&apos; and dph_col_grp = &apos;AA&apos;
+        <sql>select * from vw_geo_switrs_all_types_veh_col_cty where weather_1 = &apos;%weather%&apos; and dph_col_grp = &apos;AA&apos;
 </sql>
         <escapeSql>false</escapeSql>
         <parameter>

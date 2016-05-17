@@ -1,0 +1,63 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--4480beff:153e37f0b6c:-5bde</id>
+  <name>vw_geoserver_cr_col_year_veh_cty</name>
+  <nativeName>vw_geoserver_cr_col_year_veh_cty</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-31118007:141e5ef58cc:-7ff7</id>
+  </namespace>
+  <title>vw_geoserver_cr_col_year_veh_cty</title>
+  <keywords>
+    <string>features</string>
+    <string>vw_geoserver_cr_col_year_veh_cty</string>
+  </keywords>
+  <srs>EPSG:3857</srs>
+  <nativeBoundingBox>
+    <minx>-1.36379632636758E7</minx>
+    <maxx>-1.36224619801E7</maxx>
+    <miny>4538303.9029</miny>
+    <maxy>4554609.4531</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-122.51190844020523</minx>
+    <maxx>-122.37265804060911</maxx>
+    <miny>37.708328120898216</miny>
+    <maxy>37.824119133674635</maxy>
+    <crs>GEOGCS[&quot;WGS84(DD)&quot;, &#xd;
+  DATUM[&quot;WGS84&quot;, &#xd;
+    SPHEROID[&quot;WGS84&quot;, 6378137.0, 298.257223563]], &#xd;
+  PRIMEM[&quot;Greenwich&quot;, 0.0], &#xd;
+  UNIT[&quot;degree&quot;, 0.017453292519943295], &#xd;
+  AXIS[&quot;Geodetic longitude&quot;, EAST], &#xd;
+  AXIS[&quot;Geodetic latitude&quot;, NORTH]]</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="JDBC_VIRTUAL_TABLE">
+      <virtualTable>
+        <name>vw_geoserver_cr_col_year_veh_cty</name>
+        <sql>select * from vw_geo_crossroads_all_types_col_cty where accident_year = %yearc% and dph_col_grp = &apos;AA&apos;
+</sql>
+        <escapeSql>false</escapeSql>
+        <geometry>
+          <name>geom</name>
+          <type>Geometry</type>
+          <srid>-1</srid>
+        </geometry>
+        <parameter>
+          <name>yearc</name>
+          <defaultValue>2013</defaultValue>
+          <regexpValidator>^[\w\d\s]+$</regexpValidator>
+        </parameter>
+      </virtualTable>
+    </entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-1bcbd938:142293c7282:-8000</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

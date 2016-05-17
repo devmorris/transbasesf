@@ -36,7 +36,7 @@
     <entry key="JDBC_VIRTUAL_TABLE">
       <virtualTable>
         <name>ped_doi</name>
-        <sql>select * from vw_geo_intrsctn_switrs_all_types_ped_col_prty_vctm_frwy where victim_degree_of_injury = '%doi%' and dph_col_grp = 'BB'
+        <sql>select * from vw_geo_switrs_all_types_ped_col_prty_vctm_frwy where victim_degree_of_injury = '%doi%' and dph_col_grp = 'BB'
 </sql>
         <escapeSql>false</escapeSql>
         <parameter>

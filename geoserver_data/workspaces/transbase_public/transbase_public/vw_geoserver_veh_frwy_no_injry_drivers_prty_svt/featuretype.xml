@@ -58,7 +58,7 @@
     <entry key="JDBC_VIRTUAL_TABLE">
       <virtualTable>
         <name>vw_geoserver_veh_no_injry_drivers_prty_svt</name>
-        <sql>select * from vw_geo_intrsctn_switrs_all_types_veh_col_prties_all_frwy where stwd_vehicle_type = '%svt%' and dph_col_grp = 'AA' and party_type = 'Driver (including Hit and Run)'  and (party_number_killed = 0 or party_number_injured  = 0)
+        <sql>select * from vw_geo_switrs_all_types_veh_col_prties_all_frwy where stwd_vehicle_type = '%svt%' and dph_col_grp = 'AA' and party_type = 'Driver (including Hit and Run)'  and (party_number_killed = 0 or party_number_injured  = 0)
 </sql>
         <escapeSql>false</escapeSql>
         <geometry>

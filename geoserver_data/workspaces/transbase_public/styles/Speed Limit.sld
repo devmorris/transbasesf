@@ -8,6 +8,22 @@
       <sld:FeatureTypeStyle>
         <sld:Name>name</sld:Name>
         <sld:Rule>
+          <sld:Title>15mph</sld:Title>
+          <sld:Abstract>A 1 pixel wide black line</sld:Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>speed_limit</ogc:PropertyName>
+              <ogc:Literal>15</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <sld:LineSymbolizer>
+            <sld:Stroke>
+              <sld:CssParameter name="stroke">#000099</sld:CssParameter>
+              <sld:CssParameter name="stroke-width">1.5</sld:CssParameter>
+            </sld:Stroke>
+          </sld:LineSymbolizer>
+        </sld:Rule>
+                <sld:Rule>
           <sld:Title>25mph</sld:Title>
           <sld:Abstract>A 1 pixel wide black line</sld:Abstract>
           <ogc:Filter>
@@ -75,14 +91,30 @@
           <sld:Title>45mph and Greater</sld:Title>
           <sld:Abstract>A 1 pixel wide black line</sld:Abstract>
           <ogc:Filter>
-            <ogc:PropertyIsGreaterThanOrEqualTo>
+            <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>speed_limit</ogc:PropertyName>
               <ogc:Literal>45</ogc:Literal>
-            </ogc:PropertyIsGreaterThanOrEqualTo>
+            </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <sld:LineSymbolizer>
             <sld:Stroke>
               <sld:CssParameter name="stroke">#D7191C</sld:CssParameter>
+              <sld:CssParameter name="stroke-width">1.5</sld:CssParameter>
+            </sld:Stroke>
+          </sld:LineSymbolizer>
+        </sld:Rule>
+                <sld:Rule>
+          <sld:Title>N/A</sld:Title>
+          <sld:Abstract>A 1 pixel wide black line</sld:Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>speed_limit</ogc:PropertyName>
+              <ogc:Literal>9999</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <sld:LineSymbolizer>
+            <sld:Stroke>
+              <sld:CssParameter name="stroke">#808080</sld:CssParameter>
               <sld:CssParameter name="stroke-width">1.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
