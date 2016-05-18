@@ -1,1 +1,4 @@
-last updated 20160517
+Last updated 20160517
+
+Disclaimer
+This data is being provided as public information as defined under San Francisco and California public records laws. The San Francisco Department of Public Health (SFDPH, or the Department) cannot limit or restrict the use of this data or its interpretation by other parties in any way. Where the data is communicated, distributed, reproduced, mapped, or used in any other way, the user should acknowledge SFDPH as the source of the data, provide a reference to the original data source where also applicable, and note any caveats specified in the associated methodological documentation provided by the Department. However, users should not attribute their analysis or interpretation of this data to SFDPH. While the data has been collected and/or produced for the use of SFDPH, the Department cannot guarantee its accuracy or completeness. As all data is associated with methodological assumptions and limitations, the Department recommends that users review methodological documentation associated with the data prior to its analysis, interpretation, or communication.
